@@ -193,8 +193,8 @@ $hbox 6 "ffSkel_LeftToeBases"	    -4.00   -2.50   -2.00     4.00    2.50    2.00
 
 //$ikchain rhand ffSkel_RightHand 
 //$ikchain lhand ffSkel_LeftHand 
-$ikchain rfoot ffSkel_RightFoot 
-$ikchain lfoot ffSkel_LeftFoot
+$ikchain rfoot ffSkel_RightFoot Z 0 knee 0.707 -0.707 0
+$ikchain lfoot ffSkel_LeftFoot Z 0 knee 0.707 -0.707 0
 
 $sequence ragdoll "/reference/ragdoll" ACT_DIERAGDOLL 1 fps 30.00
 $bonemerge ffSkel_att_righthand
