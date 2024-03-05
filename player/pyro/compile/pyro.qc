@@ -1,89 +1,73 @@
 $cd ".."
-
 $modelname "player/pyro/pyro.mdl"
 //$model studio "/reference/pyro_reference.smd"
 
-$bodygroup torso
-{
-studio "/reference/pyro_reference_torsoShape.smd"
-blank
-}
-$bodygroup head
-{
+$body studio "/reference/pyro_reference_torsoShape.smd"
+$bodygroup head {
 studio "/reference/pyro_reference_headShape.smd"
 blank
 }
-$bodygroup leftArm
-{
+$bodygroup leftArm {
 studio "/reference/pyro_reference_leftArmShape.smd"
 blank
 }
-$bodygroup leftLeg
-{
+$bodygroup leftLeg {
 studio "/reference/pyro_reference_leftLegShape.smd"
 blank
 }
-$bodygroup rightArm
-{
+$bodygroup rightArm {
 studio "/reference/pyro_reference_rightArmShape.smd"
 blank
 }
-$bodygroup rightLeg
-{
+$bodygroup rightLeg {
 studio "/reference/pyro_reference_rightLegShape.smd"
 blank
 }
-
-
-
-
 $texturegroup skinfamilies {
-	{ "pyro_body_blue.vmt"  "pyro_head_blue.vmt"  "pyro_acc_blue.vmt"}
-	{ "pyro_body_red.vmt"    "pyro_head_red.vmt" "pyro_acc_red.vmt"}
-	{ "pyro_body_yellow.vmt"  "pyro_head_yellow.vmt" "pyro_acc_yellow.vmt" }
-	{ "pyro_body_green.vmt"   "pyro_head_green.vmt" "pyro_acc_green.vmt"}
+	{ "pyro_body_blue" "pyro_head_blue" "pyro_acc_blue" }
+	{ "pyro_body_red" "pyro_head_red" "pyro_acc_red" }
+	{ "pyro_body_yellow" "pyro_head_yellow" "pyro_acc_yellow" }
+	{ "pyro_body_green" "pyro_head_green" "pyro_acc_green" }
 }
 
-    $lod 10 {
-	  replacemodel "/reference/pyro_reference_torsoShape.smd" "/reference/LOD/pyro_lod1_torsoShape.smd"
-// 	  replacemodel "/reference/pyro_reference_headShape.smd" "/reference/pyro_reference_head_lodShape1.smd"
-// 	  replacemodel "/reference/pyro_reference_leftArmShape.smd" "/reference/pyro_reference_leftArm_lodShape1.smd"
-// 	  replacemodel "/reference/pyro_reference_rightArmShape.smd" "/reference/pyro_reference_rightArm_lodShape1.smd"
-// 	  replacemodel "/reference/pyro_reference_leftLegShape.smd" "/reference/pyro_reference_leftLeg_lodShape1.smd"
-// 	  replacemodel "/reference/pyro_reference_rightLegShape.smd" "/reference/pyro_reference_rightLeg_lodShape1.smd"
-    }
+$lod 10 {
+	replacemodel "/reference/pyro_reference_torsoShape.smd" "/reference/LOD/pyro_lod1_torsoShape.smd"
+//	replacemodel "/reference/pyro_reference_headShape.smd" "/reference/pyro_reference_head_lodShape1.smd"
+//	replacemodel "/reference/pyro_reference_leftArmShape.smd" "/reference/pyro_reference_leftArm_lodShape1.smd"
+//	replacemodel "/reference/pyro_reference_rightArmShape.smd" "/reference/pyro_reference_rightArm_lodShape1.smd"
+//	replacemodel "/reference/pyro_reference_leftLegShape.smd" "/reference/pyro_reference_leftLeg_lodShape1.smd"
+//	replacemodel "/reference/pyro_reference_rightLegShape.smd" "/reference/pyro_reference_rightLeg_lodShape1.smd"
+}
+$lod 35 {
+	replacemodel "/reference/pyro_reference_torsoShape.smd" "/reference/LOD/pyro_lod2_torsoShape.smd"
+//	replacemodel "/reference/pyro_reference_headShape.smd" "/reference/pyro_reference_head_lodShape3.smd"
+//	replacemodel "/reference/pyro_reference_leftArmShape.smd" "/reference/pyro_reference_leftArm_lodShape3.smd"
+//	replacemodel "/reference/pyro_reference_rightArmShape.smd" "/reference/pyro_reference_rightArm_lodShape3.smd"
+//	replacemodel "/reference/pyro_reference_leftLegShape.smd" "/reference/pyro_reference_leftLeg_lodShape3.smd"
+//	replacemodel "/reference/pyro_reference_rightLegShape.smd" "/reference/pyro_reference_rightLeg_lodShape3.smd"
 
- $lod 35 {
+	bonetreecollapse "ffSkel_lefthand"
+	bonetreecollapse "ffSkel_righthand"
 
- 	replacemodel "/reference/pyro_reference_torsoShape.smd" "/reference/LOD/pyro_lod2_torsoShape.smd"
-// 	replacemodel "/reference/pyro_reference_headShape.smd" "/reference/pyro_reference_head_lodShape3.smd"
-// 	replacemodel "/reference/pyro_reference_leftArmShape.smd" "/reference/pyro_reference_leftArm_lodShape3.smd"
-// 	replacemodel "/reference/pyro_reference_rightArmShape.smd" "/reference/pyro_reference_rightArm_lodShape3.smd"
-// 	replacemodel "/reference/pyro_reference_leftLegShape.smd" "/reference/pyro_reference_leftLeg_lodShape3.smd"
-// 	replacemodel "/reference/pyro_reference_rightLegShape.smd" "/reference/pyro_reference_rightLeg_lodShape3.smd"
-
- 	bonetreecollapse "ffSkel_lefthand"
-         bonetreecollapse "ffSkel_righthand"
-
- 		bonetreecollapse "ffSkel_neck"
- 	bonetreecollapse "ffSkel_leftForeArm"
- 	bonetreecollapse "ffSkel_rightForeArm"
- 	bonetreecollapse "ffSkel_leftLeg"
+	bonetreecollapse "ffSkel_neck"
+	bonetreecollapse "ffSkel_leftForeArm"
+	bonetreecollapse "ffSkel_rightForeArm"
+	bonetreecollapse "ffSkel_leftLeg"
 	bonetreecollapse "ffSkel_rightLeg"
 	// simplify spine
-            replacebone "ffSkel_Neck" "ffSkel_Spine2"
- 	replacebone "ffSkel_Spine3" "ffSkel_spine2"
- 	replacebone "ffSkel_spine1" "ffSkel_spine"
- 	replacebone "ffSkel_Spine"  "ffSkel_spine2"
- }
+	replacebone "ffSkel_Neck" "ffSkel_Spine2"
+	replacebone "ffSkel_Spine3" "ffSkel_spine2"
+	replacebone "ffSkel_spine1" "ffSkel_spine"
+	replacebone "ffSkel_Spine" "ffSkel_spine2"
+}
 
- $lod 60 {
- 	replacemodel "/reference/pyro_reference_torsoShape.smd" "/reference/LOD/pyro_lod3_torsoShape.smd"
-// 	replacemodel "/reference/pyro_reference_headShape.smd" "/reference/pyro_reference_head_lodShape4.smd"
-// 	replacemodel "/reference/pyro_reference_leftArmShape.smd" "/reference/pyro_reference_leftArm_lodShape4.smd"
-// 	replacemodel "/reference/pyro_reference_rightArmShape.smd" "/reference/pyro_reference_rightArm_lodShape4.smd"
-// 	replacemodel "/reference/pyro_reference_leftLegShape.smd" "/reference/pyro_reference_leftLeg_lodShape4.smd"
-// 	replacemodel "/reference/pyro_reference_rightLegShape.smd" "/reference/pyro_reference_rightLeg_lodShape4.smd"
+$lod 60 {
+	replacemodel "/reference/pyro_reference_torsoShape.smd" "/reference/LOD/pyro_lod3_torsoShape.smd"
+//	replacemodel "/reference/pyro_reference_headShape.smd" "/reference/pyro_reference_head_lodShape4.smd"
+//	replacemodel "/reference/pyro_reference_leftArmShape.smd" "/reference/pyro_reference_leftArm_lodShape4.smd"
+//	replacemodel "/reference/pyro_reference_rightArmShape.smd" "/reference/pyro_reference_rightArm_lodShape4.smd"
+//	replacemodel "/reference/pyro_reference_leftLegShape.smd" "/reference/pyro_reference_leftLeg_lodShape4.smd"
+//	replacemodel "/reference/pyro_reference_rightLegShape.smd" "/reference/pyro_reference_rightLeg_lodShape4.smd"
 
 	bonetreecollapse "ffSkel_neck"
 	bonetreecollapse "ffSkel_leftForeArm"
@@ -92,27 +76,21 @@ $texturegroup skinfamilies {
 	bonetreecollapse "ffSkel_rightLeg"
 
 	// simplify spine
-
-
 	replacebone "ffSkel_Neck" "ffSkel_Spine2"
 	replacebone "ffSkel_Spine3" "ffSkel_spine2"
 	replacebone "ffSkel_spine1" "ffSkel_spine"
-	replacebone "ffSkel_Spine"  "ffSkel_spine2"
+	replacebone "ffSkel_Spine" "ffSkel_spine2"
 }
 
-	 $shadowlod 
-	 {
-
-
-        replacemodel "/reference/pyro_reference_torsoShape.smd" "/reference/LOD/pyro_lod3_torsoShape.smd"
- 	//replacemodel "/reference/pyro_reference_headShape.smd" "/reference/pyro_reference_head_lodShape5.smd"
- 	//replacemodel "/reference/pyro_reference_leftArmShape.smd" "/reference/pyro_reference_leftArm_lodShape5.smd"
- 	//replacemodel "/reference/pyro_reference_rightArmShape.smd" "/reference/pyro_reference_rightArm_lodShape5.smd"
- 	//replacemodel "/reference/pyro_reference_leftLegShape.smd" "/reference/pyro_reference_leftLeg_lodShape5.smd"
- 	//replacemodel "/reference/pyro_reference_rightLegShape.smd" "/reference/pyro_reference_rightLeg_lodShape5.smd"
-	  }
-
-
+$shadowlod
+{
+	replacemodel "/reference/pyro_reference_torsoShape.smd" "/reference/LOD/pyro_lod3_torsoShape.smd"
+	//replacemodel "/reference/pyro_reference_headShape.smd" "/reference/pyro_reference_head_lodShape5.smd"
+	//replacemodel "/reference/pyro_reference_leftArmShape.smd" "/reference/pyro_reference_leftArm_lodShape5.smd"
+	//replacemodel "/reference/pyro_reference_rightArmShape.smd" "/reference/pyro_reference_rightArm_lodShape5.smd"
+	//replacemodel "/reference/pyro_reference_leftLegShape.smd" "/reference/pyro_reference_leftLeg_lodShape5.smd"
+	//replacemodel "/reference/pyro_reference_rightLegShape.smd" "/reference/pyro_reference_rightLeg_lodShape5.smd"
+}
 
 $attachment "attach_head" "ffSkel_Heads" 0 0 0 rotate 0 0 0
 $attachment "attach_leftArm" "ffSkel_LeftArm" 0 0 0 rotate 0 0 0
@@ -121,7 +99,7 @@ $attachment "attach_rightArm" "ffSkel_RightArm" 0 0 0 rotate 0 0 0
 $attachment "attach_rightLeg" "ffSkel_RightUpLeg" 0 0 0 rotate 0 0 0
 $attachment "anim_attachment_RH" "ffSkel_RightHand" 0 0 0 rotate 0 0 0
 $attachment "anim_attachment_LH" "ffSkel_LeftHand" 0 0 0 rotate 0 0 0
-$attachment "ffAtt_flag" "ffSkel_Spine3" 5 3 0 rotate  0 0 0
+$attachment "ffAtt_flag" "ffSkel_Spine3" 5 3 0 rotate 0 0 0
 
 // {
 //    flexfile "/reference/pyro_decap.vta"
@@ -138,17 +116,8 @@ $attachment "ffAtt_flag" "ffSkel_Spine3" 5 3 0 rotate  0 0 0
 
 //}
  
-//$cdmaterials "models\police\"
-//$cdmaterials "models\humans\male\"
 $cdmaterials "models/player/pyro/"
-// Model uses material "bmouth.vmt"
-// Model uses material "eyeball_l.vmt"
-// Model uses material "barneyface.vmt"
-// Model uses material "eyeball_r.vmt"
-// Model uses material "metrocop_sheet.vmt"
-// Model uses material "pupil_r.vmt"
-// Model uses material "glint.vmt"
-// Model uses material "pupil_l.vmt"
+
 $attachment "eyes" "ffSkel_Heads" 5.00 0.00 0.05 rotate 0 -20 -90
 $attachment "mouth" "ffSkel_Heads" 0.30 -5.70 -0.00 rotate 0.00 -80.00 -90.00
 $attachment "chest" "ffSkel_Spine2" 5.00 4.00 -0.00 rotate -0.00 90.00 90.00
@@ -175,24 +144,24 @@ $bbox -16 -16 0 16 16 72
 
 $hboxset "fortressforever"
 
-$hbox 3 "ffSkel_Hips"	    -5.00   -7.95   -4.50     5.00    7.55    6.50
-$hbox 6 "ffSkel_LeftUpLeg"	     3.00   -3.50   -4.00    17.00    5.50    3.00
-$hbox 6 "ffSkel_LeftLeg"	    -5.00   -1.50   -3.00    15.00    5.50    3.00
-$hbox 6 "ffSkel_LeftFoots"	    -2.00   -2.00   -3.10     8.00    3.00    1.10
-$hbox 7 "ffSkel_RightUpLeg"	     3.00   -3.50   -3.00    17.00    5.50    4.00
-$hbox 7 "ffSkel_RightLeg"	    -5.00   -1.50   -3.50    15.00    5.50    2.50
-$hbox 7 "ffSkel_RightFoots"	    -2.00   -2.00   -0.90     8.00    3.00    3.30
-$hbox 3 "ffSkel_Spine1"	    -5.00   -5.50   -6.50     3.00    5.50    6.50
-$hbox 2 "ffSkel_Spine2"	    -5.00   -5.10   -6.50     5.00    5.90    6.50
-$hbox 4 "ffSkel_LeftArm"	    -1.00   -1.50   -2.00    12.00    4.50    3.00
-$hbox 4 "ffSkel_LeftForeArm"	     0.00   -1.00   -2.00    10.00    4.00    2.00
-$hbox 4 "ffSkel_LeftHand"	     0.50   -1.25   -2.75     5.50    3.25    1.75
-$hbox 5 "ffSkel_RightArm"	    -1.00   -1.50   -3.50    12.00    4.50    1.50
-$hbox 5 "ffSkel_RightForeArm"	     0.00   -1.00   -2.50    10.00    4.00    1.50
-$hbox 5 "ffSkel_RightHand"	     0.50   -1.22   -1.75     5.50    3.22    2.75
-$hbox 1 "ffSkel_Heads"	    -5.00   -3.25   -2.50     3.00    3.25    6.50
-$hbox 2 "ffSkel_Spine3"	    -1.00   -4.00   -8.00     5.00    6.00    8.00
-$hbox 1 "ffSkel_Necks"	    -4.00   -2.50   -3.00     0.00    4.50    3.00
+$hbox 3 "ffSkel_Hips"	-5.00   -7.95   -4.50     5.00    7.55    6.50
+$hbox 6 "ffSkel_LeftUpLeg"	 3.00   -3.50   -4.00    17.00    5.50    3.00
+$hbox 6 "ffSkel_LeftLeg"	-5.00   -1.50   -3.00    15.00    5.50    3.00
+$hbox 6 "ffSkel_LeftFoots"	-2.00   -2.00   -3.10     8.00    3.00    1.10
+$hbox 7 "ffSkel_RightUpLeg"	 3.00   -3.50   -3.00    17.00    5.50    4.00
+$hbox 7 "ffSkel_RightLeg"	-5.00   -1.50   -3.50    15.00    5.50    2.50
+$hbox 7 "ffSkel_RightFoots"	-2.00   -2.00   -0.90     8.00    3.00    3.30
+$hbox 3 "ffSkel_Spine1"	-5.00   -5.50   -6.50     3.00    5.50    6.50
+$hbox 2 "ffSkel_Spine2"	-5.00   -5.10   -6.50     5.00    5.90    6.50
+$hbox 4 "ffSkel_LeftArm"	-1.00   -1.50   -2.00    12.00    4.50    3.00
+$hbox 4 "ffSkel_LeftForeArm"	 0.00   -1.00   -2.00    10.00    4.00    2.00
+$hbox 4 "ffSkel_LeftHand"	 0.50   -1.25   -2.75     5.50    3.25    1.75
+$hbox 5 "ffSkel_RightArm"	-1.00   -1.50   -3.50    12.00    4.50    1.50
+$hbox 5 "ffSkel_RightForeArm"	 0.00   -1.00   -2.50    10.00    4.00    1.50
+$hbox 5 "ffSkel_RightHand"	 0.50   -1.22   -1.75     5.50    3.22    2.75
+$hbox 1 "ffSkel_Heads"	-5.00   -3.25   -2.50     3.00    3.25    6.50
+$hbox 2 "ffSkel_Spine3"	-1.00   -4.00   -8.00     5.00    6.00    8.00
+$hbox 1 "ffSkel_Necks"	-4.00   -2.50   -3.00     0.00    4.50    3.00
 
 // .qc block generated by HLMV ends.
 
@@ -205,34 +174,34 @@ $ikchain lfoot ffSkel_LeftFoots Z 0 knee 0.707 -0.707 0
 
 $sequence ragdoll "/reference/ragdoll" ACT_DIERAGDOLL 1 fps 30.00
 $bonemerge ffSkel_att_righthand
-$collisionjoints "/reference/pyro_reference_phy.smd" {
 
+$collisionjoints "/reference/pyro_reference_phy.smd" {
 	$mass 90.0
-  	$inertia 10.00
-  	$damping 0.01
-  	$rotdamping 1.50
-  	$rootbone "ffSkel_Hips"
+ 	$inertia 10.00
+ 	$damping 0.01
+ 	$rotdamping 1.50
+ 	$rootbone "ffSkel_Hips"
 	$jointmerge "ffSkel_Hips" "ffSkel_ffSkel_Spine1"
 
- 	$jointconstrain "ffSkel_spine2" x limit -48.00 48.00 0.00
- 	$jointconstrain "ffSkel_spine2" y limit -25.00 25.00 0.00
- 	$jointconstrain "ffSkel_spine2" z limit -25.00 50.00 0.00
+	$jointconstrain "ffSkel_spine2" x limit -48.00 48.00 0.00
+	$jointconstrain "ffSkel_spine2" y limit -25.00 25.00 0.00
+	$jointconstrain "ffSkel_spine2" z limit -25.00 50.00 0.00
 
- 	$jointconstrain "ffSkel_rightarm" x limit -39.00 39.00 0.00
- 	$jointconstrain "ffSkel_rightarm" y limit -79.00 95.00 0.00
- 	$jointconstrain "ffSkel_rightarm" z limit -93.00 23.00 0.00
+	$jointconstrain "ffSkel_rightarm" x limit -39.00 39.00 0.00
+	$jointconstrain "ffSkel_rightarm" y limit -79.00 95.00 0.00
+	$jointconstrain "ffSkel_rightarm" z limit -93.00 23.00 0.00
 
- 	$jointconstrain "ffSkel_leftarm" x limit -30.00 30.00 0.00
- 	$jointconstrain "ffSkel_leftarm" y limit -95.00 84.00 0.00
-  	$jointconstrain "ffSkel_leftarm" z limit -86.00 26.00 0.00
+	$jointconstrain "ffSkel_leftarm" x limit -30.00 30.00 0.00
+	$jointconstrain "ffSkel_leftarm" y limit -95.00 84.00 0.00
+ 	$jointconstrain "ffSkel_leftarm" z limit -86.00 26.00 0.00
 
-  	$jointconstrain "ffSkel_leftforearm" x limit 0.00 0.00 0.00
- 	$jointconstrain "ffSkel_leftforearm" y limit 0.00 0.00 0.00
- 	$jointconstrain "ffSkel_leftforearm" z limit -149.00 4.00 0.00
+ 	$jointconstrain "ffSkel_leftforearm" x limit 0.00 0.00 0.00
+	$jointconstrain "ffSkel_leftforearm" y limit 0.00 0.00 0.00
+	$jointconstrain "ffSkel_leftforearm" z limit -149.00 4.00 0.00
 
- 	$jointconstrain "ffSkel_lefthand" x limit -37.00 37.00 0.00
- 	$jointconstrain "ffSkel_lefthand" y limit 0.00 0.00 0.00
- 	$jointconstrain "ffSkel_lefthand" z limit -57.00 59.00 0.00
+	$jointconstrain "ffSkel_lefthand" x limit -37.00 37.00 0.00
+	$jointconstrain "ffSkel_lefthand" y limit 0.00 0.00 0.00
+	$jointconstrain "ffSkel_lefthand" z limit -57.00 59.00 0.00
 
 	$jointconstrain "ffSkel_rightforearm" x limit 0.00 0.00 0.00
 	$jointconstrain "ffSkel_rightforearm" y limit 0.00 0.00 0.00
@@ -270,4 +239,3 @@ $collisionjoints "/reference/pyro_reference_phy.smd" {
 	$jointconstrain "ffSkel_rightfoots" y limit -10.00 6.00 0.00
 	$jointconstrain "ffSkel_rightfoots" z limit -5.00 15.00 0.00
 }
-

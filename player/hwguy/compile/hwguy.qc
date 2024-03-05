@@ -1,59 +1,44 @@
 $cd ".."
-
 $modelname "player/hwguy/hwguy.mdl"
 //$model studio "/reference/hwguy_reference.smd"
 
-$bodygroup torso
-{
-studio "/reference/hwguy_reference_torsoShape.smd"
-blank
-}
-$bodygroup head
-{
+$body studio "/reference/hwguy_reference_torsoShape.smd"
+$bodygroup head {
 studio "/reference/hwguy_reference_headShape.smd"
 blank
 }
-$bodygroup leftArm
-{
+$bodygroup leftArm {
 studio "/reference/hwguy_reference_leftArmShape.smd"
 blank
 }
-$bodygroup leftLeg
-{
+$bodygroup leftLeg {
 studio "/reference/hwguy_reference_leftLegShape.smd"
 blank
 }
-$bodygroup rightArm
-{
+$bodygroup rightArm {
 studio "/reference/hwguy_reference_rightArmShape.smd"
 blank
 }
-$bodygroup rightLeg
-{
+$bodygroup rightLeg {
 studio "/reference/hwguy_reference_rightLegShape.smd"
 blank
 }
-
-
-
-
 $texturegroup skinfamilies {
-	{ "hwguy_body_blue.vmt"  "hwguy_head_blue.vmt"  "hwguy_acc_blue.vmt"}
-	{ "hwguy_body_red.vmt"    "hwguy_head_red.vmt" "hwguy_acc_red.vmt"}
-	{ "hwguy_body_yellow.vmt"  "hwguy_head_yellow.vmt" "hwguy_acc_yellow.vmt" }
-	{ "hwguy_body_green.vmt"   "hwguy_head_green.vmt" "hwguy_acc_green.vmt"}
+	{ "hwguy_body_blue" "hwguy_head_blue" "hwguy_acc_blue" }
+	{ "hwguy_body_red" "hwguy_head_red" "hwguy_acc_red" }
+	{ "hwguy_body_yellow" "hwguy_head_yellow" "hwguy_acc_yellow" }
+	{ "hwguy_body_green" "hwguy_head_green" "hwguy_acc_green" }
 }
 
- $lod 10 {
-	  replacemodel "/reference/hwguy_reference_torsoShape.smd" "/reference/LOD/hwguy_reference_torsoShape_lod1.smd"
-	  replacemodel "/reference/hwguy_reference_headShape.smd" "/reference/LOD/hwguy_reference_headShape_lod1.smd"
-	  replacemodel "/reference/hwguy_reference_leftArmShape.smd" "/reference/LOD/hwguy_reference_leftArmShape_lod1.smd"
-	  replacemodel "/reference/hwguy_reference_rightArmShape.smd" "/reference/LOD/hwguy_reference_rightArmShape_lod1.smd"
-	  replacemodel "/reference/hwguy_reference_leftLegShape.smd" "/reference/LOD/hwguy_reference_leftLegShape_lod1.smd"
-	  replacemodel "/reference/hwguy_reference_rightLegShape.smd" "/reference/LOD/hwguy_reference_rightLegShape_lod1.smd"
-    }
-
- $lod 30 {
+$lod 10 {
+	replacemodel "/reference/hwguy_reference_torsoShape.smd" "/reference/LOD/hwguy_reference_torsoShape_lod1.smd"
+	replacemodel "/reference/hwguy_reference_headShape.smd" "/reference/LOD/hwguy_reference_headShape_lod1.smd"
+	replacemodel "/reference/hwguy_reference_leftArmShape.smd" "/reference/LOD/hwguy_reference_leftArmShape_lod1.smd"
+	replacemodel "/reference/hwguy_reference_rightArmShape.smd" "/reference/LOD/hwguy_reference_rightArmShape_lod1.smd"
+	replacemodel "/reference/hwguy_reference_leftLegShape.smd" "/reference/LOD/hwguy_reference_leftLegShape_lod1.smd"
+	replacemodel "/reference/hwguy_reference_rightLegShape.smd" "/reference/LOD/hwguy_reference_rightLegShape_lod1.smd"
+}
+$lod 30 {
 	replacemodel "/reference/hwguy_reference_torsoShape.smd" "/reference/LOD/hwguy_reference_torsoShape_lod2.smd"
 	replacemodel "/reference/hwguy_reference_headShape.smd" "/reference/LOD/hwguy_reference_headShape_lod2.smd"
 	replacemodel "/reference/hwguy_reference_leftArmShape.smd" "/reference/LOD/hwguy_reference_leftArmShape_lod2.smd"
@@ -68,24 +53,21 @@ $texturegroup skinfamilies {
 	bonetreecollapse "ffSkel_rightLeg"
 
 	// simplify spine
-
-
 	replacebone "ffSkel_Neck" "ffSkel_Spine2"
 	replacebone "ffSkel_Spine3" "ffSkel_spine2"
 	replacebone "ffSkel_spine1" "ffSkel_spine"
-	replacebone "ffSkel_Spine"  "ffSkel_spine2"
+	replacebone "ffSkel_Spine" "ffSkel_spine2"
 }
 
- 	$shadowlod 
-	{
-        replacemodel "/reference/hwguy_reference_torsoShape.smd" "/reference/LOD/hwguy_reference_torsoShape_lod2.smd"
- 	replacemodel "/reference/hwguy_reference_headShape.smd" "/reference/LOD/hwguy_reference_headShape_lod2.smd"
- 	replacemodel "/reference/hwguy_reference_leftArmShape.smd" "/reference/LOD/hwguy_reference_leftArmShape_lod2.smd"
- 	replacemodel "/reference/hwguy_reference_rightArmShape.smd" "/reference/LOD/hwguy_reference_rightArmShape_lod2.smd"
- 	replacemodel "/reference/hwguy_reference_leftLegShape.smd" "/reference/LOD/hwguy_reference_leftLegShape_lod2.smd"
- 	replacemodel "/reference/hwguy_reference_rightLegShape.smd" "/reference/LOD/hwguy_reference_rightLegShape_lod2.smd"
-	}
-
+$shadowlod
+{
+	replacemodel "/reference/hwguy_reference_torsoShape.smd" "/reference/LOD/hwguy_reference_torsoShape_lod2.smd"
+	replacemodel "/reference/hwguy_reference_headShape.smd" "/reference/LOD/hwguy_reference_headShape_lod2.smd"
+	replacemodel "/reference/hwguy_reference_leftArmShape.smd" "/reference/LOD/hwguy_reference_leftArmShape_lod2.smd"
+	replacemodel "/reference/hwguy_reference_rightArmShape.smd" "/reference/LOD/hwguy_reference_rightArmShape_lod2.smd"
+	replacemodel "/reference/hwguy_reference_leftLegShape.smd" "/reference/LOD/hwguy_reference_leftLegShape_lod2.smd"
+	replacemodel "/reference/hwguy_reference_rightLegShape.smd" "/reference/LOD/hwguy_reference_rightLegShape_lod2.smd"
+}
 
 $attachment "attach_head" "ffSkel_Heads" 0 0 0 rotate 0 0 0
 $attachment "attach_leftArm" "ffSkel_LeftArm" 0 0 0 rotate 0 0 0
@@ -94,7 +76,7 @@ $attachment "attach_rightArm" "ffSkel_RightArm" 0 0 0 rotate 0 0 0
 $attachment "attach_rightLeg" "ffSkel_RightUpLeg" 0 0 0 rotate 0 0 0
 $attachment "anim_attachment_RH" "ffSkel_RightHand" 0 0 0 rotate 0 0 0
 $attachment "anim_attachment_LH" "ffSkel_LeftHand" 0 0 0 rotate 0 0 0
-$attachment "ffAtt_flag" "ffSkel_Spine3" 5 3 0 rotate  0 0 0
+$attachment "ffAtt_flag" "ffSkel_Spine3" 5 3 0 rotate 0 0 0
 
 // {
 //    flexfile "/reference/hwguy_decap.vta"
@@ -111,17 +93,8 @@ $attachment "ffAtt_flag" "ffSkel_Spine3" 5 3 0 rotate  0 0 0
 
 //}
  
-//$cdmaterials "models\police\"
-//$cdmaterials "models\humans\male\"
 $cdmaterials "models/player/hwguy/"
-// Model uses material "bmouth.vmt"
-// Model uses material "eyeball_l.vmt"
-// Model uses material "barneyface.vmt"
-// Model uses material "eyeball_r.vmt"
-// Model uses material "metrocop_sheet.vmt"
-// Model uses material "pupil_r.vmt"
-// Model uses material "glint.vmt"
-// Model uses material "pupil_l.vmt"
+
 $attachment "eyes" "ffSkel_Heads" 5.00 0.00 0.05 rotate 0 -20 -90
 $attachment "mouth" "ffSkel_Heads" 0.30 -5.70 -0.00 rotate 0.00 -80.00 -90.00
 $attachment "chest" "ffSkel_Spine2" 5.00 4.00 -0.00 rotate -0.00 90.00 90.00
@@ -132,13 +105,15 @@ $attachment "helmet_attachment" "ffSkel_Heads" 2.66 -1.60 -0.00 rotate 0.00 -82.
 //$attachment "anim_attachment_LH" "ValveBiped.Anim_Attachment_LH" -0.00 -0.00 0.00 rotate -90.00 -90.00 0.00
 $attachment "anim_attachment_head" "ffSkel_Heads" -0.00 0.00 0.00 rotate -90.00 -90.00 0.00
 $includemodel "player/ff_player_shared.mdl"
-//$includemodel "player/cs_player_shared.mdl"
-//$includemodel "player/ak_anims_t.mdl"
-//$includemodel "barney_animations.mdl"
-//$includemodel "/humans/male_shared.mdl"
-//$includemodel "/hl2dm/male_shared.mdl"
-//$includemodel "barney_postures.mdl"
-//$includemodel "barney_gestures.mdl"
+/*
+$includemodel "player/cs_player_shared.mdl"
+$includemodel "player/ak_anims_t.mdl"
+$includemodel "barney_animations.mdl"
+$includemodel "/humans/male_shared.mdl"
+$includemodel "/hl2dm/male_shared.mdl"
+$includemodel "barney_postures.mdl"
+$includemodel "barney_gestures.mdl"
+*/
 $surfaceprop "flesh"
 
 $bbox -16 -16 0 16 16 72 
@@ -149,24 +124,24 @@ $bbox -16 -16 0 16 16 72
 
 $hboxset "fortressforever"
 
-$hbox 3 "ffSkel_Hips"	    -5.00   -7.95   -7.25     5.00    7.55    4.25
-$hbox 6 "ffSkel_LeftUpLeg"	     3.00   -4.50   -4.00    17.00    4.50    4.00
-$hbox 6 "ffSkel_LeftLeg"	    -4.00   -3.00   -2.50    16.00    4.00    3.50
-$hbox 6 "ffSkel_LeftFoots"	     0.00   -1.50   -3.10    10.00    3.50    1.10
-$hbox 7 "ffSkel_RightUpLeg"	     3.00   -4.50   -4.00    17.00    4.50    4.00
-$hbox 7 "ffSkel_RightLeg"	    -4.00   -3.00   -4.00    16.00    4.00    2.00
-$hbox 7 "ffSkel_RightFoots"	     0.00   -1.50   -0.90    10.00    3.50    3.30
-$hbox 3 "ffSkel_Spine1"	    -5.00   -7.50   -7.50     3.00    3.50    7.50
-$hbox 2 "ffSkel_Spine2"	    -5.00   -7.50   -7.50     5.00    3.50    7.50
-$hbox 4 "ffSkel_LeftArm"	    -1.50   -1.50   -2.50    11.50    4.50    3.50
-$hbox 4 "ffSkel_LeftForeArm"	     0.00   -2.50   -1.50    10.00    2.50    2.50
-$hbox 4 "ffSkel_LeftHand"	    -0.50   -2.75   -1.75     6.50    1.75    1.75
-$hbox 5 "ffSkel_RightArm"	    -1.50   -3.00   -3.50    11.50    3.00    2.50
-$hbox 5 "ffSkel_RightForeArm"	     0.00   -2.50   -2.50    10.00    2.50    1.50
-$hbox 5 "ffSkel_RightHand"	    -0.50   -3.22   -1.75     6.50    1.22    1.75
-$hbox 1 "ffSkel_Heads"	    -4.00   -3.25   -2.25     4.00    3.25    6.25
-$hbox 2 "ffSkel_Spine3"	    -1.00   -6.00   -8.00     5.00    3.00    8.00
-$hbox 1 "ffSkel_Necks"	    -3.90   -4.00   -3.50     1.10    3.00    3.50
+$hbox 3 "ffSkel_Hips"	-5.00   -7.95   -7.25     5.00    7.55    4.25
+$hbox 6 "ffSkel_LeftUpLeg"	 3.00   -4.50   -4.00    17.00    4.50    4.00
+$hbox 6 "ffSkel_LeftLeg"	-4.00   -3.00   -2.50    16.00    4.00    3.50
+$hbox 6 "ffSkel_LeftFoots"	 0.00   -1.50   -3.10    10.00    3.50    1.10
+$hbox 7 "ffSkel_RightUpLeg"	 3.00   -4.50   -4.00    17.00    4.50    4.00
+$hbox 7 "ffSkel_RightLeg"	-4.00   -3.00   -4.00    16.00    4.00    2.00
+$hbox 7 "ffSkel_RightFoots"	 0.00   -1.50   -0.90    10.00    3.50    3.30
+$hbox 3 "ffSkel_Spine1"	-5.00   -7.50   -7.50     3.00    3.50    7.50
+$hbox 2 "ffSkel_Spine2"	-5.00   -7.50   -7.50     5.00    3.50    7.50
+$hbox 4 "ffSkel_LeftArm"	-1.50   -1.50   -2.50    11.50    4.50    3.50
+$hbox 4 "ffSkel_LeftForeArm"	 0.00   -2.50   -1.50    10.00    2.50    2.50
+$hbox 4 "ffSkel_LeftHand"	-0.50   -2.75   -1.75     6.50    1.75    1.75
+$hbox 5 "ffSkel_RightArm"	-1.50   -3.00   -3.50    11.50    3.00    2.50
+$hbox 5 "ffSkel_RightForeArm"	 0.00   -2.50   -2.50    10.00    2.50    1.50
+$hbox 5 "ffSkel_RightHand"	-0.50   -3.22   -1.75     6.50    1.22    1.75
+$hbox 1 "ffSkel_Heads"	-4.00   -3.25   -2.25     4.00    3.25    6.25
+$hbox 2 "ffSkel_Spine3"	-1.00   -6.00   -8.00     5.00    3.00    8.00
+$hbox 1 "ffSkel_Necks"	-3.90   -4.00   -3.50     1.10    3.00    3.50
 
 // .qc block generated by HLMV ends.
 
@@ -181,34 +156,34 @@ $ikchain lfoot ffSkel_LeftFoots Z 0 knee 0.707 -0.707 0
 
 $sequence ragdoll "/reference/ragdoll" ACT_DIERAGDOLL 1 fps 30.00
 $bonemerge ffSkel_att_righthand
-$collisionjoints "/reference/hwguy_reference_phy.smd" {
 
+$collisionjoints "/reference/hwguy_reference_phy.smd" {
 	$mass 90.0
-  	$inertia 10.00
-  	$damping 0.01
-  	$rotdamping 1.50
-  	$rootbone "ffSkel_Hips"
+ 	$inertia 10.00
+ 	$damping 0.01
+ 	$rotdamping 1.50
+ 	$rootbone "ffSkel_Hips"
 	$jointmerge "ffSkel_Hips" "ffSkel_ffSkel_Spine1"
 
- 	$jointconstrain "ffSkel_spine2" x limit -48.00 48.00 0.00
- 	$jointconstrain "ffSkel_spine2" y limit -25.00 25.00 0.00
- 	$jointconstrain "ffSkel_spine2" z limit -25.00 50.00 0.00
+	$jointconstrain "ffSkel_spine2" x limit -48.00 48.00 0.00
+	$jointconstrain "ffSkel_spine2" y limit -25.00 25.00 0.00
+	$jointconstrain "ffSkel_spine2" z limit -25.00 50.00 0.00
 
- 	$jointconstrain "ffSkel_rightarm" x limit -39.00 39.00 0.00
- 	$jointconstrain "ffSkel_rightarm" y limit -79.00 95.00 0.00
- 	$jointconstrain "ffSkel_rightarm" z limit -93.00 23.00 0.00
+	$jointconstrain "ffSkel_rightarm" x limit -39.00 39.00 0.00
+	$jointconstrain "ffSkel_rightarm" y limit -79.00 95.00 0.00
+	$jointconstrain "ffSkel_rightarm" z limit -93.00 23.00 0.00
 
- 	$jointconstrain "ffSkel_leftarm" x limit -30.00 30.00 0.00
- 	$jointconstrain "ffSkel_leftarm" y limit -95.00 84.00 0.00
-  	$jointconstrain "ffSkel_leftarm" z limit -86.00 26.00 0.00
+	$jointconstrain "ffSkel_leftarm" x limit -30.00 30.00 0.00
+	$jointconstrain "ffSkel_leftarm" y limit -95.00 84.00 0.00
+ 	$jointconstrain "ffSkel_leftarm" z limit -86.00 26.00 0.00
 
-  	$jointconstrain "ffSkel_leftforearm" x limit 0.00 0.00 0.00
- 	$jointconstrain "ffSkel_leftforearm" y limit 0.00 0.00 0.00
- 	$jointconstrain "ffSkel_leftforearm" z limit -149.00 4.00 0.00
+ 	$jointconstrain "ffSkel_leftforearm" x limit 0.00 0.00 0.00
+	$jointconstrain "ffSkel_leftforearm" y limit 0.00 0.00 0.00
+	$jointconstrain "ffSkel_leftforearm" z limit -149.00 4.00 0.00
 
- 	$jointconstrain "ffSkel_lefthand" x limit -37.00 37.00 0.00
- 	$jointconstrain "ffSkel_lefthand" y limit 0.00 0.00 0.00
- 	$jointconstrain "ffSkel_lefthand" z limit -57.00 59.00 0.00
+	$jointconstrain "ffSkel_lefthand" x limit -37.00 37.00 0.00
+	$jointconstrain "ffSkel_lefthand" y limit 0.00 0.00 0.00
+	$jointconstrain "ffSkel_lefthand" z limit -57.00 59.00 0.00
 
 	$jointconstrain "ffSkel_rightforearm" x limit 0.00 0.00 0.00
 	$jointconstrain "ffSkel_rightforearm" y limit 0.00 0.00 0.00
@@ -246,4 +221,3 @@ $collisionjoints "/reference/hwguy_reference_phy.smd" {
 	$jointconstrain "ffSkel_rightfoots" y limit -10.00 6.00 0.00
 	$jointconstrain "ffSkel_rightfoots" z limit -5.00 15.00 0.00
 }
-
