@@ -1,15 +1,10 @@
 $modelname "weapons\sniperrifle\w_sniperrifle.mdl"
-
 $cdmaterials "models\weapons\sniperrifle"
-
 $attachment 1 "ffSkel_gunEnd" 0 0 0
-
 $scale 1
-
+$surfaceprop weapon
 $keyvalues { "prop_data" { "base" "metal.medium" } }
-
 $model w_sniperrifle "w_sniper_ref.smd"
-
 $sequence idle "w_sniper_idle.smd" loop ACT_VM_IDLE 1 fps 15
 
 $lod 10 {

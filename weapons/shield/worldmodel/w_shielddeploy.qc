@@ -1,14 +1,11 @@
 $modelname "weapons\shield\w_shielddeploy.mdl"
-
 $cdmaterials "models\weapons\shield"
-
 $scale 1
 $mostlyopaque
 $surfaceprop plastic
-
 $keyvalues { "prop_data" { "base" "metal.medium" } }
 
-$model "studio" "shield_ref.smd"
+$model studio "shield_ref.smd"
 
 $sequence idle "shield_ref.smd" loop fps 15
 

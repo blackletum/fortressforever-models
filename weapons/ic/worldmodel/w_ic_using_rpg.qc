@@ -1,9 +1,9 @@
 $modelname "weapons/incendiarycannon/w_incendiarycannon.mdl"
 $cdmaterials "models/weapons/incendiarycannon/"
 $scale 0.85
-$surfaceprop "default"
+$surfaceprop weapon
 $keyvalues { "prop_data" { "base" "Wooden.Large" } }
-$body "Body" "ic_w_ref.smd"
+$body Body "ic_w_ref.smd"
 
 $lod 30 {
       replacemodel "ic_w_ref" "ic_w_ref_LOD1"

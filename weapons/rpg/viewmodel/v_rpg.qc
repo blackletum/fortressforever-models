@@ -19,13 +19,12 @@ for future modification.
 *****************************
 */
 
-$modelname 		"weapons/rpg/v_rpg.mdl"
-$cdmaterials 		"models/weapons/rpg"
-$cdmaterials 		"models/v_arms"
-$origin 		0 0 0
-$scale 			1.0
-
-$body "studio" "reference_RPG.smd"
+$modelname "weapons/rpg/v_rpg.mdl"
+$cdmaterials "models/weapons/rpg"
+$cdmaterials "models/v_arms"
+$origin 0 0 0
+$scale 1.0
+$body studio "reference_RPG.smd"
 
 /*
 ***Bodygroups for different arms (to be added later [maybe! :P])***
@@ -63,39 +62,25 @@ $sequence StartReload_with1 "anim_StartReload_with0" ACT_VM_STARTRELOAD_WITH1 1 
 $sequence StartReload_with2 "anim_StartReload_with2" ACT_VM_STARTRELOAD_WITH2 1 fps 30.00 fadein 0 fadeout 0
 $sequence StartReload_with3 "anim_StartReload_with3" ACT_VM_STARTRELOAD_WITH3 1 fps 30.00 fadein 0 fadeout 0
 
-$sequence InitReload_0to1 "anim_InitReload_0to1" ACT_VM_InitReload_0TO1 1 fps 30.00 fadein 0 fadeout 0 {
-  { event AE_CL_PLAYSOUND 17 "rpg.Reload1" }
-}
-$sequence InitReload_1to2 "anim_InitReload_1to2" ACT_VM_InitReload_1TO2 1 fps 30.00 fadein 0 fadeout 0 {
-  { event AE_CL_PLAYSOUND 17 "rpg.Reload2" }
-}
-$sequence InitReload_2to3 "anim_InitReload_2to3" ACT_VM_InitReload_2TO3 1 fps 30.00 fadein 0 fadeout 0 {
-  { event AE_CL_PLAYSOUND 17 "rpg.Reload3" }
-}
-$sequence InitReload_3to4 "anim_InitReload_3to4" ACT_VM_InitReload_3TO4 1 fps 30.00 fadein 0 fadeout 0 {
-  { event AE_CL_PLAYSOUND 17 "rpg.Reload4" }
-}
+$sequence InitReload_0to1 "anim_InitReload_0to1" ACT_VM_InitReload_0TO1 1 fps 30.00 fadein 0 fadeout 0//{{ event AE_CL_PLAYSOUND 17 "rpg.Reload1" }}
+$sequence InitReload_1to2 "anim_InitReload_1to2" ACT_VM_InitReload_1TO2 1 fps 30.00 fadein 0 fadeout 0//{{ event AE_CL_PLAYSOUND 17 "rpg.Reload2" }}
+$sequence InitReload_2to3 "anim_InitReload_2to3" ACT_VM_InitReload_2TO3 1 fps 30.00 fadein 0 fadeout 0// {{ event AE_CL_PLAYSOUND 17 "rpg.Reload3" }}
+$sequence InitReload_3to4 "anim_InitReload_3to4" ACT_VM_InitReload_3TO4 1 fps 30.00 fadein 0 fadeout 0// {{ event AE_CL_PLAYSOUND 17 "rpg.Reload4" }}
 
-$sequence Reload_1to2 "anim_Reload_1to2" ACT_VM_RELOAD_1TO2 1 fps 30.00 fadein 0 fadeout 0 {
+$sequence Reload_1to2 "anim_Reload_1to2" ACT_VM_RELOAD_1TO2 1 fps 30.00 fadein 0 fadeout 0/* {
   { event AE_CL_PLAYSOUND 0 "rpg.slide1" }
   { event AE_CL_PLAYSOUND 10 "rpg.reload2" }
-}
-$sequence Reload_2to3 "anim_Reload_2to3" ACT_VM_RELOAD_2TO3 1 fps 30.00 fadein 0 fadeout 0 {
+}*/
+$sequence Reload_2to3 "anim_Reload_2to3" ACT_VM_RELOAD_2TO3 1 fps 30.00 fadein 0 fadeout 0/* {
   { event AE_CL_PLAYSOUND 0 "rpg.slide2" }
   { event AE_CL_PLAYSOUND 10 "rpg.reload3" }
-}
-$sequence Reload_3to4 "anim_Reload_3to4" ACT_VM_RELOAD_3TO4 1 fps 30.00 fadein 0 fadeout 0 {
+}*/
+$sequence Reload_3to4 "anim_Reload_3to4" ACT_VM_RELOAD_3TO4 1 fps 30.00 fadein 0 fadeout 0/* {
   { event AE_CL_PLAYSOUND 0 "rpg.slide3" }
   { event AE_CL_PLAYSOUND 10 "rpg.reload4" }
-}
+}*/
 
-$sequence FinishReload_with1 "anim_FinishReload_with1" ACT_VM_FINISHRELOAD_WITH1 1 fps 30.00 fadein 0 {
-  { event AE_CL_PLAYSOUND 0 "rpg.slide1" }
-}
-$sequence FinishReload_with2 "anim_FinishReload_with2" ACT_VM_FINISHRELOAD_WITH2 1 fps 30.00 fadein 0 {
-  { event AE_CL_PLAYSOUND 0 "rpg.slide2" }
-}
-$sequence FinishReload_with3 "anim_FinishReload_with3" ACT_VM_FINISHRELOAD_WITH3 1 fps 30.00 fadein 0 {
-  { event AE_CL_PLAYSOUND 0 "rpg.slide3" }
-}
+$sequence FinishReload_with1 "anim_FinishReload_with1" ACT_VM_FINISHRELOAD_WITH1 1 fps 30.00 fadein 0// {{ event AE_CL_PLAYSOUND 0 "rpg.slide1" }}
+$sequence FinishReload_with2 "anim_FinishReload_with2" ACT_VM_FINISHRELOAD_WITH2 1 fps 30.00 fadein 0// {{ event AE_CL_PLAYSOUND 0 "rpg.slide2" }}
+$sequence FinishReload_with3 "anim_FinishReload_with3" ACT_VM_FINISHRELOAD_WITH3 1 fps 30.00 fadein 0// {{ event AE_CL_PLAYSOUND 0 "rpg.slide3" }}
 $sequence FinishReload_with4 "anim_FinishReload_with4" ACT_VM_FINISHRELOAD_WITH4 1 fps 30.00 fadein 0

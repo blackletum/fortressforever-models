@@ -1,13 +1,9 @@
 $modelname "weapons\medkit\w_medkit.mdl"
-
 $cdmaterials "models\weapons\medkit"
-
 $scale 1
-
+$surfaceprop weapon
 $keyvalues { "prop_data" { "base" "metal.medium" } }
-
-$model "studio" "w_medkit_ref.smd"
-
+$model studio "w_medkit_ref.smd"
 $sequence idle "w_medkit_idle.smd" loop fps 15
 
 $collisionmodel "w_medkit_phy.smd"
