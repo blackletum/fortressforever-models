@@ -8,14 +8,12 @@ Anims	- Decs
 *****************************
 */
 
-$cd 			"C:\Games\Steam\SteamApps\SourceMods\FortressForever\models-dev\General Source Files\Items\football"
-$modelname 		"items/ball/ball2.mdl"
-$cdmaterials 	"models\items\ball\"
-$scale 			1.8
+$modelname "items/ball/ball2.mdl"
+$cdmaterials "models\items\ball\"
+$scale 1.8
+$body studio "football.smd"
+$surfaceprop rubber
 
-$bodygroup studio { 
-  studio "football.smd" 
-}
 $sequence idle "football.smd" fps 1
 $collisionmodel "football.smd"
 {
