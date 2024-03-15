@@ -2,7 +2,7 @@ $cd ".."
 $modelname "player/demoman/demoman.mdl"
 //$model studio "/reference/demoman_reference.smd"
 
-$body studio "/reference/demoman_reference_torsoShape.smd"
+$model studio "/reference/demoman_reference_torsoShape.smd"
 $bodygroup head {
 studio "/reference/demoman_reference_headShape.smd"
 blank

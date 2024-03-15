@@ -2,7 +2,7 @@ $cd ".."
 $modelname "player/spy/spy.mdl"
 //$model studio "/reference/spy_reference.smd"
 
-$body studio "/reference/spy_reference_torsoShape.smd"
+$model studio "/reference/spy_reference_torsoShape.smd"
 $bodygroup head {
 studio "/reference/spy_reference_headShape.smd"
 blank

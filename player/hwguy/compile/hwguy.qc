@@ -2,7 +2,7 @@ $cd ".."
 $modelname "player/hwguy/hwguy.mdl"
 //$model studio "/reference/hwguy_reference.smd"
 
-$body studio "/reference/hwguy_reference_torsoShape.smd"
+$model studio "/reference/hwguy_reference_torsoShape.smd"
 $bodygroup head {
 studio "/reference/hwguy_reference_headShape.smd"
 blank

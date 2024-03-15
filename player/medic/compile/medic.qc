@@ -2,7 +2,7 @@ $modelname "player/medic/medic.mdl"
 $cd ".."
 //$model studio "/reference/medic_reference.smd"
 
-$body studio "/reference/medic_reference_torsoShape.smd"
+$model studio "/reference/medic_reference_torsoShape.smd"
 $bodygroup head {
 studio "/reference/medic_reference_headShape.smd"
 blank

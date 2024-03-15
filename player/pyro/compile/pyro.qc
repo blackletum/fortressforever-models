@@ -2,7 +2,7 @@ $cd ".."
 $modelname "player/pyro/pyro.mdl"
 //$model studio "/reference/pyro_reference.smd"
 
-$body studio "/reference/pyro_reference_torsoShape.smd"
+$model studio "/reference/pyro_reference_torsoShape.smd"
 $bodygroup head {
 studio "/reference/pyro_reference_headShape.smd"
 blank

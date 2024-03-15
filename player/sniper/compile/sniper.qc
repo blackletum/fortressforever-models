@@ -2,7 +2,7 @@ $cd ".."
 $modelname "player/sniper/sniper.mdl"
 //$model studio "/reference/sniper_reference.smd"
 
-$body studio "/reference/sniper_reference_torsoShape.smd"
+$model studio "/reference/sniper_reference_torsoShape.smd"
 $bodygroup head {
 studio "/reference/sniper_reference_headShape.smd"
 blank

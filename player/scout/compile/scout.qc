@@ -2,7 +2,7 @@ $cd "..\"
 $modelname "player/scout/scout.mdl"
 //$model studio "/reference/scout_reference.smd"
 
-$body studio "/reference/scout_reference_torsoShape.smd"
+$model studio "/reference/scout_reference_torsoShape.smd"
 $bodygroup head {
 studio "/reference/scout_reference_headShape.smd"
 blank
