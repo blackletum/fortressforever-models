@@ -2,7 +2,6 @@ $modelname "buildable\respawn_turret\respawn_turret.mdl"
 $cdmaterials "models/buildable\respawn_turret\"
 $cliptotextures
 $surfaceprop computer
-
 $scale 1
 
 $poseparameter aim_yaw -180.00 180.00 wrap
@@ -15,7 +14,7 @@ $sequence idle "respawn_turret_idle" ACT_MINITURRET_CLOSED_IDLE 1 loop fps 1.00
 //$attachment "gun_hole" "ffSg_FireAttach" 0 0 0
 $attachment "barrel01" "ffSg_barrel" 0 0 0 rotate 90 0 0
 //$attachment "barrel02" "ffSg_Barrel1" 15 0 0 rotate 0 0 0
-$attachment "eyes" "ffSg_body"  8 4.5 -5.5 rotate 0 0 0
+$attachment "eyes" "ffSg_body" 8 4.5 -5.5 rotate 0 0 0
 
 
 $sequence aim_updown "respawn_turret_updown" fps 30

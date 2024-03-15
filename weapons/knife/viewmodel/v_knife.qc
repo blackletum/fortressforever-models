@@ -8,13 +8,12 @@ Anims	- FooleyCooley
 *****************************
 */
 
-$modelname 		"weapons/knife/v_knife.mdl"
-$cdmaterials 		"models/weapons/knife"
-$cdmaterials 		"models/v_arms"
-$origin 		0 0 0
-$scale 			1.0
-
-$body "studio" "reference_Knife.smd"
+$modelname "weapons/knife/v_knife.mdl"
+$cdmaterials "models/weapons/knife"
+$cdmaterials "models/v_arms"
+$origin 0 0 0
+$scale 1.0
+$body studio "reference_Knife.smd"
 
 /*
 ***Bodygroups for different arms (to be added later [maybe! :P])***

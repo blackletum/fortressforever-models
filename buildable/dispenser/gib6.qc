@@ -1,8 +1,7 @@
 $modelname "buildable\dispenser\gib6.mdl"
-$model "studio" "dispgib6.smd"
+$model studio "dispgib6.smd"
 $cdmaterials "models\buildable\dispenser\"
-
-$surfaceprop "metal"
+$surfaceprop metal
 
 $sequence idle "dispenser.smd"
 $autocenter
@@ -12,17 +11,17 @@ $collisionmodel "dispgib6.smd"{
 }
 $texturegroup skinfamilies
 {
-    { "disp_map" }
-    { "disp_blue" }
-    { "disp_red" }
-    { "disp_yellow" }
-    { "disp_green" }
+	{ "disp_map" }
+	{ "disp_blue" }
+	{ "disp_red" }
+	{ "disp_yellow" }
+	{ "disp_green" }
 }
 $keyvalues
 { 
 	prop_data
 	{
-		base			Metal.Small 
-		physicsmode 		2
+		base		Metal.Small 
+		physicsmode	2
 	}
 }

@@ -8,18 +8,17 @@ Anims	- FooleyCooley
 *****************************
 */
 
-$modelname 		"weapons/crowbar/v_crowbar.mdl"
-$cdmaterials 		"models/weapons/crowbar"
-$cdmaterials 		"models/v_arms"
-$origin 		1.5 5 0
-$scale 			1.0
-
-$body "studio" "reference_Crowbar.smd"
+$modelname "weapons/crowbar/v_crowbar.mdl"
+$cdmaterials "models/weapons/crowbar"
+$cdmaterials "models/v_arms"
+$origin 1.5 5 0
+$scale 1.0
+$body studio "reference_Crowbar.smd"
 
 /*
 ***Bodygroups for different arms (to be added later [maybe! :P])***
-$bodygroup heavyArms 	{"studio" "reference_Crowbar_heavyArms.smd"}
-$bodygroup scoutArms 	{"studio" "reference_Crowbar_scoutArms.smd"}
+$bodygroup heavyArms	{"studio" "reference_Crowbar_heavyArms.smd"}
+$bodygroup scoutArms	{"studio" "reference_Crowbar_scoutArms.smd"}
 $bodygroup engineerArms {"studio" "reference_Crowbar_engineerArms.smd"}
 $bodygroup civilianArms {"studio" "reference_Crowbar_civilianArms.smd"}
 */

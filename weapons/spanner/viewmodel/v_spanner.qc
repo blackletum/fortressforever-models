@@ -8,20 +8,18 @@ Anims	- FooleyCooley
 *****************************
 */
 
-$cd 			"C:/0FF_Edit/FortressForever/modelsrc/weapons/spanner"
-$modelname 		"weapons/spanner/v_spanner.mdl"
-$cdmaterials 		"models/weapons/spanner"
-$cdmaterials 		"models/v_arms"
-$origin 		0 0 0
-$scale 			1.0
-$illumposition 		20 -6 7
-
-$body "studio" "reference_Spanner.smd"
+$modelname "weapons/spanner/v_spanner.mdl"
+$cdmaterials "models/weapons/spanner"
+$cdmaterials "models/v_arms"
+$origin 0 0 0
+$scale 1.0
+$illumposition 20 -6 7
+$body studio "reference_Spanner.smd"
 
 /*
 ***Bodygroups for different arms (to be added later [maybe! :P])***
-$bodygroup heavyArms 	{"studio" "reference_Spanner_heavyArms.smd"}
-$bodygroup scoutArms 	{"studio" "reference_Spanner_scoutArms.smd"}
+$bodygroup heavyArms	{"studio" "reference_Spanner_heavyArms.smd"}
+$bodygroup scoutArms	{"studio" "reference_Spanner_scoutArms.smd"}
 $bodygroup engineerArms {"studio" "reference_Spanner_engineerArms.smd"}
 $bodygroup civilianArms {"studio" "reference_Spanner_civilianArms.smd"}
 */

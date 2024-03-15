@@ -1,9 +1,9 @@
 $modelname "items/jumppad/jumppad.mdl"
-$model "Body" "jumppad_ref.smd"
+$model Body "jumppad_ref.smd"
 $cdmaterials "models\items\jumppad\"
-// Model uses material "jumppad.vmt"
-// Model uses material "jumppad_light.vmt"
-$surfaceprop "metal"
+// Model uses material "jumppad"
+// Model uses material "jumppad_light"
+$surfaceprop metal
 $texturegroup skinfamilies {
 	{ "jumppad" }
 	{ "jumppad_blue" }
@@ -13,7 +13,6 @@ $texturegroup skinfamilies {
 }
 $sequence Idle "Idle" ACT_IDLE 1 fps 30.00
 $collisionmodel "phymodel.smd" {
-
 	$concave
 	$mass 100.0
 	$inertia 1.00
@@ -24,6 +23,6 @@ $keyvalues
 {
 	prop_data
 	{
-		base			Metal.Small 
+		base	Metal.Small 
 	}
 }

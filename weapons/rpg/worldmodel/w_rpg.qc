@@ -1,10 +1,9 @@
 $modelname "weapons/rpg/w_rpg.mdl"
-$model "Body" "rpg_ref.smd"
+$model Body "rpg_ref.smd"
 $cdmaterials "models\weapons\rpg\"
 $cdmaterials "models\weapons\w_rpg\"
-
-$surfaceprop "metal"
-$keyvalues  { prop_data { "base" "Metal.Medium"  } } 
+$surfaceprop metal
+$keyvalues { prop_data { "base" "Metal.Medium"  }}
 
 $sequence idle "rpg_ref" loop fps 1.00
 $lod 10 {

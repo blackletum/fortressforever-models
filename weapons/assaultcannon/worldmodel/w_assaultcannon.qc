@@ -3,7 +3,8 @@ $alwayscollapse "SMDImport"
 $cdmaterials "models\weapons\assaultcannon"
 $attachment "1" "ffSkel_att_righthand" -3.00 39.00 2.00 rotate 0 90 0
 $scale 1
-$keyvalues { "prop_data" { "base" "metal.medium" } }
+$surfaceprop metal
+$keyvalues { "prop_data" { "base" "metal.medium" }}
 $model studio "ac_ref.SMD"
 $sequence idle "ac_ref.SMD" loop ACT_VM_IDLE 1 fps 15
 

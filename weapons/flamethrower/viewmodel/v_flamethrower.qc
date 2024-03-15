@@ -8,21 +8,21 @@ Anims	- FooleyCooley
 *****************************
 */
 
-$modelname 		"weapons/flamethrower/v_flamethrower.mdl"
-$cdmaterials 		"models/weapons/flamethrower"
-$cdmaterials 		"models/v_arms"
-$origin 		0 0 0
-$scale 			1.0
+$modelname "weapons/flamethrower/v_flamethrower.mdl"
+$cdmaterials "models/weapons/flamethrower"
+$cdmaterials "models/v_arms"
+$origin 0 0 0
+$scale 1.0
 
 $attachment "1" "bone_muzzle" 0 0 0 rotate 0 0 0
 $attachment "pilotLight" "bone_pilotLight" 0 0 0 rotate 0 0 0
 
-$body "studio" "reference_Flamethrower.smd"
+$body studio "reference_Flamethrower.smd"
 
 /*
 ***Bodygroups for different arms (to be added later [maybe! :P])***
-$bodygroup heavyArms 	{"studio" "reference_Flamethrower_heavyArms.smd"}
-$bodygroup scoutArms 	{"studio" "reference_Flamethrower_scoutArms.smd"}
+$bodygroup heavyArms	{"studio" "reference_Flamethrower_heavyArms.smd"}
+$bodygroup scoutArms	{"studio" "reference_Flamethrower_scoutArms.smd"}
 $bodygroup engineerArms {"studio" "reference_Flamethrower_engineerArms.smd"}
 $bodygroup civilianArms {"studio" "reference_Flamethrower_civilianArms.smd"}
 */
