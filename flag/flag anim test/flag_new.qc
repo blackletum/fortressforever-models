@@ -9,7 +9,7 @@ $texturegroup skinfamilies
 	{ "flag_green" }
 }
 
-$surfaceprop "carpet"
+$surfaceprop carpet
 $sequence Idle "flag_idle" loop ACT_INFO_RETURNED 1 loop fps 30.00
 $sequence Drop "flag_idle" ACT_INFO_DROPPED 1 loop fps 30.00
 $sequence Carry "flag_idle" ACT_INFO_CARRIED 1 loop fps 30.00

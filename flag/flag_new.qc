@@ -2,7 +2,6 @@ $modelname "flag/flag.mdl"
 $model Body "flag_reference.smd"
 $cdmaterials "models\flag\"
 $surfaceprop carpet
-
 $texturegroup skinfamilies
 {
 	{ "flag_blue" }
