@@ -1,18 +1,14 @@
 $modelname "weapons\incendiarycannon\v_incendiarycannon"
 // $scale 0.3
 
-$model studio "F:\MyDocuments\Modelling\Steamwork\models\weapons\IC\v\compile\ic_ref.smd"
-
-
-
+$model studio "ic_ref.smd"
 $cdmaterials "models\weapons\incendiarycannon"
 $cdmaterials "models\v_arms"
 $cdmaterials "models\shells"
-
 $texturegroup v_pyroArms
 {
-    { "v_pyroArms_blue" }
-    { "v_pyroArms_red" }
+	{ "v_pyroArms_blue" }
+	{ "v_pyroArms_red" }
 }
 
 $surfaceprop "default"
@@ -50,4 +46,3 @@ $sequence Fire4 "ic_fire4" snap ACT_VM_PRIMARYATTACK 1 fps 30.00 {
  	{ event AE_MUZZLEFLASH 1 "RPG 1" } 
 	{ event AE_CL_PLAYSOUND 12 "ic.cocky" }
 }
-

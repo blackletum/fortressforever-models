@@ -19,18 +19,17 @@ for future modification.
 *****************************
 */
 
-$modelname 		"weapons/incendiarycannon/v_incendiarycannon.mdl"
-$cdmaterials 		"models/weapons/rpg"
-$cdmaterials 		"models/v_arms"
-$origin 		0 0 0
-$scale 			1.0
-
-$body "studio" "reference_RPG.smd"
+$modelname "weapons/incendiarycannon/v_incendiarycannon.mdl"
+$cdmaterials "models/weapons/rpg"
+$cdmaterials "models/v_arms"
+$origin 0 0 0
+$scale 1.0
+$body studio "reference_RPG.smd"
 
 /*
 ***Bodygroups for different arms (to be added later [maybe! :P])***
-$bodygroup heavyArms 	{"studio" "reference_RPG_heavyArms.smd"}
-$bodygroup scoutArms 	{"studio" "reference_RPG_scoutArms.smd"}
+$bodygroup heavyArms	{"studio" "reference_RPG_heavyArms.smd"}
+$bodygroup scoutArms	{"studio" "reference_RPG_scoutArms.smd"}
 $bodygroup engineerArms {"studio" "reference_RPG_engineerArms.smd"}
 $bodygroup civilianArms {"studio" "reference_RPG_civilianArms.smd"}
 */

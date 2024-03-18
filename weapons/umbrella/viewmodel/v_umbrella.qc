@@ -8,22 +8,21 @@ Anims	- FooleyCooley
 *****************************
 */
 
-$cd 			"..."
-$modelname 		"weapons/umbrella/v_umbrella.mdl"
-$cdmaterials 	"models/weapons/umbrella"
-$cdmaterials 	"models/v_arms"
+$modelname "weapons/umbrella/v_umbrella.mdl"
+$cdmaterials "models/weapons/umbrella"
+$cdmaterials "models/v_arms"
 $origin 		1.5 5 0
 $scale 			1.0
-$illumposition 	20 -6 7
+$illumposition 20 -6 7
 
-$body "studio" "reference_Umbrella.smd"
+$body studio "reference_Umbrella.smd"
 
 /*
 ***Bodygroups for different arms (to be added later [maybe! :P])***
-$bodygroup heavyArms 		{"studio" "reference_Crowbar_heavyArms.smd"}
-$bodygroup scoutArms 		{"studio" "reference_Crowbar_scoutArms.smd"}
-$bodygroup engineerArms 	{"studio" "reference_Crowbar_engineerArms.smd"}
-$bodygroup civilianArms 	{"studio" "reference_Crowbar_civilianArms.smd"}
+$bodygroup heavyArms	{"studio" "reference_Crowbar_heavyArms.smd"}
+$bodygroup scoutArms	{"studio" "reference_Crowbar_scoutArms.smd"}
+$bodygroup engineerArms {"studio" "reference_Crowbar_engineerArms.smd"}
+$bodygroup civilianArms {"studio" "reference_Crowbar_civilianArms.smd"}
 */
 
 $sequence Draw "anim_Draw" ACT_VM_DRAW 1 fps 30.00 fadein 0

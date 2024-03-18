@@ -1,7 +1,5 @@
 $modelname "weapons/shield/v_shield.mdl"
-
 $model studio "v_shield_ref.smd"
-
 $cdmaterials "models\weapons\shield"
 $cdmaterials "models\v_arms\"
 
