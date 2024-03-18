@@ -24,10 +24,10 @@ studio "/reference/soldier_reference_rightLegShape.smd"
 blank
 }
 $texturegroup skinfamilies {
-	{ "soldier_body_blue" "soldier_head_blue" "soldier_acc_blue" }
-	{ "soldier_body_red" "soldier_head_red" "soldier_acc_red" }
-	{ "soldier_body_yellow" "soldier_head_yellow" "soldier_acc_yellow" }
-	{ "soldier_body_green" "soldier_head_green" "soldier_acc_green" }
+	{ "soldier_body_blue" "soldier_head_blue" }
+	{ "soldier_body_red" "soldier_head_red" }
+	{ "soldier_body_yellow" "soldier_head_yellow" }
+	{ "soldier_body_green" "soldier_head_green" }
 }
 
 $lod 10 {
