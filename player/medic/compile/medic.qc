@@ -24,10 +24,10 @@ studio "/reference/medic_reference_rightLegShape.smd"
 blank
 }
 $texturegroup skinfamilies {
-	{ "medic_body_blue" "medic_head_blue" "medic_acc_blue" }
-	{ "medic_body_red" "medic_head_red" "medic_acc_red" }
-	{ "medic_body_yellow" "medic_head_yellow" "medic_acc_yellow" }
-	{ "medic_body_green" "medic_head_green" "medic_acc_green" }
+	{ "medic_body_blue" "medic_head_blue" }
+	{ "medic_body_red" "medic_head_red" }
+	{ "medic_body_yellow" "medic_head_yellow" }
+	{ "medic_body_green" "medic_head_green" }
 }
 
 $lod 10 {

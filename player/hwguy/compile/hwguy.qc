@@ -24,10 +24,10 @@ studio "/reference/hwguy_reference_rightLegShape.smd"
 blank
 }
 $texturegroup skinfamilies {
-	{ "hwguy_body_blue" "hwguy_head_blue" "hwguy_acc_blue" }
-	{ "hwguy_body_red" "hwguy_head_red" "hwguy_acc_red" }
-	{ "hwguy_body_yellow" "hwguy_head_yellow" "hwguy_acc_yellow" }
-	{ "hwguy_body_green" "hwguy_head_green" "hwguy_acc_green" }
+	{ "hwguy_body_blue" }
+	{ "hwguy_body_red" }
+	{ "hwguy_body_yellow" }
+	{ "hwguy_body_green" }
 }
 
 $lod 10 {
@@ -149,8 +149,8 @@ $hbox 1 "ffSkel_Necks"	-3.90   -4.00   -3.50     1.10    3.00    3.50
 
 
 
-//$ikchain rhand ffSkel_RightHand 
-//$ikchain lhand ffSkel_LeftHand 
+//$ikchain rhand ffSkel_RightHand
+//$ikchain lhand ffSkel_LeftHand
 $ikchain rfoot ffSkel_RightFoots Z 0 knee 0.707 -0.707 0
 $ikchain lfoot ffSkel_LeftFoots Z 0 knee 0.707 -0.707 0
 

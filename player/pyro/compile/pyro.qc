@@ -24,10 +24,10 @@ studio "/reference/pyro_reference_rightLegShape.smd"
 blank
 }
 $texturegroup skinfamilies {
-	{ "pyro_body_blue" "pyro_head_blue" "pyro_acc_blue" }
-	{ "pyro_body_red" "pyro_head_red" "pyro_acc_red" }
-	{ "pyro_body_yellow" "pyro_head_yellow" "pyro_acc_yellow" }
-	{ "pyro_body_green" "pyro_head_green" "pyro_acc_green" }
+	{ "pyro_body_blue" "pyro_head_blue" }
+	{ "pyro_body_red" "pyro_head_red" }
+	{ "pyro_body_yellow" "pyro_head_yellow" }
+	{ "pyro_body_green" "pyro_head_green" }
 }
 
 $lod 10 {

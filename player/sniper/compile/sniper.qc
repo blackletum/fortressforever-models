@@ -25,10 +25,10 @@ blank
 }
 
 $texturegroup skinfamilies {
-	{ "sniper_body_blue" "sniper_head_blue" "sniper_acc_blue" }
-	{ "sniper_body_red" "sniper_head_red" "sniper_acc_red" }
-	{ "sniper_body_yellow" "sniper_head_yellow" "sniper_acc_yellow" }
-	{ "sniper_body_green" "sniper_head_green" "sniper_acc_green" }
+	{ "sniper_body_blue" "sniper_head_blue" }
+	{ "sniper_body_red" "sniper_head_red" }
+	{ "sniper_body_yellow" "sniper_head_yellow" }
+	{ "sniper_body_green" "sniper_head_green" }
 }
 
 $lod 10 {
