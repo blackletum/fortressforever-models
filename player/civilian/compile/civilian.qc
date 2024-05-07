@@ -25,9 +25,10 @@ blank
 }
 $texturegroup skinfamilies {
 	{ "civilian_body" "civilian_head" }
-	{ "civilian_body" "civilian_head" }
-	{ "civilian_body" "civilian_head" }
-	{ "civilian_body" "civilian_head" }
+	{ "civilian_body_red" "civilian_head_red" }
+	{ "civilian_body_yellow" "civilian_head_yellow" }
+	{ "civilian_body_green" "civilian_head_green" }
+	{ "civilian_body_neutral" "civilian_head_neutral" }
 }
 
 $lod 10 {

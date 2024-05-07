@@ -24,10 +24,10 @@ studio "/reference/scout_reference_rightLegShape.smd"
 blank
 }
 $texturegroup skinfamilies {
-	{ "scout_body_blue" "scout_head_blue" }
-	{ "scout_body_red" "scout_head_red" }
-	{ "scout_body_yellow" "scout_head_yellow" }
-	{ "scout_body_green" "scout_head_green" }
+	{ "scout_body_blue" }
+	{ "scout_body_red" }
+	{ "scout_body_yellow" }
+	{ "scout_body_green" }
 }
 
 $lod 10 {
