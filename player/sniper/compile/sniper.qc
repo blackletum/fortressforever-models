@@ -1,26 +1,26 @@
 $cd ".."
 $modelname "player/sniper/sniper.mdl"
-//$model studio "/reference/sniper_reference"
+//$model studio "/reference/sniper_reference.smd"
 
-$model studio "/reference/sniper_reference_torsoShape"
+$model studio "/reference/sniper_reference_torsoShape.smd"
 $bodygroup head {
-studio "/reference/sniper_reference_headShape"
+studio "/reference/sniper_reference_headShape.smd"
 blank
 }
 $bodygroup leftArm {
-studio "/reference/sniper_reference_leftArmShape"
+studio "/reference/sniper_reference_leftArmShape.smd"
 blank
 }
 $bodygroup leftLeg {
-studio "/reference/sniper_reference_leftLegShape"
+studio "/reference/sniper_reference_leftLegShape.smd"
 blank
 }
 $bodygroup rightArm {
-studio "/reference/sniper_reference_rightArmShape"
+studio "/reference/sniper_reference_rightArmShape.smd"
 blank
 }
 $bodygroup rightLeg {
-studio "/reference/sniper_reference_rightLegShape"
+studio "/reference/sniper_reference_rightLegShape.smd"
 blank
 }
 
@@ -32,20 +32,20 @@ $texturegroup skinfamilies {
 }
 
 $lod 10 {
-	replacemodel "/reference/sniper_reference_torsoShape" "/reference/LOD/sniper_reference_torsoShape_lod1"
-	replacemodel "/reference/sniper_reference_headShape" "/reference/LOD/sniper_reference_headShape_lod1"
-	replacemodel "/reference/sniper_reference_leftArmShape" "/reference/LOD/sniper_reference_leftArmShape_lod1"
-	replacemodel "/reference/sniper_reference_rightArmShape" "/reference/LOD/sniper_reference_rightArmShape_lod1"
-	replacemodel "/reference/sniper_reference_leftLegShape" "/reference/LOD/sniper_reference_leftLegShape_lod1"
-	replacemodel "/reference/sniper_reference_rightLegShape" "/reference/LOD/sniper_reference_rightLegShape_lod1"
+	replacemodel "/reference/sniper_reference_torsoShape.smd" "/reference/LOD/sniper_reference_torsoShape_lod1.smd"
+	replacemodel "/reference/sniper_reference_headShape.smd" "/reference/LOD/sniper_reference_headShape_lod1.smd"
+	replacemodel "/reference/sniper_reference_leftArmShape.smd" "/reference/LOD/sniper_reference_leftArmShape_lod1.smd"
+	replacemodel "/reference/sniper_reference_rightArmShape.smd" "/reference/LOD/sniper_reference_rightArmShape_lod1.smd"
+	replacemodel "/reference/sniper_reference_leftLegShape.smd" "/reference/LOD/sniper_reference_leftLegShape_lod1.smd"
+	replacemodel "/reference/sniper_reference_rightLegShape.smd" "/reference/LOD/sniper_reference_rightLegShape_lod1.smd"
 }
 $lod 30 {
-	replacemodel "/reference/sniper_reference_torsoShape" "/reference/LOD/sniper_reference_torsoShape_lod2"
-	replacemodel "/reference/sniper_reference_headShape" "/reference/LOD/sniper_reference_headShape_lod2"
-	replacemodel "/reference/sniper_reference_leftArmShape" "/reference/LOD/sniper_reference_leftArmShape_lod2"
-	replacemodel "/reference/sniper_reference_rightArmShape" "/reference/LOD/sniper_reference_rightArmShape_lod2"
-	replacemodel "/reference/sniper_reference_leftLegShape" "/reference/LOD/sniper_reference_leftLegShape_lod2"
-	replacemodel "/reference/sniper_reference_rightLegShape" "/reference/LOD/sniper_reference_rightLegShape_lod2"
+	replacemodel "/reference/sniper_reference_torsoShape.smd" "/reference/LOD/sniper_reference_torsoShape_lod2.smd"
+	replacemodel "/reference/sniper_reference_headShape.smd" "/reference/LOD/sniper_reference_headShape_lod2.smd"
+	replacemodel "/reference/sniper_reference_leftArmShape.smd" "/reference/LOD/sniper_reference_leftArmShape_lod2.smd"
+	replacemodel "/reference/sniper_reference_rightArmShape.smd" "/reference/LOD/sniper_reference_rightArmShape_lod2.smd"
+	replacemodel "/reference/sniper_reference_leftLegShape.smd" "/reference/LOD/sniper_reference_leftLegShape_lod2.smd"
+	replacemodel "/reference/sniper_reference_rightLegShape.smd" "/reference/LOD/sniper_reference_rightLegShape_lod2.smd"
 
 	bonetreecollapse "ffSkel_neck"
 	bonetreecollapse "ffSkel_leftForeArm"
@@ -62,12 +62,12 @@ $lod 30 {
 
 $shadowlod
 {
-	replacemodel "/reference/sniper_reference_torsoShape" "/reference/LOD/sniper_reference_torsoShape_lod2"
-	replacemodel "/reference/sniper_reference_headShape" "/reference/LOD/sniper_reference_headShape_lod2"
-	replacemodel "/reference/sniper_reference_leftArmShape" "/reference/LOD/sniper_reference_leftArmShape_lod2"
-	replacemodel "/reference/sniper_reference_rightArmShape" "/reference/LOD/sniper_reference_rightArmShape_lod2"
-	replacemodel "/reference/sniper_reference_leftLegShape" "/reference/LOD/sniper_reference_leftLegShape_lod2"
-	replacemodel "/reference/sniper_reference_rightLegShape" "/reference/LOD/sniper_reference_rightLegShape_lod2"
+	replacemodel "/reference/sniper_reference_torsoShape.smd" "/reference/LOD/sniper_reference_torsoShape_lod2.smd"
+	replacemodel "/reference/sniper_reference_headShape.smd" "/reference/LOD/sniper_reference_headShape_lod2.smd"
+	replacemodel "/reference/sniper_reference_leftArmShape.smd" "/reference/LOD/sniper_reference_leftArmShape_lod2.smd"
+	replacemodel "/reference/sniper_reference_rightArmShape.smd" "/reference/LOD/sniper_reference_rightArmShape_lod2.smd"
+	replacemodel "/reference/sniper_reference_leftLegShape.smd" "/reference/LOD/sniper_reference_leftLegShape_lod2.smd"
+	replacemodel "/reference/sniper_reference_rightLegShape.smd" "/reference/LOD/sniper_reference_rightLegShape_lod2.smd"
 }
 
 $attachment "attach_head" "ffSkel_Heads" 0 0 0 rotate 0 0 0
@@ -141,10 +141,10 @@ $hbox 1 "ffSkel_Necks"	    -2.50   -2.00   -3.00     0.50    4.00    3.00
 $ikchain rfoot ffSkel_RightFoots Z 0 knee 0.707 -0.707 0
 $ikchain lfoot ffSkel_LeftFoots Z 0 knee 0.707 -0.707 0
 
-$sequence ragdoll "/reference/ragdoll" ACT_DIERAGDOLL 1 fps 30.00
+$sequence ragdoll "/reference/ragdoll.smd" ACT_DIERAGDOLL 1
 $bonemerge ffSkel_att_righthand
 
-$collisionjoints "/reference/sniper_reference_phy" {
+$collisionjoints "/reference/sniper_reference_phy.smd" {
 	$mass 90.0
  	$inertia 10.00
  	$damping 0.01

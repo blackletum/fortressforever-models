@@ -1,26 +1,26 @@
 $cd ".."
 $modelname "player/hwguy/hwguy.mdl"
-//$model studio "/reference/hwguy_reference"
+//$model studio "/reference/hwguy_reference.smd"
 
-$model studio "/reference/hwguy_reference_torsoShape"
+$model studio "/reference/hwguy_reference_torsoShape.smd"
 $bodygroup head {
-studio "/reference/hwguy_reference_headShape"
+studio "/reference/hwguy_reference_headShape.smd"
 blank
 }
 $bodygroup leftArm {
-studio "/reference/hwguy_reference_leftArmShape"
+studio "/reference/hwguy_reference_leftArmShape.smd"
 blank
 }
 $bodygroup leftLeg {
-studio "/reference/hwguy_reference_leftLegShape"
+studio "/reference/hwguy_reference_leftLegShape.smd"
 blank
 }
 $bodygroup rightArm {
-studio "/reference/hwguy_reference_rightArmShape"
+studio "/reference/hwguy_reference_rightArmShape.smd"
 blank
 }
 $bodygroup rightLeg {
-studio "/reference/hwguy_reference_rightLegShape"
+studio "/reference/hwguy_reference_rightLegShape.smd"
 blank
 }
 $texturegroup skinfamilies {
@@ -31,20 +31,20 @@ $texturegroup skinfamilies {
 }
 
 $lod 10 {
-	replacemodel "/reference/hwguy_reference_torsoShape" "/reference/LOD/hwguy_reference_torsoShape_lod1"
-	replacemodel "/reference/hwguy_reference_headShape" "/reference/LOD/hwguy_reference_headShape_lod1"
-	replacemodel "/reference/hwguy_reference_leftArmShape" "/reference/LOD/hwguy_reference_leftArmShape_lod1"
-	replacemodel "/reference/hwguy_reference_rightArmShape" "/reference/LOD/hwguy_reference_rightArmShape_lod1"
-	replacemodel "/reference/hwguy_reference_leftLegShape" "/reference/LOD/hwguy_reference_leftLegShape_lod1"
-	replacemodel "/reference/hwguy_reference_rightLegShape" "/reference/LOD/hwguy_reference_rightLegShape_lod1"
+	replacemodel "/reference/hwguy_reference_torsoShape.smd" "/reference/LOD/hwguy_reference_torsoShape_lod1.smd"
+	replacemodel "/reference/hwguy_reference_headShape.smd" "/reference/LOD/hwguy_reference_headShape_lod1.smd"
+	replacemodel "/reference/hwguy_reference_leftArmShape.smd" "/reference/LOD/hwguy_reference_leftArmShape_lod1.smd"
+	replacemodel "/reference/hwguy_reference_rightArmShape.smd" "/reference/LOD/hwguy_reference_rightArmShape_lod1.smd"
+	replacemodel "/reference/hwguy_reference_leftLegShape.smd" "/reference/LOD/hwguy_reference_leftLegShape_lod1.smd"
+	replacemodel "/reference/hwguy_reference_rightLegShape.smd" "/reference/LOD/hwguy_reference_rightLegShape_lod1.smd"
 }
 $lod 30 {
-	replacemodel "/reference/hwguy_reference_torsoShape" "/reference/LOD/hwguy_reference_torsoShape_lod2"
-	replacemodel "/reference/hwguy_reference_headShape" "/reference/LOD/hwguy_reference_headShape_lod2"
-	replacemodel "/reference/hwguy_reference_leftArmShape" "/reference/LOD/hwguy_reference_leftArmShape_lod2"
-	replacemodel "/reference/hwguy_reference_rightArmShape" "/reference/LOD/hwguy_reference_rightArmShape_lod2"
-	replacemodel "/reference/hwguy_reference_leftLegShape" "/reference/LOD/hwguy_reference_leftLegShape_lod2"
-	replacemodel "/reference/hwguy_reference_rightLegShape" "/reference/LOD/hwguy_reference_rightLegShape_lod2"
+	replacemodel "/reference/hwguy_reference_torsoShape.smd" "/reference/LOD/hwguy_reference_torsoShape_lod2.smd"
+	replacemodel "/reference/hwguy_reference_headShape.smd" "/reference/LOD/hwguy_reference_headShape_lod2.smd"
+	replacemodel "/reference/hwguy_reference_leftArmShape.smd" "/reference/LOD/hwguy_reference_leftArmShape_lod2.smd"
+	replacemodel "/reference/hwguy_reference_rightArmShape.smd" "/reference/LOD/hwguy_reference_rightArmShape_lod2.smd"
+	replacemodel "/reference/hwguy_reference_leftLegShape.smd" "/reference/LOD/hwguy_reference_leftLegShape_lod2.smd"
+	replacemodel "/reference/hwguy_reference_rightLegShape.smd" "/reference/LOD/hwguy_reference_rightLegShape_lod2.smd"
 
 	bonetreecollapse "ffSkel_neck"
 	bonetreecollapse "ffSkel_leftForeArm"
@@ -61,12 +61,12 @@ $lod 30 {
 
 $shadowlod
 {
-	replacemodel "/reference/hwguy_reference_torsoShape" "/reference/LOD/hwguy_reference_torsoShape_lod2"
-	replacemodel "/reference/hwguy_reference_headShape" "/reference/LOD/hwguy_reference_headShape_lod2"
-	replacemodel "/reference/hwguy_reference_leftArmShape" "/reference/LOD/hwguy_reference_leftArmShape_lod2"
-	replacemodel "/reference/hwguy_reference_rightArmShape" "/reference/LOD/hwguy_reference_rightArmShape_lod2"
-	replacemodel "/reference/hwguy_reference_leftLegShape" "/reference/LOD/hwguy_reference_leftLegShape_lod2"
-	replacemodel "/reference/hwguy_reference_rightLegShape" "/reference/LOD/hwguy_reference_rightLegShape_lod2"
+	replacemodel "/reference/hwguy_reference_torsoShape.smd" "/reference/LOD/hwguy_reference_torsoShape_lod2.smd"
+	replacemodel "/reference/hwguy_reference_headShape.smd" "/reference/LOD/hwguy_reference_headShape_lod2.smd"
+	replacemodel "/reference/hwguy_reference_leftArmShape.smd" "/reference/LOD/hwguy_reference_leftArmShape_lod2.smd"
+	replacemodel "/reference/hwguy_reference_rightArmShape.smd" "/reference/LOD/hwguy_reference_rightArmShape_lod2.smd"
+	replacemodel "/reference/hwguy_reference_leftLegShape.smd" "/reference/LOD/hwguy_reference_leftLegShape_lod2.smd"
+	replacemodel "/reference/hwguy_reference_rightLegShape.smd" "/reference/LOD/hwguy_reference_rightLegShape_lod2.smd"
 }
 
 $attachment "attach_head" "ffSkel_Heads" 0 0 0 rotate 0 0 0
@@ -145,10 +145,10 @@ $hbox 1 "ffSkel_Necks"	-3.90   -4.00   -3.50     1.10    3.00    3.50
 $ikchain rfoot ffSkel_RightFoots Z 0 knee 0.707 -0.707 0
 $ikchain lfoot ffSkel_LeftFoots Z 0 knee 0.707 -0.707 0
 
-$sequence ragdoll "/reference/ragdoll" ACT_DIERAGDOLL 1 fps 30.00
+$sequence ragdoll "/reference/ragdoll.smd" ACT_DIERAGDOLL 1
 $bonemerge ffSkel_att_righthand
 
-$collisionjoints "/reference/hwguy_reference_phy" {
+$collisionjoints "/reference/hwguy_reference_phy.smd" {
 	$mass 90.0
  	$inertia 10.00
  	$damping 0.01

@@ -1,26 +1,26 @@
 $cd ".."
 $modelname "player/spy/spy.mdl"
-//$model studio "/reference/spy_reference"
+//$model studio "/reference/spy_reference.smd"
 
-$model studio "/reference/spy_reference_torsoShape"
+$model studio "/reference/spy_reference_torsoShape.smd"
 $bodygroup head {
-studio "/reference/spy_reference_headShape"
+studio "/reference/spy_reference_headShape.smd"
 blank
 }
 $bodygroup leftArm {
-studio "/reference/spy_reference_leftArmShape"
+studio "/reference/spy_reference_leftArmShape.smd"
 blank
 }
 $bodygroup leftLeg {
-studio "/reference/spy_reference_leftLegShape"
+studio "/reference/spy_reference_leftLegShape.smd"
 blank
 }
 $bodygroup rightArm {
-studio "/reference/spy_reference_rightArmShape"
+studio "/reference/spy_reference_rightArmShape.smd"
 blank
 }
 $bodygroup rightLeg {
-studio "/reference/spy_reference_rightLegShape"
+studio "/reference/spy_reference_rightLegShape.smd"
 blank
 }
 
@@ -32,28 +32,28 @@ $texturegroup skinfamilies {
 }
 
 $lod 10 {
-	replacemodel "/reference/spy_reference_torsoShape" "/reference/LOD/spy_lod1_torsoShape"
-//	replacemodel "/reference/spy_reference_headShape" "/reference/spy_reference_head_lodShape1"
-//	replacemodel "/reference/spy_reference_leftArmShape" "/reference/spy_reference_leftArm_lodShape1"
-//	replacemodel "/reference/spy_reference_rightArmShape" "/reference/spy_reference_rightArm_lodShape1"
-//	replacemodel "/reference/spy_reference_leftLegShape" "/reference/spy_reference_leftLeg_lodShape1"
-//	replacemodel "/reference/spy_reference_rightLegShape" "/reference/spy_reference_rightLeg_lodShape1"
+	replacemodel "/reference/spy_reference_torsoShape.smd" "/reference/LOD/spy_lod1_torsoShape.smd"
+//	replacemodel "/reference/spy_reference_headShape.smd" "/reference/spy_reference_head_lodShape1.smd"
+//	replacemodel "/reference/spy_reference_leftArmShape.smd" "/reference/spy_reference_leftArm_lodShape1.smd"
+//	replacemodel "/reference/spy_reference_rightArmShape.smd" "/reference/spy_reference_rightArm_lodShape1.smd"
+//	replacemodel "/reference/spy_reference_leftLegShape.smd" "/reference/spy_reference_leftLeg_lodShape1.smd"
+//	replacemodel "/reference/spy_reference_rightLegShape.smd" "/reference/spy_reference_rightLeg_lodShape1.smd"
 }
 $lod 20 {
-	replacemodel "/reference/spy_reference_torsoShape" "/reference/LOD/spy_lod2_torsoShape"
-//	replacemodel "/reference/spy_reference_headShape" "/reference/spy_reference_head_lodShape2"
-//	replacemodel "/reference/spy_reference_leftArmShape" "/reference/spy_reference_leftArm_lodShape2"
-//	replacemodel "/reference/spy_reference_rightArmShape" "/reference/spy_reference_rightArm_lodShape2"
-//	replacemodel "/reference/spy_reference_leftLegShape" "/reference/spy_reference_leftLeg_lodShape2"
-//	replacemodel "/reference/spy_reference_rightLegShape" "/reference/spy_reference_rightLeg_lodShape2"
+	replacemodel "/reference/spy_reference_torsoShape.smd" "/reference/LOD/spy_lod2_torsoShape.smd"
+//	replacemodel "/reference/spy_reference_headShape.smd" "/reference/spy_reference_head_lodShape2.smd"
+//	replacemodel "/reference/spy_reference_leftArmShape.smd" "/reference/spy_reference_leftArm_lodShape2.smd"
+//	replacemodel "/reference/spy_reference_rightArmShape.smd" "/reference/spy_reference_rightArm_lodShape2.smd"
+//	replacemodel "/reference/spy_reference_leftLegShape.smd" "/reference/spy_reference_leftLeg_lodShape2.smd"
+//	replacemodel "/reference/spy_reference_rightLegShape.smd" "/reference/spy_reference_rightLeg_lodShape2.smd"
 }
 $lod 35 {
-	replacemodel "/reference/spy_reference_torsoShape" "/reference/LOD/spy_lod3_torsoShape"
-//	replacemodel "/reference/spy_reference_headShape" "/reference/spy_reference_head_lodShape3"
-//	replacemodel "/reference/spy_reference_leftArmShape" "/reference/spy_reference_leftArm_lodShape3"
-//	replacemodel "/reference/spy_reference_rightArmShape" "/reference/spy_reference_rightArm_lodShape3"
-//	replacemodel "/reference/spy_reference_leftLegShape" "/reference/spy_reference_leftLeg_lodShape3"
-//	replacemodel "/reference/spy_reference_rightLegShape" "/reference/spy_reference_rightLeg_lodShape3"
+	replacemodel "/reference/spy_reference_torsoShape.smd" "/reference/LOD/spy_lod3_torsoShape.smd"
+//	replacemodel "/reference/spy_reference_headShape.smd" "/reference/spy_reference_head_lodShape3.smd"
+//	replacemodel "/reference/spy_reference_leftArmShape.smd" "/reference/spy_reference_leftArm_lodShape3.smd"
+//	replacemodel "/reference/spy_reference_rightArmShape.smd" "/reference/spy_reference_rightArm_lodShape3.smd"
+//	replacemodel "/reference/spy_reference_leftLegShape.smd" "/reference/spy_reference_leftLeg_lodShape3.smd"
+//	replacemodel "/reference/spy_reference_rightLegShape.smd" "/reference/spy_reference_rightLeg_lodShape3.smd"
 
 	bonetreecollapse "ffSkel_lefthand"
 	bonetreecollapse "ffSkel_righthand"
@@ -70,12 +70,12 @@ $lod 35 {
 	replacebone "ffSkel_Spine" "ffSkel_spine2"
 }
 $lod 50 {
-	replacemodel "/reference/spy_reference_torsoShape" "/reference/LOD/spy_lod4_torsoShape"
-//	replacemodel "/reference/spy_reference_headShape" "/reference/spy_reference_head_lodShape4"
-//	replacemodel "/reference/spy_reference_leftArmShape" "/reference/spy_reference_leftArm_lodShape4"
-//	replacemodel "/reference/spy_reference_rightArmShape" "/reference/spy_reference_rightArm_lodShape4"
-//	replacemodel "/reference/spy_reference_leftLegShape" "/reference/spy_reference_leftLeg_lodShape4"
-//	replacemodel "/reference/spy_reference_rightLegShape" "/reference/spy_reference_rightLeg_lodShape4"
+	replacemodel "/reference/spy_reference_torsoShape.smd" "/reference/LOD/spy_lod4_torsoShape.smd"
+//	replacemodel "/reference/spy_reference_headShape.smd" "/reference/spy_reference_head_lodShape4.smd"
+//	replacemodel "/reference/spy_reference_leftArmShape.smd" "/reference/spy_reference_leftArm_lodShape4.smd"
+//	replacemodel "/reference/spy_reference_rightArmShape.smd" "/reference/spy_reference_rightArm_lodShape4.smd"
+//	replacemodel "/reference/spy_reference_leftLegShape.smd" "/reference/spy_reference_leftLeg_lodShape4.smd"
+//	replacemodel "/reference/spy_reference_rightLegShape.smd" "/reference/spy_reference_rightLeg_lodShape4.smd"
 
 	bonetreecollapse "ffSkel_neck"
 	bonetreecollapse "ffSkel_leftForeArm"
@@ -92,12 +92,12 @@ $lod 50 {
 
 $shadowlod
 {
-	replacemodel "/reference/spy_reference_torsoShape" "/reference/LOD/spy_lod4_torsoShape"
-	//replacemodel "/reference/spy_reference_headShape" "/reference/spy_reference_head_lodShape5"
-	//replacemodel "/reference/spy_reference_leftArmShape" "/reference/spy_reference_leftArm_lodShape5"
-	//replacemodel "/reference/spy_reference_rightArmShape" "/reference/spy_reference_rightArm_lodShape5"
-	//replacemodel "/reference/spy_reference_leftLegShape" "/reference/spy_reference_leftLeg_lodShape5"
-	//replacemodel "/reference/spy_reference_rightLegShape" "/reference/spy_reference_rightLeg_lodShape5"
+	replacemodel "/reference/spy_reference_torsoShape.smd" "/reference/LOD/spy_lod4_torsoShape.smd"
+	//replacemodel "/reference/spy_reference_headShape.smd" "/reference/spy_reference_head_lodShape5.smd"
+	//replacemodel "/reference/spy_reference_leftArmShape.smd" "/reference/spy_reference_leftArm_lodShape5.smd"
+	//replacemodel "/reference/spy_reference_rightArmShape.smd" "/reference/spy_reference_rightArm_lodShape5.smd"
+	//replacemodel "/reference/spy_reference_leftLegShape.smd" "/reference/spy_reference_leftLeg_lodShape5.smd"
+	//replacemodel "/reference/spy_reference_rightLegShape.smd" "/reference/spy_reference_rightLeg_lodShape5.smd"
 }
 
 $attachment "attach_head" "ffSkel_Heads" 0 0 0 rotate 0 0 0
@@ -172,10 +172,10 @@ $hbox 1 "ffSkel_Necks"	    -4.50   -1.50   -3.00     0.50    4.50    3.00
 $ikchain rfoot ffSkel_RightFoots Z 0 knee 0.707 -0.707 0
 $ikchain lfoot ffSkel_LeftFoots Z 0 knee 0.707 -0.707 0
 
-$sequence ragdoll "/reference/spy_reference_torsoshape" ACT_DIERAGDOLL 1 fps 1
+$sequence ragdoll "/reference/spy_reference_torsoshape.smd" ACT_DIERAGDOLL 1
 $bonemerge ffSkel_att_righthand
 
-$collisionjoints "/reference/spy_reference_phy" {
+$collisionjoints "/reference/spy_reference_phy.smd" {
 	$mass 90.0
 	$inertia 10.00
 	$damping 0.01
