@@ -128,13 +128,6 @@ $attachment "helmet_attachment" "ffSkel_Heads" 2.66 -1.60 -0.00 rotate 0.00 -82.
 //$attachment "anim_attachment_LH" "ValveBiped.Anim_Attachment_LH" -0.00 -0.00 0.00 rotate -90.00 -90.00 0.00
 $attachment "anim_attachment_head" "ffSkel_Heads" -0.00 0.00 0.00 rotate -90.00 -90.00 0.00
 $includemodel "player/ff_player_shared.mdl"
-//$includemodel "player/cs_player_shared.mdl"
-//$includemodel "player/ak_anims_t.mdl"
-//$includemodel "barney_animations.mdl"
-//$includemodel "/humans/male_shared.mdl"
-//$includemodel "/hl2dm/male_shared.mdl"
-//$includemodel "barney_postures.mdl"
-//$includemodel "barney_gestures.mdl"
 $surfaceprop "flesh"
 
 $bbox -16 -16 0 16 16 72 
@@ -172,7 +165,7 @@ $hbox 1 "ffSkel_Necks"	-4.00   -2.50   -3.00     0.00    4.50    3.00
 $ikchain rfoot ffSkel_RightFoots Z 0 knee 0.707 -0.707 0
 $ikchain lfoot ffSkel_LeftFoots Z 0 knee 0.707 -0.707 0
 
-$sequence ragdoll "/reference/ragdoll" ACT_DIERAGDOLL 1 fps 30.00
+$sequence ragdoll "/reference/pyro_reference_torsoshape.smd" ACT_DIERAGDOLL 1 fps 1
 $bonemerge ffSkel_att_righthand
 
 $collisionjoints "/reference/pyro_reference_phy.smd" {

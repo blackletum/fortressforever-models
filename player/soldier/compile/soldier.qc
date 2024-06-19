@@ -1,26 +1,26 @@
 $cd ".."
 $modelname "player/soldier/soldier.mdl"
-//$model studio "/reference/soldier_reference.smd"
+//$model studio "/reference/soldier_reference"
 
-$model studio "/reference/soldier_reference_torsoShape.smd"
+$model studio "/reference/soldier_reference_torsoShape"
 $bodygroup head {
-studio "/reference/soldier_reference_headShape.smd"
+studio "/reference/soldier_reference_headShape"
 blank
 }
 $bodygroup leftArm {
-studio "/reference/soldier_reference_leftArmShape.smd"
+studio "/reference/soldier_reference_leftArmShape"
 blank
 }
 $bodygroup leftLeg {
-studio "/reference/soldier_reference_leftLegShape.smd"
+studio "/reference/soldier_reference_leftLegShape"
 blank
 }
 $bodygroup rightArm {
-studio "/reference/soldier_reference_rightArmShape.smd"
+studio "/reference/soldier_reference_rightArmShape"
 blank
 }
 $bodygroup rightLeg {
-studio "/reference/soldier_reference_rightLegShape.smd"
+studio "/reference/soldier_reference_rightLegShape"
 blank
 }
 $texturegroup skinfamilies {
@@ -31,29 +31,29 @@ $texturegroup skinfamilies {
 }
 
 $lod 10 {
-//	replacemodel "/reference/soldier_reference_torsoShape.smd" "/reference/soldier_reference_torso_lodShape1.smd"
-//	replacemodel "/reference/soldier_reference_headShape.smd" "/reference/soldier_reference_head_lodShape1.smd"
-//	replacemodel "/reference/soldier_reference_leftArmShape.smd" "/reference/soldier_reference_leftArm_lodShape1.smd"
-//	replacemodel "/reference/soldier_reference_rightArmShape.smd" "/reference/soldier_reference_rightArm_lodShape1.smd"
-//	replacemodel "/reference/soldier_reference_leftLegShape.smd" "/reference/soldier_reference_leftLeg_lodShape1.smd"
-//	replacemodel "/reference/soldier_reference_rightLegShape.smd" "/reference/soldier_reference_rightLeg_lodShape1.smd"
+//	replacemodel "/reference/soldier_reference_torsoShape" "/reference/soldier_reference_torso_lodShape1"
+//	replacemodel "/reference/soldier_reference_headShape" "/reference/soldier_reference_head_lodShape1"
+//	replacemodel "/reference/soldier_reference_leftArmShape" "/reference/soldier_reference_leftArm_lodShape1"
+//	replacemodel "/reference/soldier_reference_rightArmShape" "/reference/soldier_reference_rightArm_lodShape1"
+//	replacemodel "/reference/soldier_reference_leftLegShape" "/reference/soldier_reference_leftLeg_lodShape1"
+//	replacemodel "/reference/soldier_reference_rightLegShape" "/reference/soldier_reference_rightLeg_lodShape1"
 }
 
 $lod 20 {
-//	replacemodel "/reference/soldier_reference_torsoShape.smd" "/reference/soldier_reference_torso_lodShape2.smd"
-//	replacemodel "/reference/soldier_reference_headShape.smd" "/reference/soldier_reference_head_lodShape2.smd"
-//	replacemodel "/reference/soldier_reference_leftArmShape.smd" "/reference/soldier_reference_leftArm_lodShape2.smd"
-//	replacemodel "/reference/soldier_reference_rightArmShape.smd" "/reference/soldier_reference_rightArm_lodShape2.smd"
-//	replacemodel "/reference/soldier_reference_leftLegShape.smd" "/reference/soldier_reference_leftLeg_lodShape2.smd"
-//	replacemodel "/reference/soldier_reference_rightLegShape.smd" "/reference/soldier_reference_rightLeg_lodShape2.smd"
+//	replacemodel "/reference/soldier_reference_torsoShape" "/reference/soldier_reference_torso_lodShape2"
+//	replacemodel "/reference/soldier_reference_headShape" "/reference/soldier_reference_head_lodShape2"
+//	replacemodel "/reference/soldier_reference_leftArmShape" "/reference/soldier_reference_leftArm_lodShape2"
+//	replacemodel "/reference/soldier_reference_rightArmShape" "/reference/soldier_reference_rightArm_lodShape2"
+//	replacemodel "/reference/soldier_reference_leftLegShape" "/reference/soldier_reference_leftLeg_lodShape2"
+//	replacemodel "/reference/soldier_reference_rightLegShape" "/reference/soldier_reference_rightLeg_lodShape2"
 }
 $lod 35 {
-//	replacemodel "/reference/soldier_reference_torsoShape.smd" "/reference/soldier_reference_torso_lodShape3.smd"
-//	replacemodel "/reference/soldier_reference_headShape.smd" "/reference/soldier_reference_head_lodShape3.smd"
-//	replacemodel "/reference/soldier_reference_leftArmShape.smd" "/reference/soldier_reference_leftArm_lodShape3.smd"
-//	replacemodel "/reference/soldier_reference_rightArmShape.smd" "/reference/soldier_reference_rightArm_lodShape3.smd"
-//	replacemodel "/reference/soldier_reference_leftLegShape.smd" "/reference/soldier_reference_leftLeg_lodShape3.smd"
-//	replacemodel "/reference/soldier_reference_rightLegShape.smd" "/reference/soldier_reference_rightLeg_lodShape3.smd"
+//	replacemodel "/reference/soldier_reference_torsoShape" "/reference/soldier_reference_torso_lodShape3"
+//	replacemodel "/reference/soldier_reference_headShape" "/reference/soldier_reference_head_lodShape3"
+//	replacemodel "/reference/soldier_reference_leftArmShape" "/reference/soldier_reference_leftArm_lodShape3"
+//	replacemodel "/reference/soldier_reference_rightArmShape" "/reference/soldier_reference_rightArm_lodShape3"
+//	replacemodel "/reference/soldier_reference_leftLegShape" "/reference/soldier_reference_leftLeg_lodShape3"
+//	replacemodel "/reference/soldier_reference_rightLegShape" "/reference/soldier_reference_rightLeg_lodShape3"
 
 	bonetreecollapse "ffSkel_lefthand"
 	bonetreecollapse "ffSkel_righthand"
@@ -70,12 +70,12 @@ $lod 35 {
 	replacebone "ffSkel_Spine" "ffSkale_spine2"
 }
 $lod 50 {
-//	replacemodel "/reference/soldier_reference_torsoShape.smd" "/reference/soldier_reference_torso_lodShape4.smd"
-//	replacemodel "/reference/soldier_reference_headShape.smd" "/reference/soldier_reference_head_lodShape4.smd"
-//	replacemodel "/reference/soldier_reference_leftArmShape.smd" "/reference/soldier_reference_leftArm_lodShape4.smd"
-//	replacemodel "/reference/soldier_reference_rightArmShape.smd" "/reference/soldier_reference_rightArm_lodShape4.smd"
-//	replacemodel "/reference/soldier_reference_leftLegShape.smd" "/reference/soldier_reference_leftLeg_lodShape4.smd"
-//	replacemodel "/reference/soldier_reference_rightLegShape.smd" "/reference/soldier_reference_rightLeg_lodShape4.smd"
+//	replacemodel "/reference/soldier_reference_torsoShape" "/reference/soldier_reference_torso_lodShape4"
+//	replacemodel "/reference/soldier_reference_headShape" "/reference/soldier_reference_head_lodShape4"
+//	replacemodel "/reference/soldier_reference_leftArmShape" "/reference/soldier_reference_leftArm_lodShape4"
+//	replacemodel "/reference/soldier_reference_rightArmShape" "/reference/soldier_reference_rightArm_lodShape4"
+//	replacemodel "/reference/soldier_reference_leftLegShape" "/reference/soldier_reference_leftLeg_lodShape4"
+//	replacemodel "/reference/soldier_reference_rightLegShape" "/reference/soldier_reference_rightLeg_lodShape4"
 
 	bonetreecollapse "ffSkel_necks"
 	bonetreecollapse "ffSkel_leftForeArm"
@@ -90,12 +90,12 @@ $lod 50 {
 	replacebone "ffSkel_Spine" "ffSkel_spine2"
 }
 $lod 70 {
-//	replacemodel "/reference/soldier_reference_torsoShape.smd" "/reference/soldier_reference_torso_lodShape5.smd"
-//	replacemodel "/reference/soldier_reference_headShape.smd" "/reference/soldier_reference_head_lodShape5.smd"
-//	replacemodel "/reference/soldier_reference_leftArmShape.smd" "/reference/soldier_reference_leftArm_lodShape5.smd"
-//	replacemodel "/reference/soldier_reference_rightArmShape.smd" "/reference/soldier_reference_rightArm_lodShape5.smd"
-//	replacemodel "/reference/soldier_reference_leftLegShape.smd" "/reference/soldier_reference_leftLeg_lodShape5.smd"
-//	replacemodel "/reference/soldier_reference_rightLegShape.smd" "/reference/soldier_reference_rightLeg_lodShape5.smd"
+//	replacemodel "/reference/soldier_reference_torsoShape" "/reference/soldier_reference_torso_lodShape5"
+//	replacemodel "/reference/soldier_reference_headShape" "/reference/soldier_reference_head_lodShape5"
+//	replacemodel "/reference/soldier_reference_leftArmShape" "/reference/soldier_reference_leftArm_lodShape5"
+//	replacemodel "/reference/soldier_reference_rightArmShape" "/reference/soldier_reference_rightArm_lodShape5"
+//	replacemodel "/reference/soldier_reference_leftLegShape" "/reference/soldier_reference_leftLeg_lodShape5"
+//	replacemodel "/reference/soldier_reference_rightLegShape" "/reference/soldier_reference_rightLeg_lodShape5"
 
 	bonetreecollapse "ffSkel_Necks"
 	bonetreecollapse "ffSkel_leftForeArm"
@@ -112,12 +112,12 @@ $lod 70 {
 
 /* $shadowlod
 {
-	//replacemodel "/reference/soldier_reference_torsoShape.smd" "/reference/soldier_reference_torso_lodShape5.smd"
-	//replacemodel "/reference/soldier_reference_headShape.smd" "/reference/soldier_reference_head_lodShape5.smd"
-	//replacemodel "/reference/soldier_reference_leftArmShape.smd" "/reference/soldier_reference_leftArm_lodShape5.smd"
-	//replacemodel "/reference/soldier_reference_rightArmShape.smd" "/reference/soldier_reference_rightArm_lodShape5.smd"
-	//replacemodel "/reference/soldier_reference_leftLegShape.smd" "/reference/soldier_reference_leftLeg_lodShape5.smd"
-	//replacemodel "/reference/soldier_reference_rightLegShape.smd" "/reference/soldier_reference_rightLeg_lodShape5.smd"
+	//replacemodel "/reference/soldier_reference_torsoShape" "/reference/soldier_reference_torso_lodShape5"
+	//replacemodel "/reference/soldier_reference_headShape" "/reference/soldier_reference_head_lodShape5"
+	//replacemodel "/reference/soldier_reference_leftArmShape" "/reference/soldier_reference_leftArm_lodShape5"
+	//replacemodel "/reference/soldier_reference_rightArmShape" "/reference/soldier_reference_rightArm_lodShape5"
+	//replacemodel "/reference/soldier_reference_leftLegShape" "/reference/soldier_reference_leftLeg_lodShape5"
+	//replacemodel "/reference/soldier_reference_rightLegShape" "/reference/soldier_reference_rightLeg_lodShape5"
 }	 
 */
 $attachment "attach_head" "ffSkel_Heads" 0 0 0 rotate 0 0 0
@@ -150,17 +150,7 @@ $attachment "eyes" "ffSkel_heads" 5.00 0.00 0.05 rotate 0 -20 -90
 $attachment "mouth" "ffSkel_heads" 0.30 -5.70 -0.00 rotate 0.00 -80.00 -90.00
 $attachment "chest" "ffSkel_Spine2" 5.00 4.00 -0.00 rotate -0.00 90.00 90.00
 $attachment "helmet_attachment" "ffSkel_heads" 2.66 -1.60 -0.00 rotate 0.00 -82.95 -90.00
-
 $includemodel "player/ff_player_shared.mdl"
-/*
-$includemodel "player/cs_player_shared.mdl"
-$includemodel "player/ak_anims_t.mdl"
-$includemodel "barney_animations.mdl"
-$includemodel "/humans/male_shared.mdl"
-$includemodel "/hl2dm/male_shared.mdl"
-$includemodel "barney_postures.mdl"
-$includemodel "barney_gestures.mdl"
-*/
 $surfaceprop "flesh"
 
 $bbox -16 -16 0 16 16 72 
@@ -199,7 +189,7 @@ $ikchain lfoot ffSkel_LeftFoots Z 0 knee 0.707 -0.707 0
 $sequence ragdoll "/reference/ragdoll" ACT_DIERAGDOLL 1 fps 30.00
 $bonemerge ffSkel_att_righthand
 
-$collisionjoints "/reference/soldier_reference_phy.smd" {
+$collisionjoints "/reference/soldier_reference_phy" {
 	$mass 90.0
  	$inertia 2.00
  	$damping 0.01

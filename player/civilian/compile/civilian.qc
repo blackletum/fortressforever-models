@@ -1,26 +1,26 @@
 $cd ".."
 $modelname "player/civilian/civilian.mdl"
-//$model studio "/reference/civilian_reference.smd"
+//$model studio "/reference/civilian_reference"
 
-$model studio "/reference/civilian_reference_torsoShape.smd"
+$model studio "/reference/civilian_reference_torsoShape"
 $bodygroup head {
-studio "/reference/civilian_reference_headShape.smd"
+studio "/reference/civilian_reference_headShape"
 blank
 }
 $bodygroup leftArm {
-studio "/reference/civilian_reference_leftArmShape.smd"
+studio "/reference/civilian_reference_leftArmShape"
 blank
 }
 $bodygroup leftLeg {
-studio "/reference/civilian_reference_leftLegShape.smd"
+studio "/reference/civilian_reference_leftLegShape"
 blank
 }
 $bodygroup rightArm {
-studio "/reference/civilian_reference_rightArmShape.smd"
+studio "/reference/civilian_reference_rightArmShape"
 blank
 }
 $bodygroup rightLeg {
-studio "/reference/civilian_reference_rightLegShape.smd"
+studio "/reference/civilian_reference_rightLegShape"
 blank
 }
 $texturegroup skinfamilies {
@@ -32,28 +32,28 @@ $texturegroup skinfamilies {
 }
 
 $lod 10 {
-	replacemodel "/reference/civilian_reference_torsoShape.smd" "/reference/LOD/civilian_lod1_torsoShape.smd"
-//	replacemodel "/reference/civilian_reference_headShape.smd" "/reference/civilian_reference_head_lodShape1.smd"
-//	replacemodel "/reference/civilian_reference_leftArmShape.smd" "/reference/civilian_reference_leftArm_lodShape1.smd"
-//	replacemodel "/reference/civilian_reference_rightArmShape.smd" "/reference/civilian_reference_rightArm_lodShape1.smd"
-//	replacemodel "/reference/civilian_reference_leftLegShape.smd" "/reference/civilian_reference_leftLeg_lodShape1.smd"
-//	replacemodel "/reference/civilian_reference_rightLegShape.smd" "/reference/civilian_reference_rightLeg_lodShape1.smd"
+	replacemodel "/reference/civilian_reference_torsoShape" "/reference/LOD/civilian_lod1_torsoShape"
+//	replacemodel "/reference/civilian_reference_headShape" "/reference/civilian_reference_head_lodShape1"
+//	replacemodel "/reference/civilian_reference_leftArmShape" "/reference/civilian_reference_leftArm_lodShape1"
+//	replacemodel "/reference/civilian_reference_rightArmShape" "/reference/civilian_reference_rightArm_lodShape1"
+//	replacemodel "/reference/civilian_reference_leftLegShape" "/reference/civilian_reference_leftLeg_lodShape1"
+//	replacemodel "/reference/civilian_reference_rightLegShape" "/reference/civilian_reference_rightLeg_lodShape1"
 }
 $lod 20 {
-	replacemodel "/reference/civilian_reference_torsoShape.smd" "/reference/LOD/civilian_lod2_torsoShape.smd"
-//	replacemodel "/reference/civilian_reference_headShape.smd" "/reference/civilian_reference_head_lodShape2.smd"
-//	replacemodel "/reference/civilian_reference_leftArmShape.smd" "/reference/civilian_reference_leftArm_lodShape2.smd"
-//	replacemodel "/reference/civilian_reference_rightArmShape.smd" "/reference/civilian_reference_rightArm_lodShape2.smd"
-//	replacemodel "/reference/civilian_reference_leftLegShape.smd" "/reference/civilian_reference_leftLeg_lodShape2.smd"
-//	replacemodel "/reference/civilian_reference_rightLegShape.smd" "/reference/civilian_reference_rightLeg_lodShape2.smd"
+	replacemodel "/reference/civilian_reference_torsoShape" "/reference/LOD/civilian_lod2_torsoShape"
+//	replacemodel "/reference/civilian_reference_headShape" "/reference/civilian_reference_head_lodShape2"
+//	replacemodel "/reference/civilian_reference_leftArmShape" "/reference/civilian_reference_leftArm_lodShape2"
+//	replacemodel "/reference/civilian_reference_rightArmShape" "/reference/civilian_reference_rightArm_lodShape2"
+//	replacemodel "/reference/civilian_reference_leftLegShape" "/reference/civilian_reference_leftLeg_lodShape2"
+//	replacemodel "/reference/civilian_reference_rightLegShape" "/reference/civilian_reference_rightLeg_lodShape2"
 }
 $lod 40 {
-	replacemodel "/reference/civilian_reference_torsoShape.smd" "/reference/LOD/civilian_lod3_torsoShape.smd"
-//	replacemodel "/reference/civilian_reference_headShape.smd" "/reference/civilian_reference_head_lodShape3.smd"
-//	replacemodel "/reference/civilian_reference_leftArmShape.smd" "/reference/civilian_reference_leftArm_lodShape3.smd"
-//	replacemodel "/reference/civilian_reference_rightArmShape.smd" "/reference/civilian_reference_rightArm_lodShape3.smd"
-//	replacemodel "/reference/civilian_reference_leftLegShape.smd" "/reference/civilian_reference_leftLeg_lodShape3.smd"
-//	replacemodel "/reference/civilian_reference_rightLegShape.smd" "/reference/civilian_reference_rightLeg_lodShape3.smd"
+	replacemodel "/reference/civilian_reference_torsoShape" "/reference/LOD/civilian_lod3_torsoShape"
+//	replacemodel "/reference/civilian_reference_headShape" "/reference/civilian_reference_head_lodShape3"
+//	replacemodel "/reference/civilian_reference_leftArmShape" "/reference/civilian_reference_leftArm_lodShape3"
+//	replacemodel "/reference/civilian_reference_rightArmShape" "/reference/civilian_reference_rightArm_lodShape3"
+//	replacemodel "/reference/civilian_reference_leftLegShape" "/reference/civilian_reference_leftLeg_lodShape3"
+//	replacemodel "/reference/civilian_reference_rightLegShape" "/reference/civilian_reference_rightLeg_lodShape3"
 
 	bonetreecollapse "ffSkel_lefthand"
 	bonetreecollapse "ffSkel_righthand"
@@ -70,12 +70,12 @@ $lod 40 {
 	replacebone "ffSkel_Spine" "ffSkel_spine2"
 }
 $lod 60 {
-	replacemodel "/reference/civilian_reference_torsoShape.smd" "/reference/LOD/civilian_lod4_torsoShape.smd"
-//	replacemodel "/reference/civilian_reference_headShape.smd" "/reference/civilian_reference_head_lodShape4.smd"
-//	replacemodel "/reference/civilian_reference_leftArmShape.smd" "/reference/civilian_reference_leftArm_lodShape4.smd"
-//	replacemodel "/reference/civilian_reference_rightArmShape.smd" "/reference/civilian_reference_rightArm_lodShape4.smd"
-//	replacemodel "/reference/civilian_reference_leftLegShape.smd" "/reference/civilian_reference_leftLeg_lodShape4.smd"
-//	replacemodel "/reference/civilian_reference_rightLegShape.smd" "/reference/civilian_reference_rightLeg_lodShape4.smd"
+	replacemodel "/reference/civilian_reference_torsoShape" "/reference/LOD/civilian_lod4_torsoShape"
+//	replacemodel "/reference/civilian_reference_headShape" "/reference/civilian_reference_head_lodShape4"
+//	replacemodel "/reference/civilian_reference_leftArmShape" "/reference/civilian_reference_leftArm_lodShape4"
+//	replacemodel "/reference/civilian_reference_rightArmShape" "/reference/civilian_reference_rightArm_lodShape4"
+//	replacemodel "/reference/civilian_reference_leftLegShape" "/reference/civilian_reference_leftLeg_lodShape4"
+//	replacemodel "/reference/civilian_reference_rightLegShape" "/reference/civilian_reference_rightLeg_lodShape4"
 
 	bonetreecollapse "ffSkel_neck"
 	bonetreecollapse "ffSkel_leftForeArm"
@@ -92,12 +92,12 @@ $lod 60 {
 
 $shadowlod
 {
-	replacemodel "/reference/civilian_reference_torsoShape.smd" "/reference/LOD/civilian_lod4_torsoShape.smd"
-	//replacemodel "/reference/civilian_reference_headShape.smd" "/reference/civilian_reference_head_lodShape5.smd"
-	//replacemodel "/reference/civilian_reference_leftArmShape.smd" "/reference/civilian_reference_leftArm_lodShape5.smd"
-	//replacemodel "/reference/civilian_reference_rightArmShape.smd" "/reference/civilian_reference_rightArm_lodShape5.smd"
-	//replacemodel "/reference/civilian_reference_leftLegShape.smd" "/reference/civilian_reference_leftLeg_lodShape5.smd"
-	//replacemodel "/reference/civilian_reference_rightLegShape.smd" "/reference/civilian_reference_rightLeg_lodShape5.smd"
+	replacemodel "/reference/civilian_reference_torsoShape" "/reference/LOD/civilian_lod4_torsoShape"
+	//replacemodel "/reference/civilian_reference_headShape" "/reference/civilian_reference_head_lodShape5"
+	//replacemodel "/reference/civilian_reference_leftArmShape" "/reference/civilian_reference_leftArm_lodShape5"
+	//replacemodel "/reference/civilian_reference_rightArmShape" "/reference/civilian_reference_rightArm_lodShape5"
+	//replacemodel "/reference/civilian_reference_leftLegShape" "/reference/civilian_reference_leftLeg_lodShape5"
+	//replacemodel "/reference/civilian_reference_rightLegShape" "/reference/civilian_reference_rightLeg_lodShape5"
 }
 
 $attachment "attach_head" "ffSkel_Heads" 0 0 0 rotate 0 0 0
@@ -136,13 +136,6 @@ $attachment "helmet_attachment" "ffSkel_Heads" 2.66 -1.60 -0.00 rotate 0.00 -82.
 //$attachment "anim_attachment_LH" "ValveBiped.Anim_Attachment_LH" -0.00 -0.00 0.00 rotate -90.00 -90.00 0.00
 $attachment "anim_attachment_head" "ffSkel_Heads" -0.00 0.00 0.00 rotate -90.00 -90.00 0.00
 $includemodel "player/ff_player_shared.mdl"
-//$includemodel "player/cs_player_shared.mdl"
-//$includemodel "player/ak_anims_t.mdl"
-//$includemodel "barney_animations.mdl"
-//$includemodel "/humans/male_shared.mdl"
-//$includemodel "/hl2dm/male_shared.mdl"
-//$includemodel "barney_postures.mdl"
-//$includemodel "barney_gestures.mdl"
 $surfaceprop "flesh"
 
 $bbox -16 -16 0 16 16 72 
@@ -180,10 +173,10 @@ $hbox 1 "ffSkel_Necks"	    -4.00   -2.50   -3.00     0.00    4.50    3.00
 $ikchain rfoot ffSkel_RightFoots Z 0 knee 0.707 -0.707 0
 $ikchain lfoot ffSkel_LeftFoots Z 0 knee 0.707 -0.707 0
 
-$sequence ragdoll "/reference/ragdoll" ACT_DIERAGDOLL 1 fps 30.00
+$sequence ragdoll "/reference/civilian_reference_torsoshape" ACT_DIERAGDOLL 1 fps 1
 $bonemerge ffSkel_att_righthand
 
-$collisionjoints "/reference/civilian_reference_phy.smd" {
+$collisionjoints "/reference/civilian_reference_phy" {
 	$mass 90.0
  	$inertia 10.00
  	$damping 0.01

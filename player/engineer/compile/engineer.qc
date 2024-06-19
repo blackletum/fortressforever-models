@@ -1,26 +1,26 @@
 $cd ".."
 $modelname "player/engineer/engineer.mdl"
-//$model studio "/reference/engineer_reference.smd"
+//$model studio "/reference/engineer_reference"
 
-$model studio "/reference/engineer_reference_torsoShape_new.smd"
+$model studio "/reference/engineer_reference_torsoShape_new"
 $bodygroup head {
-studio "/reference/engineer_reference_headShape_new.smd"
+studio "/reference/engineer_reference_headShape_new"
 blank
 }
 $bodygroup leftArm {
-studio "/reference/engineer_reference_leftArmShape_new.smd"
+studio "/reference/engineer_reference_leftArmShape_new"
 blank
 }
 $bodygroup leftLeg {
-studio "/reference/engineer_reference_leftLegShape_new.smd"
+studio "/reference/engineer_reference_leftLegShape_new"
 blank
 }
 $bodygroup rightArm {
-studio "/reference/engineer_reference_rightArmShape_new.smd"
+studio "/reference/engineer_reference_rightArmShape_new"
 blank
 }
 $bodygroup rightLeg {
-studio "/reference/engineer_reference_rightLegShape_new.smd"
+studio "/reference/engineer_reference_rightLegShape_new"
 blank
 }
 $texturegroup skinfamilies {
@@ -31,20 +31,20 @@ $texturegroup skinfamilies {
 }
 
 $lod 10 {
-	replacemodel "/reference/engineer_reference_torsoShape_new.smd" "/reference/LOD/engineer_reference_torsoShape_lod1.smd"
-	replacemodel "/reference/engineer_reference_headShape_new.smd" "/reference/LOD/engineer_reference_headShape_lod1.smd"
-	replacemodel "/reference/engineer_reference_leftArmShape_new.smd" "/reference/LOD/engineer_reference_leftArmShape_lod1.smd"
-	replacemodel "/reference/engineer_reference_rightArmShape_new.smd" "/reference/LOD/engineer_reference_rightArmShape_lod1.smd"
-	replacemodel "/reference/engineer_reference_leftLegShape_new.smd" "/reference/LOD/engineer_reference_leftLegShape_lod1.smd"
-	replacemodel "/reference/engineer_reference_rightLegShape_new.smd" "/reference/LOD/engineer_reference_rightLegShape_lod1.smd"
+	replacemodel "/reference/engineer_reference_torsoShape_new" "/reference/LOD/engineer_reference_torsoShape_lod1"
+	replacemodel "/reference/engineer_reference_headShape_new" "/reference/LOD/engineer_reference_headShape_lod1"
+	replacemodel "/reference/engineer_reference_leftArmShape_new" "/reference/LOD/engineer_reference_leftArmShape_lod1"
+	replacemodel "/reference/engineer_reference_rightArmShape_new" "/reference/LOD/engineer_reference_rightArmShape_lod1"
+	replacemodel "/reference/engineer_reference_leftLegShape_new" "/reference/LOD/engineer_reference_leftLegShape_lod1"
+	replacemodel "/reference/engineer_reference_rightLegShape_new" "/reference/LOD/engineer_reference_rightLegShape_lod1"
 }
 $lod 30 {
-	replacemodel "/reference/engineer_reference_torsoShape_new.smd" "/reference/LOD/engineer_reference_torsoShape_lod2.smd"
-	replacemodel "/reference/engineer_reference_headShape_new.smd" "/reference/LOD/engineer_reference_headShape_lod2.smd"
-	replacemodel "/reference/engineer_reference_leftArmShape_new.smd" "/reference/LOD/engineer_reference_leftArmShape_lod2.smd"
-	replacemodel "/reference/engineer_reference_rightArmShape_new.smd" "/reference/LOD/engineer_reference_rightArmShape_lod2.smd"
-	replacemodel "/reference/engineer_reference_leftLegShape_new.smd" "/reference/LOD/engineer_reference_leftLegShape_lod2.smd"
-	replacemodel "/reference/engineer_reference_rightLegShape_new.smd" "/reference/LOD/engineer_reference_rightLegShape_lod2.smd"
+	replacemodel "/reference/engineer_reference_torsoShape_new" "/reference/LOD/engineer_reference_torsoShape_lod2"
+	replacemodel "/reference/engineer_reference_headShape_new" "/reference/LOD/engineer_reference_headShape_lod2"
+	replacemodel "/reference/engineer_reference_leftArmShape_new" "/reference/LOD/engineer_reference_leftArmShape_lod2"
+	replacemodel "/reference/engineer_reference_rightArmShape_new" "/reference/LOD/engineer_reference_rightArmShape_lod2"
+	replacemodel "/reference/engineer_reference_leftLegShape_new" "/reference/LOD/engineer_reference_leftLegShape_lod2"
+	replacemodel "/reference/engineer_reference_rightLegShape_new" "/reference/LOD/engineer_reference_rightLegShape_lod2"
 
 	bonetreecollapse "ffSkel_neck"
 	bonetreecollapse "ffSkel_leftForeArm"
@@ -61,12 +61,12 @@ $lod 30 {
 
 $shadowlod
 {
-	replacemodel "/reference/engineer_reference_torsoShape_new.smd" "/reference/LOD/engineer_reference_torsoShape_lod2.smd"
-	replacemodel "/reference/engineer_reference_headShape_new.smd" "/reference/LOD/engineer_reference_headShape_lod2.smd"
-	replacemodel "/reference/engineer_reference_leftArmShape_new.smd" "/reference/LOD/engineer_reference_leftArmShape_lod2.smd"
-	replacemodel "/reference/engineer_reference_rightArmShape_new.smd" "/reference/LOD/engineer_reference_rightArmShape_lod2.smd"
-	replacemodel "/reference/engineer_reference_leftLegShape_new.smd" "/reference/LOD/engineer_reference_leftLegShape_lod2.smd"
-	replacemodel "/reference/engineer_reference_rightLegShape_new.smd" "/reference/LOD/engineer_reference_rightLegShape_lod2.smd"
+	replacemodel "/reference/engineer_reference_torsoShape_new" "/reference/LOD/engineer_reference_torsoShape_lod2"
+	replacemodel "/reference/engineer_reference_headShape_new" "/reference/LOD/engineer_reference_headShape_lod2"
+	replacemodel "/reference/engineer_reference_leftArmShape_new" "/reference/LOD/engineer_reference_leftArmShape_lod2"
+	replacemodel "/reference/engineer_reference_rightArmShape_new" "/reference/LOD/engineer_reference_rightArmShape_lod2"
+	replacemodel "/reference/engineer_reference_leftLegShape_new" "/reference/LOD/engineer_reference_leftLegShape_lod2"
+	replacemodel "/reference/engineer_reference_rightLegShape_new" "/reference/LOD/engineer_reference_rightLegShape_lod2"
 }
 
 $attachment "attach_head" "ffSkel_Heads" 0 0 0 rotate 0 0 0
@@ -105,15 +105,6 @@ $attachment "helmet_attachment" "ffSkel_Heads" 2.66 -1.60 -0.00 rotate 0.00 -82.
 //$attachment "anim_attachment_LH" "ValveBiped.Anim_Attachment_LH" -0.00 -0.00 0.00 rotate -90.00 -90.00 0.00
 $attachment "anim_attachment_head" "ffSkel_Heads" -0.00 0.00 0.00 rotate -90.00 -90.00 0.00
 $includemodel "player/ff_player_shared.mdl"
-/*
-$includemodel "player/cs_player_shared.mdl"
-$includemodel "player/ak_anims_t.mdl"
-$includemodel "barney_animations.mdl"
-$includemodel "/humans/male_shared.mdl"
-$includemodel "/hl2dm/male_shared.mdl"
-$includemodel "barney_postures.mdl"
-$includemodel "barney_gestures.mdl"
-*/
 $surfaceprop "flesh"
 
 $bbox -16 -16 0 16 16 72 
@@ -151,10 +142,10 @@ $hbox 0 "ffSkel_LeftFoots"	    -3.00   -3.00   -2.00     9.00    3.00    2.00
 $ikchain rfoot ffSkel_RightFoots Z 0 knee 0.707 -0.707 0
 $ikchain lfoot ffSkel_LeftFoots Z 0 knee 0.707 -0.707 0
 
-$sequence ragdoll "/reference/ragdoll" ACT_DIERAGDOLL 1 fps 30.00
+$sequence ragdoll "/reference/ragdoll" ACT_DIERAGDOLL 1 fps 1
 $bonemerge ffSkel_att_righthand
 
-$collisionjoints "/reference/engineer_reference_phy_new.smd" {
+$collisionjoints "/reference/engineer_reference_phy_new" {
 	$mass 90.0
  	$inertia 10.00
  	$damping 0.01
