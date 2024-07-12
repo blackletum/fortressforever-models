@@ -47,14 +47,14 @@ $lod 30 {
 	replacemodel "/reference/sniper_reference_leftLegShape.smd" "/reference/LOD/sniper_reference_leftLegShape_lod2.smd"
 	replacemodel "/reference/sniper_reference_rightLegShape.smd" "/reference/LOD/sniper_reference_rightLegShape_lod2.smd"
 
-	bonetreecollapse "ffSkel_neck"
+	bonetreecollapse "ffSkel_necks"
 	bonetreecollapse "ffSkel_leftForeArm"
 	bonetreecollapse "ffSkel_rightForeArm"
 	bonetreecollapse "ffSkel_leftLeg"
 	bonetreecollapse "ffSkel_rightLeg"
 
 	// simplify spine
-	replacebone "ffSkel_Neck" "ffSkel_Spine2"
+	replacebone "ffSkel_Necks" "ffSkel_Spine2"
 	replacebone "ffSkel_Spine3" "ffSkel_spine2"
 	replacebone "ffSkel_spine1" "ffSkel_spine"
 	replacebone "ffSkel_Spine" "ffSkel_spine2"
@@ -96,17 +96,17 @@ $attachment "ffAtt_flag" "ffSkel_Spine3" 5 3 0 rotate  0 0 0
  
 $cdmaterials "models/player/sniper/"
 
-$attachment "eyes" "ffSkel_Head" 5.00 0.00 0.05 rotate 0 -20 -90
-$attachment "mouth" "ffSkel_Head" 0.30 -5.70 -0.00 rotate 0.00 -80.00 -90.00
+$attachment "eyes" "ffSkel_Heads" 5.00 0.00 0.05 rotate 0 -20 -90
+$attachment "mouth" "ffSkel_Heads" 0.30 -5.70 -0.00 rotate 0.00 -80.00 -90.00
 $attachment "chest" "ffSkel_Spine2" 5.00 4.00 -0.00 rotate -0.00 90.00 90.00
-$attachment "helmet_attachment" "ffSkel_Head" 2.66 -1.60 -0.00 rotate 0.00 -82.95 -90.00
+$attachment "helmet_attachment" "ffSkel_Heads" 2.66 -1.60 -0.00 rotate 0.00 -82.95 -90.00
 //$attachment "faceplate_attachment" "ValveBiped.faceplate_attachment" 0.00 -0.00 0.00 rotate -90.00 -90.00 0.00
 //$attachment "forward" "ValveBiped.forward" 0.00 0.00 0.00 rotate 0.00 0.00 -0.00
 //$attachment "anim_attachment_RH" "ValveBiped.Anim_Attachment_RH" -0.00 -0.00 -0.00 rotate -90.00 -90.00 0.00
 //$attachment "anim_attachment_LH" "ValveBiped.Anim_Attachment_LH" -0.00 -0.00 0.00 rotate -90.00 -90.00 0.00
-$attachment "anim_attachment_head" "ffSkel_Head" -0.00 0.00 0.00 rotate -90.00 -90.00 0.00
+$attachment "anim_attachment_head" "ffSkel_Heads" -0.00 0.00 0.00 rotate -90.00 -90.00 0.00
 $includemodel "player/ff_player_shared.mdl"
-$surfaceprop "flesh"
+$surfaceprop flesh
 
 $bbox -16 -16 0 16 16 72 
 //$bbox -10 -18 0 26 18 72
@@ -141,7 +141,8 @@ $hbox 1 "ffSkel_Necks"	    -2.50   -2.00   -3.00     0.50    4.00    3.00
 $ikchain rfoot ffSkel_RightFoots Z 0 knee 0.707 -0.707 0
 $ikchain lfoot ffSkel_LeftFoots Z 0 knee 0.707 -0.707 0
 
-$sequence ragdoll "/reference/ragdoll.smd" ACT_DIERAGDOLL 1
+$sequence ragdoll "/reference/sniper_reference_torsoShape.smd" ACT_DIERAGDOLL 1
+//$sequence menu_pose "/reference/sniper_menu_pose.smd" ACT_MENUPOSE 1
 $bonemerge ffSkel_att_righthand
 
 $collisionjoints "/reference/sniper_reference_phy.smd" {
@@ -150,7 +151,7 @@ $collisionjoints "/reference/sniper_reference_phy.smd" {
  	$damping 0.01
  	$rotdamping 1.50
  	$rootbone "ffSkel_Hips"
-	$jointmerge "ffSkel_Hips" "ffSkel_ffSkel_Spine1"
+	$jointmerge "ffSkel_Hips" "ffSkel_Spine1"
 
 	$jointconstrain "ffSkel_spine2" x limit -48.00 48.00 0.00
 	$jointconstrain "ffSkel_spine2" y limit -25.00 25.00 0.00

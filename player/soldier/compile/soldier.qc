@@ -67,7 +67,7 @@ $lod 35 {
 	replacebone "ffSkel_Necks" "ffSkel_Spine2"
 	replacebone "ffSkel_Spine3" "ffSkel_spine2"
 	replacebone "ffSkel_spine1" "ffSkel_spine"
-	replacebone "ffSkel_Spine" "ffSkale_spine2"
+	replacebone "ffSkel_Spine" "ffSkel_spine2"
 }
 $lod 50 {
 //	replacemodel "/reference/soldier_reference_torsoShape.smd" "/reference/soldier_reference_torso_lodShape4.smd"
@@ -151,7 +151,7 @@ $attachment "mouth" "ffSkel_heads" 0.30 -5.70 -0.00 rotate 0.00 -80.00 -90.00
 $attachment "chest" "ffSkel_Spine2" 5.00 4.00 -0.00 rotate -0.00 90.00 90.00
 $attachment "helmet_attachment" "ffSkel_heads" 2.66 -1.60 -0.00 rotate 0.00 -82.95 -90.00
 $includemodel "player/ff_player_shared.mdl"
-$surfaceprop "flesh"
+$surfaceprop flesh
 
 $bbox -16 -16 0 16 16 72 
 //$bbox -10 -18 0 26 18 72
@@ -186,7 +186,8 @@ $hbox 7 "ffSkel_RightFoots"	    -2.00   -2.00   -1.50     8.00    3.00    2.50
 $ikchain rfoot ffSkel_RightFoots Z 0 knee 0.707 -0.707 0
 $ikchain lfoot ffSkel_LeftFoots Z 0 knee 0.707 -0.707 0
 
-$sequence ragdoll "/reference/ragdoll.smd" ACT_DIERAGDOLL 1
+$sequence ragdoll "/reference/soldier_reference_torsoShape.smd" ACT_DIERAGDOLL 1
+//$sequence menu_pose "/reference/soldier_menu_pose.smd" ACT_MENUPOSE 1
 $bonemerge ffSkel_att_righthand
 
 $collisionjoints "/reference/soldier_reference_phy.smd" {
@@ -195,7 +196,7 @@ $collisionjoints "/reference/soldier_reference_phy.smd" {
  	$damping 0.01
  	$rotdamping 4
  	$rootbone "ffSkel_Hips"
-	$jointmerge "ffSkel_Hips" "ffSkel_ffSkel_Spine1"
+	$jointmerge "ffSkel_Hips" "ffSkel_Spine1"
 
 	$jointconstrain "ffSkel_spine2" x limit -48.00 48.00 0.00
 	$jointconstrain "ffSkel_spine2" y limit -25.00 25.00 0.00

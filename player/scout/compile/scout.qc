@@ -135,7 +135,7 @@ $attachment "helmet_attachment" "ffSkel_head" 2.66 -1.60 -0.00 rotate 0.00 -82.9
 //$attachment "anim_attachment_LH" "ValveBiped.Anim_Attachment_LH" -0.00 -0.00 0.00 rotate -90.00 -90.00 0.00
 $attachment "anim_attachment_head" "ffSkel_head" -0.00 0.00 0.00 rotate -90.00 -90.00 0.00
 $includemodel "player/ff_player_shared.mdl"
-$surfaceprop "flesh"
+$surfaceprop flesh
 
 $bbox -16 -16 0 16 16 72 
 //$bbox -10 -18 0 26 18 72
@@ -199,6 +199,7 @@ $ikchain rfoot ffSkel_RightFoot Z 0 knee 0.707 -0.707 0
 $ikchain lfoot ffSkel_LeftFoot Z 0 knee 0.707 -0.707 0
 
 $sequence ragdoll "/reference/scout_reference_torsoshape.smd" ACT_DIERAGDOLL 1
+//$sequence menu_pose "/reference/scout_menu_pose.smd" ACT_MENUPOSE 1
 $bonemerge ffSkel_att_righthand
 
 $collisionjoints "/reference/scout_reference_phy.smd" {
@@ -207,7 +208,7 @@ $collisionjoints "/reference/scout_reference_phy.smd" {
  	$damping 0.01
  	$rotdamping 4
  	$rootbone "ffSkel_Hips"
-	$jointmerge "ffSkel_Hips" "ffSkel_ffSkel_Spine1"
+	$jointmerge "ffSkel_Hips" "ffSkel_Spine1"
 
 	$jointconstrain "ffSkel_spine2" x limit -48.00 48.00 0.00
 	$jointconstrain "ffSkel_spine2" y limit -25.00 25.00 0.00

@@ -100,7 +100,7 @@ $attachment "mouth" "ffSkel_head" 0.30 -5.70 -0.00 rotate 0.00 -80.00 -90.00
 $attachment "chest" "ffSkel_Spine2" 5.00 4.00 -0.00 rotate -0.00 90.00 90.00
 $attachment "helmet_attachment" "ffSkel_head" 2.66 -1.60 -0.00 rotate 0.00 -82.95 -90.00
 $includemodel "player/ff_player_shared.mdl"
-$surfaceprop "flesh"
+$surfaceprop flesh
 
 $bbox -16 -16 0 16 16 72 
 //$bbox -10 -18 0 26 18 72
@@ -167,6 +167,7 @@ $ikchain rfoot ffSkel_RightFoot Z 0 knee 0.707 -0.707 0
 $ikchain lfoot ffSkel_LeftFoot Z 0 knee 0.707 -0.707 0
 
 $sequence ragdoll "/reference/medic_reference_torsoshape.smd" ACT_DIERAGDOLL 1
+//$sequence menu_pose "/reference/medic_menu_pose.smd" ACT_MENUPOSE 1
 $bonemerge ffSkel_att_righthand
 
 $collisionjoints "/reference/medic_reference_phy.smd" {

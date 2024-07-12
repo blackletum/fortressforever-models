@@ -58,13 +58,13 @@ $lod 35 {
 	bonetreecollapse "ffSkel_lefthand"
 	bonetreecollapse "ffSkel_righthand"
 
-	bonetreecollapse "ffSkel_neck"
+	bonetreecollapse "ffSkel_necks"
 	bonetreecollapse "ffSkel_leftForeArm"
 	bonetreecollapse "ffSkel_rightForeArm"
 	bonetreecollapse "ffSkel_leftLeg"
 	bonetreecollapse "ffSkel_rightLeg"
 	// simplify spine
-	replacebone "ffSkel_Neck" "ffSkel_Spine2"
+	replacebone "ffSkel_Necks" "ffSkel_Spine2"
 	replacebone "ffSkel_Spine3" "ffSkel_spine2"
 	replacebone "ffSkel_spine1" "ffSkel_spine"
 	replacebone "ffSkel_Spine" "ffSkel_spine2"
@@ -77,14 +77,14 @@ $lod 50 {
 //	replacemodel "/reference/spy_reference_leftLegShape.smd" "/reference/spy_reference_leftLeg_lodShape4.smd"
 //	replacemodel "/reference/spy_reference_rightLegShape.smd" "/reference/spy_reference_rightLeg_lodShape4.smd"
 
-	bonetreecollapse "ffSkel_neck"
+	bonetreecollapse "ffSkel_necks"
 	bonetreecollapse "ffSkel_leftForeArm"
 	bonetreecollapse "ffSkel_rightForeArm"
 	bonetreecollapse "ffSkel_leftLeg"
 	bonetreecollapse "ffSkel_rightLeg"
 
 	// simplify spine
-	replacebone "ffSkel_Neck" "ffSkel_Spine2"
+	replacebone "ffSkel_Necks" "ffSkel_Spine2"
 	replacebone "ffSkel_Spine3" "ffSkel_spine2"
 	replacebone "ffSkel_spine1" "ffSkel_spine"
 	replacebone "ffSkel_Spine" "ffSkel_spine2"
@@ -136,7 +136,7 @@ $attachment "helmet_attachment" "ffSkel_Heads" 2.66 -1.60 -0.00 rotate 0.00 -82.
 //$attachment "anim_attachment_LH" "ValveBiped.Anim_Attachment_LH" -0.00 -0.00 0.00 rotate -90.00 -90.00 0.00
 $attachment "anim_attachment_head" "ffSkel_Heads" -0.00 0.00 0.00 rotate -90.00 -90.00 0.00
 $includemodel "player/ff_player_shared.mdl"
-$surfaceprop "flesh"
+$surfaceprop flesh
 
 $bbox -16 -16 0 16 16 72
 //$bbox -10 -18 0 26 18 72
@@ -173,6 +173,7 @@ $ikchain rfoot ffSkel_RightFoots Z 0 knee 0.707 -0.707 0
 $ikchain lfoot ffSkel_LeftFoots Z 0 knee 0.707 -0.707 0
 
 $sequence ragdoll "/reference/spy_reference_torsoshape.smd" ACT_DIERAGDOLL 1
+//$sequence menu_pose "/reference/spy_menu_pose.smd" ACT_MENUPOSE 1
 $bonemerge ffSkel_att_righthand
 
 $collisionjoints "/reference/spy_reference_phy.smd" {
