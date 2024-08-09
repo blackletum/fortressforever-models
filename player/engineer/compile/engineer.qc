@@ -27,7 +27,7 @@ $texturegroup skinfamilies {
 	{ "engineer_body_blue" "engineer_acc_blue" }
 	{ "engineer_body_red" "engineer_acc_red" }
 	{ "engineer_body_yellow" "engineer_acc_yellow" }
-	{ "engineer_body_green" "enginee_acc_green" }
+	{ "engineer_body_green" "engineer_acc_green" }
 }
 
 $lod 10 {
