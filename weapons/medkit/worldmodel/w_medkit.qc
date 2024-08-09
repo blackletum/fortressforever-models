@@ -4,7 +4,7 @@ $scale 1
 $surfaceprop weapon
 $keyvalues { "prop_data" { "base" "metal.medium" }}
 $model studio "w_medkit_ref.smd"
-$sequence idle "w_medkit_idle.smd" loop fps 15
+$sequence idle "w_medkit_ref.smd"
 
 $collisionmodel "w_medkit_phy.smd"
 {

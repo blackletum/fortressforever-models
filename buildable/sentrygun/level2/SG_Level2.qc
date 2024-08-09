@@ -39,8 +39,8 @@ $lod 25 {
 $lod 60 { 
 	replacemodel "reference_SG_Level2.smd" "LOD2_SG_Level2.smd"
 }
-$sequence aim_yaw "anim_SG_Level2" fps 30
-$sequence aim_pitch "anim_SG_Level2" fps 30
+$sequence aim_yaw "anim_SG_Level2"
+$sequence aim_pitch "anim_SG_Level2"
 
 $weightlist sg_yaw	{ "bone_sgYaw" 1.0 }
 $weightlist sg_pitch	{ "bone_sgPitch" 1.0 }
@@ -68,7 +68,6 @@ $animation ac_rot120 "anim_Fire" frame 10 10 subtract neutral 0 weightlist ac_ro
 $animation ac_rot240 "anim_Fire" frame 20 20 subtract neutral 0 weightlist ac_rot
 
 $sequence auto_rotate { ac_rot0 ac_rot120 ac_rot240 ac_rot0 blendwidth 4 blend "barrel_rotate" -180 180 } weightlist ac_rot delta autoplay
-
 
 $collisionmodel "physmodel"
 {

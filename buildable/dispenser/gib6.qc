@@ -2,13 +2,9 @@ $modelname "buildable\dispenser\gib6.mdl"
 $model studio "dispgib6.smd"
 $cdmaterials "models\buildable\dispenser\"
 $surfaceprop metal
-
 $sequence idle "dispenser.smd"
 $autocenter
-$collisionmodel "dispgib6.smd"{
-
-	$mass 15
-}
+$collisionmodel "dispgib6.smd"{ $mass 15 }
 $texturegroup skinfamilies
 {
 	{ "disp_map" }
@@ -21,7 +17,7 @@ $keyvalues
 { 
 	prop_data
 	{
-		base		Metal.Small 
+		base	Metal.Small 
 		physicsmode	2
 	}
 }

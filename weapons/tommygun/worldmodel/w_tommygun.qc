@@ -5,9 +5,9 @@ $scale 1
 $surfaceprop weapon
 $keyvalues { "prop_data" { "base" "metal.medium" }}
 $model w_tommygun "w_tommyREF.smd"
-$sequence idle "w_tommyIDLE.smd" loop fps 15
+$sequence idle "w_tommyREF.smd" ACT_VM_IDLE
 
-$sequence attack1 "attack1" ACT_VM_PRIMARYATTACK 1 fps 30.00 {
+$sequence attack1 "attack1" ACT_VM_PRIMARYATTACK 1 {
 	{ event AE_NPC_MUZZLEFLASH 0 "SMG1 1" }
 }
 

@@ -7,11 +7,12 @@ $texturegroup skinfamilies
 	{ "flag_red" }
 	{ "flag_yellow" }
 	{ "flag_green" }
+	{ "flag_neutral" }
 }
 
 $keyvalues { "prop_data" { "base" "metal.medium" }}
 
-$sequence idle "idle" loop fps 15
+$sequence idle "w_flag_ref.smd"
 $collisionmodel "w_flag_phy.smd"
 {
 	$mass 3.0 // Mass in kilograms

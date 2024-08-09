@@ -4,13 +4,11 @@ $cdmaterials "models\buildable\dispenser\"
 $surfaceprop metal
 
 $sequence idle "dispenser.smd"
-
 $collisionmodel "phymodel.smd" {
-
-	$mass 1.0
-	$inertia 1.00
-	$damping 0.00
-	$rotdamping 0.00
+	$mass 1
+	$inertia 1
+	$damping 0
+	$rotdamping 0
 }
 $texturegroup skinfamilies
 {

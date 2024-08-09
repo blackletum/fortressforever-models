@@ -6,10 +6,8 @@ $surfaceprop weapon
 $keyvalues { "prop_data" { "base" "metal.medium" }}
 $model w_flamethrower "wFlame_ref.smd"
 
-$sequence idle "wFlame_idle.smd" loop fps 15
-
-$sequence attack1 "attack1" ACT_VM_PRIMARYATTACK 1 fps 30.00 {
-}
+$sequence idle "wFlame_ref.smd"
+$sequence attack1 "attack1" ACT_VM_PRIMARYATTACK 1 {}
 
 $collisionmodel "wFlame_phy.smd"
 {

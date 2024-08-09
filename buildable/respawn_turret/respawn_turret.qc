@@ -3,7 +3,6 @@ $cdmaterials "models/buildable\respawn_turret\"
 $cliptotextures
 $surfaceprop computer
 $scale 1
-
 $poseparameter aim_yaw -180.00 180.00 wrap
 $poseparameter aim_pitch -60 0
 
@@ -27,8 +26,8 @@ $animation aim_240 "respawn_turret_spin" frame 6 6 subtract neutral 0
 
 $sequence auto_leftright { aim_0 aim_120 aim_240 aim_0 blendwidth 4 blend "aim_yaw" -180 180 } delta autoplay
 
-$sequence deploy "respawn_turret_deploy" ACT_MINITURRET_OPEN 1 fps 30// {{ event 5004 0 "RespawnTurret.Deploy" }}
-$sequence retract "respawn_turret_retract" ACT_MINITURRET_CLOSE 1 fps 30// {{ event 5004 0 "RespawnTurret.Retract" }}
+$sequence deploy "respawn_turret_deploy" ACT_MINITURRET_OPEN 1 // {{ event 5004 0 "RespawnTurret.Deploy" }}
+$sequence retract "respawn_turret_retract" ACT_MINITURRET_CLOSE 1 // {{ event 5004 0 "RespawnTurret.Retract" }}
 
 $animation aim_up "respawn_turret_updown" frames 3 3 subtract neutral 0
 $animation aim_down "respawn_turret_updown" frames 6 6 subtract neutral 0

@@ -1,20 +1,9 @@
-/*
-*****************************
-Ball
-
-Model 	- Decs
-Skin	- Decs
-Anims	- Decs
-*****************************
-*/
-
 $modelname "items/ball/ball2.mdl"
 $cdmaterials "models\items\ball\"
 $scale 1.8
 $body studio "football.smd"
 $surfaceprop rubber
-
-$sequence idle "football.smd" fps 1
+$sequence idle "football.smd"
 $collisionmodel "football.smd"
 {
 	$concave

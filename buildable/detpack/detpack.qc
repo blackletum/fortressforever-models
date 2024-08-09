@@ -4,7 +4,7 @@ $cdmaterials "models\buildable\detpack"
 $surfaceprop metal
 $illumposition 4.876 -2.116 8.708
 
-$sequence idle "detpack_idle" loop fps 15.00
+$sequence idle "detpack_ref.smd"
 $collisionmodel "detpack_phy.smd" {
 	//$mass 100.0
 	$mass 2000.0

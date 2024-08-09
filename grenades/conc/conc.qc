@@ -4,6 +4,6 @@ $scale 1
 $surfaceprop default
 $keyvalues { "prop_data" { "base" "Wooden.Large" }}
 $cdmaterials "models/grenades/conc/"
-$body Body "conc_reference"
-$sequence idle "conc_idle" loop fps 1
+$body Body "conc_reference.smd"
+$sequence idle "conc_reference.smd"
 $attachment "glowsprite" "joint1" 0 0 0 rotate 0 0 0

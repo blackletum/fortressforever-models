@@ -6,9 +6,7 @@ $surfaceprop metal
 
 $sequence idle "gib01.smd"
 $autocenter
-$collisionmodel "gib01.smd"{
-	$mass 5
-}
+$collisionmodel "gib01.smd"{ $mass 5 }
 $texturegroup skinfamilies
 {
 	{ "sg_lvl2_blue" }
@@ -20,7 +18,7 @@ $keyvalues
 { 
 	prop_data
 	{
-		base		Metal.Small 
+		base	Metal.Small 
 		physicsmode	2
 	}
 }

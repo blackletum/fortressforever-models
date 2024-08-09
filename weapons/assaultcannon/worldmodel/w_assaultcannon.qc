@@ -9,7 +9,7 @@ $model studio "ac_ref.SMD"
 $sequence idle "ac_ref.SMD" loop ACT_VM_IDLE 1 fps 15
 
 $poseparameter ac_rotate -180 180 wrap
-$sequence ac_rotate   "ac_fire" fps 30
+$sequence ac_rotate "ac_fire.smd"
 
 $weightlist ac_rot { "ffSkel_gunEnd" 1.0 }
 
@@ -20,9 +20,7 @@ $animation ac_rot240 "ac_fire" frame 14 14 subtract neutral 0 weightlist ac_rot
 
 $sequence auto_rotate { ac_rot0 ac_rot120 ac_rot240 ac_rot0 blendwidth 4 blend "ac_rotate" -180 180 } weightlist ac_rot delta autoplay
 
-$sequence attack1 "ac_fire.SMD" ACT_VM_PRIMARYATTACK 1 fps 30.00 {
-{ event AE_NPC_MUZZLEFLASH 0 "SMG1 1" }
-}
+$sequence attack1 "ac_fire.SMD" ACT_VM_PRIMARYATTACK 1 {{ event AE_NPC_MUZZLEFLASH 0 "SMG1 1" }}
 $lod 30 {
 	replacemodel "ac_ref.SMD" "ac_lod1.smd"
 }

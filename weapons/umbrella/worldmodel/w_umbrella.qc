@@ -3,7 +3,7 @@ $cdmaterials "models\weapons\umbrella"
 $scale 1
 $keyvalues { "prop_data" { "base" "metal.medium" }}
 $model w_umbrella "wumb_ref.smd"
-$sequence idle "wumb_idle.smd" loop fps 15
+$sequence idle "wumb_ref.smd"
 
 $collisionmodel "wumb_phy.smd"
 {

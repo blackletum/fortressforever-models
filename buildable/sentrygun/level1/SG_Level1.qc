@@ -32,14 +32,10 @@ $texturegroup skinfamilies {
 	{ "sg_lvl1_yellow" "sg_fx_yellow" }
 	{ "sg_lvl1_green" "sg_fx_green" }
 }
-$lod 25 { 
-	replacemodel "reference_SG_Level1.smd" "LOD1_SG_Level1.smd"
-}
-$lod 50 { 
-	replacemodel "reference_SG_Level1.smd" "LOD2_SG_Level1.smd"
-}
-$sequence aim_yaw "anim_SG_Level1" fps 30
-$sequence aim_pitch "anim_SG_Level1" fps 30
+$lod 25 { replacemodel "reference_SG_Level1.smd" "LOD1_SG_Level1.smd" }
+$lod 50 { replacemodel "reference_SG_Level1.smd" "LOD2_SG_Level1.smd" }
+$sequence aim_yaw "anim_SG_Level1"
+$sequence aim_pitch "anim_SG_Level1"
 
 $weightlist sg_yaw	{ "bone_sgYaw" 1.0 }
 $weightlist sg_pitch	{ "bone_sgPitch" 1.0 }

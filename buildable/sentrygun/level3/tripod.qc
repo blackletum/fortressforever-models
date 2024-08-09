@@ -6,14 +6,12 @@ $surfaceprop metal
 
 $sequence idle "sg_gib2.smd"
 $autocenter
-$collisionmodel "sg_gib2_phy.smd"{
-	$mass 15
-}
+$collisionmodel "sg_gib2_phy.smd"{ $mass 15 }
 $keyvalues
 { 
 	prop_data
 	{
-		base		Metal.Small 
+		base	Metal.Small 
 		physicsmode	2
 	}
 }
