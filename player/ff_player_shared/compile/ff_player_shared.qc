@@ -103,14 +103,14 @@ $definebone "ffSkel_RightFoot" "ffSkel_RightLeg" 15.634299 -0.000000 0.000000 10
 $bonemerge ffSkel_RightHand
 
 $ikchain rfoot "ffSkel_RightFoot" Z 0 knee 0.707 0.707 0
-$ikchain lfoot "ffSkel_LeftFoot" Z 0 knee 0.707 0.707 0 
+$ikchain lfoot "ffSkel_LeftFoot" Z 0 knee 0.707 0.707 0
 //$ikchain rhand "ffSkel_RightHand" Z 0 knee 0.707 0.707 0
 //$ikchain lhand "ffSkel_LeftHand" Z 0 knee 0.707 0.707 0
 
-$weightlist armsonly "ffSkel_LeftShoulder" 1.0 "ffSkel_RightShoulder" 1.0 "ffSkel_Hips" 0.0 "ffSkel_LeftUpLeg" 0.0 "ffSkel_RightUpLeg" 0.0 
-$weightlist upperbody "ffSkel_Spine" 1.0 "ffSkel_Hips" 0.0 "ffSkel_LeftUpLeg" 0.0 "ffSkel_RightUpLeg" 0.0 
-$weightlist upperbodynoarms "ffSkel_LeftShoulder" 0.0 "ffSkel_RightShoulder" 0.0 "ffSkel_Spine" 1.0 "ffSkel_Hips" 0.0 "ffSkel_LeftUpLeg" 0.0 "ffSkel_RightUpLeg" 0.0 
-$weightlist nolowerbody "ffSkel_Hips" 1.0 "ffSkel_LeftUpLeg" 0.0 "ffSkel_RightUpLeg" 0.0 
+$weightlist armsonly "ffSkel_LeftShoulder" 1.0 "ffSkel_RightShoulder" 1.0 "ffSkel_Hips" 0.0 "ffSkel_LeftUpLeg" 0.0 "ffSkel_RightUpLeg" 0.0
+$weightlist upperbody "ffSkel_Spine" 1.0 "ffSkel_Hips" 0.0 "ffSkel_LeftUpLeg" 0.0 "ffSkel_RightUpLeg" 0.0
+$weightlist upperbodynoarms "ffSkel_LeftShoulder" 0.0 "ffSkel_RightShoulder" 0.0 "ffSkel_Spine" 1.0 "ffSkel_Hips" 0.0 "ffSkel_LeftUpLeg" 0.0 "ffSkel_RightUpLeg" 0.0
+$weightlist nolowerbody "ffSkel_Hips" 1.0 "ffSkel_LeftUpLeg" 0.0 "ffSkel_RightUpLeg" 0.0
 $weightlist lowerbody "ffSkel_Hips" 1.0 "ffSkel_Spine" 0.0
 
 $heirarchy "ffSkel_Hips" ""
@@ -126,23 +126,23 @@ $poseparameter "body_yaw" -90 90 loop 360
 	//-----------------
 	//	Idles
 	//-----------------
-	$sequence ragdoll "ragdoll" loop FPS 30 activity ACT_DIERAGDOLL 1
-	$sequence ragdoll_i "ragdoll_i" loop FPS 30
-	$sequence ragdoll_r "ragdoll_r" loop FPS 30
-	$sequence ragdoll_w "ragdoll_w" loop FPS 30
-	$sequence ragdoll_cw "ragdoll_cw" loop FPS 30
-	$sequence ragdoll_cwi "ragdoll_cwi" loop FPS 30
-	$sequence ragdoll_si "ragdoll_si" loop FPS 30
-	$sequence Idle_lower "Idle01" align ragdoll_i X Y Z 0 0 loop FPS 30 fadein 0 fadeout 0 activity ACT_IDLE 1
-	$sequence Crouch_Idle_Lower "Crouch_idle01" align ragdoll_cwi X Y Z 0 0 loop FPS 30 activity ACT_CROUCHIDLE 1
-	$sequence Swim_Idle_Lower "Swim_idle01" align ragdoll_si X Y Z 0 0 loop FPS 30 activity ACT_HOVER 1
+	$sequence ragdoll "ragdoll" loop activity ACT_DIERAGDOLL 1
+	$sequence ragdoll_i "ragdoll_i" loop
+	$sequence ragdoll_r "ragdoll_r" loop
+	$sequence ragdoll_w "ragdoll_w" loop
+	$sequence ragdoll_cw "ragdoll_cw" loop
+	$sequence ragdoll_cwi "ragdoll_cwi" loop
+	$sequence ragdoll_si "ragdoll_si" loop
+	$sequence Idle_lower "Idle01" align ragdoll_i X Y Z 0 0 loop fadein 0 fadeout 0 activity ACT_IDLE 1
+	$sequence Crouch_Idle_Lower "Crouch_idle01" align ragdoll_cwi X Y Z 0 0 loop activity ACT_CROUCHIDLE 1
+	$sequence Swim_Idle_Lower "Swim_idle01" align ragdoll_si X Y Z 0 0 loop activity ACT_HOVER 1
 
 	//-----------------
 	// Airstate
 	//-----------------
-	//$sequence Airstate "Airstate" loop FPS 30 activity ACT_AIRBORNE 1
+	//$sequence Airstate "Airstate" loop activity ACT_AIRBORNE 1
 		
-	//$sequence menu_pose "menu_pose" loop fps 30 origin 0 0 -115 activity ACT_MENUPOSE 1
+	//$sequence menu_pose "menu_pose" loop origin 0 0 -115 activity ACT_MENUPOSE 1
 
 	//-----------------
 	// Run
@@ -164,7 +164,7 @@ $poseparameter "body_yaw" -90 90 loop 360
 //		a_RunNE a_RunN a_RunNW
 //		a_RunW a_RunSW a_RunS
 //		blendwidth 9 blend move_yaw -180 180
-//		loop 
+//		loop
 //		ACT_RUN 1
 	}
 */
@@ -221,9 +221,9 @@ $poseparameter "body_yaw" -90 90 loop 360
 	$animation a_Crouch_walkZero "9Crouch_Walk_idle" loop align ragdoll_cw X Y Z 0 0
 
 	$sequence Crouch_walk_lower {
-		a_Crouch_walkNW a_Crouch_walkN a_Crouch_walkNE 
-		a_Crouch_walkW a_Crouch_walkZero a_Crouch_walkE 
-		a_Crouch_walkSW a_Crouch_walkS a_Crouch_walkSE 
+		a_Crouch_walkNW a_Crouch_walkN a_Crouch_walkNE
+		a_Crouch_walkW a_Crouch_walkZero a_Crouch_walkE
+		a_Crouch_walkSW a_Crouch_walkS a_Crouch_walkSE
 		blendwidth 3 blend move_y -1 1 blend move_x 1 -1 loop
 		weightlist lowerbody
 			ACT_RUN_CROUCH 1
@@ -257,16 +257,16 @@ $poseparameter "body_yaw" -90 90 loop 360
 	//---------------
 	//	jump
 	//---------------
-	$sequence Jump "jump" fps 30 align ragdoll X Y Z 0 0 activity ACT_HOP 1 weightlist lowerbody
+	$sequence Jump "jump" align ragdoll X Y Z 0 0 activity ACT_HOP 1 weightlist lowerbody
 	//{ event 7001 23 "lfoot" } { event 7001 23 "rfoot" }
-	//$sequence Jump1 "jump1" fps 30 align ragdoll X Y Z 0 0 activity ACT_HOP1 1 { event 7001 23 "lfoot" } { event 7001 23 "rfoot" }
-	//$sequence Jump2 "jump2" fps 30 align ragdoll X Y Z 0 0 activity ACT_HOP2 1 { event 7001 23 "lfoot" } { event 7001 23 "rfoot" }
-	//$sequence Jump3 "jump3" fps 30 align ragdoll X Y Z 0 0 activity ACT_HOP3 1 { event 7001 23 "lfoot" } { event 7001 23 "rfoot" }
+	//$sequence Jump1 "jump1" align ragdoll X Y Z 0 0 activity ACT_HOP1 1 { event 7001 23 "lfoot" } { event 7001 23 "rfoot" }
+	//$sequence Jump2 "jump2" align ragdoll X Y Z 0 0 activity ACT_HOP2 1 { event 7001 23 "lfoot" } { event 7001 23 "rfoot" }
+	//$sequence Jump3 "jump3" align ragdoll X Y Z 0 0 activity ACT_HOP3 1 { event 7001 23 "lfoot" } { event 7001 23 "rfoot" }
 
 	//-----------------
 	//	SHOTGUN
 	//-----------------
-	$sequence Jump_Upper_shotgun "shotgun/jump_shotgun" FPS 30 startloop 0 weightlist upperbody
+	$sequence Jump_Upper_shotgun "shotgun/jump_shotgun" startloop 0 weightlist upperbody
 
 	$animation Swim_shotgun_aim_neutral shotgun/swim_9aims_shotgun frame 4 4
 	$animation Swim_shotgun_aim_up_left shotgun/swim_9aims_shotgun frame 0 0 subtract Swim_shotgun_aim_neutral 0
@@ -331,30 +331,30 @@ $poseparameter "body_yaw" -90 90 loop 360
 		delta
 	}
 
-	$sequence Idle_Upper_shotgun "shotgun/idle_shotgun" FPS 30 weightlist upperbody addlayer Run_Aim_shotgun
-	$sequence Walk_Upper_shotgun "shotgun/walk_shotgun" FPS 30 weightlist upperbody addlayer Run_Aim_shotgun
-	$sequence Run_Upper_shotgun "shotgun/run_shotgun" FPS 30 weightlist upperbody addlayer Run_Aim_shotgun
-	$sequence Crouch_Idle_Upper_shotgun "shotgun/crouch_idle_shotgun" FPS 30 weightlist upperbody addlayer Crouch_Aim_shotgun
-	$sequence Crouch_Walk_Upper_shotgun "shotgun/crouch_walk_shotgun" FPS 30 weightlist upperbody addlayer Crouch_Aim_shotgun
+	$sequence Idle_Upper_shotgun "shotgun/idle_shotgun" weightlist upperbody addlayer Run_Aim_shotgun
+	$sequence Walk_Upper_shotgun "shotgun/walk_shotgun" weightlist upperbody addlayer Run_Aim_shotgun
+	$sequence Run_Upper_shotgun "shotgun/run_shotgun" weightlist upperbody addlayer Run_Aim_shotgun
+	$sequence Crouch_Idle_Upper_shotgun "shotgun/crouch_idle_shotgun" weightlist upperbody addlayer Crouch_Aim_shotgun
+	$sequence Crouch_Walk_Upper_shotgun "shotgun/crouch_walk_shotgun" weightlist upperbody addlayer Crouch_Aim_shotgun
 
-	$animation Idle_Shoot_shotgun_layer "shotgun/shoot_shotgun" FPS 30 subtract Idle_Shoot_shotgun_layer 0 weightlist upperbody
+	$animation Idle_Shoot_shotgun_layer "shotgun/shoot_shotgun" subtract Idle_Shoot_shotgun_layer 0 weightlist upperbody
 	$sequence Idle_Shoot_shotgun "Idle_Shoot_shotgun_layer" delta
 	$sequence Walk_Shoot_shotgun "Idle_Shoot_shotgun_layer" delta
 	$sequence Run_Shoot_shotgun "Idle_Shoot_shotgun_layer" delta
 	$sequence Crouch_Idle_Shoot_shotgun "Idle_Shoot_shotgun_layer" delta
 	$sequence Crouch_Walk_Shoot_shotgun "Idle_Shoot_shotgun_layer" delta
 
-	$sequence Swim_Idle_Upper_shotgun "shotgun/swim_idle_shotgun" FPS 30 weightlist upperbody addlayer Swim_Aim_shotgun
-	$animation Swim_Shoot_shotgun_layer "shotgun/swim_shoot_shotgun" FPS 30 subtract Swim_Shoot_shotgun_layer 0 weightlist upperbody
-	$sequence Swim_Upper_shotgun "shotgun/swim_shotgun" FPS 30 weightlist upperbody addlayer Swim_Aim_shotgun
+	$sequence Swim_Idle_Upper_shotgun "shotgun/swim_idle_shotgun" weightlist upperbody addlayer Swim_Aim_shotgun
+	$animation Swim_Shoot_shotgun_layer "shotgun/swim_shoot_shotgun" subtract Swim_Shoot_shotgun_layer 0 weightlist upperbody
+	$sequence Swim_Upper_shotgun "shotgun/swim_shotgun" weightlist upperbody addlayer Swim_Aim_shotgun
 
-	$animation Reload_shotgun_layer "shotgun/reload_shotgun" FPS 30 subtract Reload_shotgun_layer 0 weightlist upperbody
+	$animation Reload_shotgun_layer "shotgun/reload_shotgun" subtract Reload_shotgun_layer 0 weightlist upperbody
 	$sequence Reload_shotgun "Reload_shotgun_layer" delta
 
 	//-----------------
 	// SUPER SHOTGUN
 	//-----------------
-	$sequence Jump_Upper_supershotgun "supershotgun/jump_supershotgun" FPS 30 startloop 0 weightlist upperbody
+	$sequence Jump_Upper_supershotgun "supershotgun/jump_supershotgun" startloop 0 weightlist upperbody
 
 	$animation Swim_supershotgun_aim_neutral supershotgun/swim_9aims_supershotgun frame 4 4
 	$animation Swim_supershotgun_aim_up_left supershotgun/swim_9aims_supershotgun frame 0 0 subtract Swim_supershotgun_aim_neutral 0
@@ -419,30 +419,30 @@ $poseparameter "body_yaw" -90 90 loop 360
 		delta
 	}
 
-	$sequence Idle_Upper_supershotgun "supershotgun/idle_supershotgun" FPS 30 weightlist upperbody addlayer Run_Aim_supershotgun
-	$sequence Walk_Upper_supershotgun "supershotgun/walk_supershotgun" FPS 30 weightlist upperbody addlayer Run_Aim_supershotgun
-	$sequence Run_Upper_supershotgun "supershotgun/run_supershotgun" FPS 30 startloop 0 weightlist upperbody addlayer Run_Aim_supershotgun
-	$sequence Crouch_Idle_Upper_supershotgun "supershotgun/crouch_idle_supershotgun" FPS 30 weightlist upperbody addlayer Crouch_Aim_supershotgun
-	$sequence Crouch_Walk_Upper_supershotgun "supershotgun/crouch_walk_supershotgun" FPS 30 weightlist upperbody addlayer Crouch_Aim_supershotgun
+	$sequence Idle_Upper_supershotgun "supershotgun/idle_supershotgun" weightlist upperbody addlayer Run_Aim_supershotgun
+	$sequence Walk_Upper_supershotgun "supershotgun/walk_supershotgun" weightlist upperbody addlayer Run_Aim_supershotgun
+	$sequence Run_Upper_supershotgun "supershotgun/run_supershotgun" startloop 0 weightlist upperbody addlayer Run_Aim_supershotgun
+	$sequence Crouch_Idle_Upper_supershotgun "supershotgun/crouch_idle_supershotgun" weightlist upperbody addlayer Crouch_Aim_supershotgun
+	$sequence Crouch_Walk_Upper_supershotgun "supershotgun/crouch_walk_supershotgun" weightlist upperbody addlayer Crouch_Aim_supershotgun
 
-	$animation Idle_Shoot_supershotgun_layer "supershotgun/shoot_supershotgun" FPS 30 subtract Idle_Shoot_supershotgun_layer 0 weightlist upperbody
+	$animation Idle_Shoot_supershotgun_layer "supershotgun/shoot_supershotgun" subtract Idle_Shoot_supershotgun_layer 0 weightlist upperbody
 	$sequence Idle_Shoot_supershotgun "Idle_Shoot_supershotgun_layer" delta
 	$sequence Walk_Shoot_supershotgun "Idle_Shoot_supershotgun_layer" delta
 	$sequence Run_Shoot_supershotgun "Idle_Shoot_supershotgun_layer" delta
 	$sequence Crouch_Idle_Shoot_supershotgun "Idle_Shoot_supershotgun_layer" delta
 	$sequence Crouch_Walk_Shoot_supershotgun "Idle_Shoot_supershotgun_layer" delta
 
-	$sequence Swim_Idle_Upper_supershotgun "supershotgun/swim_idle_supershotgun" FPS 30 weightlist upperbody addlayer Swim_Aim_supershotgun
-	$animation Swim_Shoot_supershotgun_layer "supershotgun/swim_shoot_supershotgun" FPS 30 subtract Swim_Shoot_supershotgun_layer 0 weightlist upperbody
-	$sequence Swim_Upper_supershotgun "supershotgun/swim_supershotgun" FPS 30 weightlist upperbody addlayer Swim_Aim_supershotgun
+	$sequence Swim_Idle_Upper_supershotgun "supershotgun/swim_idle_supershotgun" weightlist upperbody addlayer Swim_Aim_supershotgun
+	$animation Swim_Shoot_supershotgun_layer "supershotgun/swim_shoot_supershotgun" subtract Swim_Shoot_supershotgun_layer 0 weightlist upperbody
+	$sequence Swim_Upper_supershotgun "supershotgun/swim_supershotgun" weightlist upperbody addlayer Swim_Aim_supershotgun
 
-	$animation Reload_supershotgun_layer "supershotgun/reload_supershotgun" FPS 30 subtract Reload_supershotgun_layer 0 weightlist upperbody
+	$animation Reload_supershotgun_layer "supershotgun/reload_supershotgun" subtract Reload_supershotgun_layer 0 weightlist upperbody
 	$sequence Reload_supershotgun "Reload_supershotgun_layer" delta
 
 	//-----------------
 	//	GRENADE LAUNCHER
 	//-----------------
-	$sequence Jump_Upper_grenadelauncher "grenadelauncher/jump_grenadelauncher" FPS 30 startloop 0 weightlist upperbody 
+	$sequence Jump_Upper_grenadelauncher "grenadelauncher/jump_grenadelauncher" startloop 0 weightlist upperbody
 
 	$animation Swim_grenadelauncher_aim_neutral grenadelauncher/swim_9aims_grenadelauncher frame 4 4
 	$animation Swim_grenadelauncher_aim_up_left grenadelauncher/swim_9aims_grenadelauncher frame 0 0 subtract Swim_grenadelauncher_aim_neutral 0
@@ -507,30 +507,30 @@ $poseparameter "body_yaw" -90 90 loop 360
 		delta
 	}
 
-	$sequence Idle_Upper_grenadelauncher "grenadelauncher/idle_grenadelauncher" FPS 30 weightlist upperbody addlayer Run_Aim_grenadelauncher
-	$sequence Walk_Upper_grenadelauncher "grenadelauncher/walk_grenadelauncher" FPS 30 weightlist upperbody addlayer Run_Aim_grenadelauncher
-	$sequence Run_Upper_grenadelauncher "grenadelauncher/run_grenadelauncher" FPS 30 startloop 0 weightlist upperbody addlayer Run_Aim_grenadelauncher
-	$sequence Crouch_Idle_Upper_grenadelauncher "grenadelauncher/crouch_idle_grenadelauncher" FPS 30 weightlist upperbody addlayer Crouch_Aim_grenadelauncher
-	$sequence Crouch_Walk_Upper_grenadelauncher "grenadelauncher/crouch_walk_grenadelauncher" FPS 30 weightlist upperbody addlayer Crouch_Aim_grenadelauncher
+	$sequence Idle_Upper_grenadelauncher "grenadelauncher/idle_grenadelauncher" weightlist upperbody addlayer Run_Aim_grenadelauncher
+	$sequence Walk_Upper_grenadelauncher "grenadelauncher/walk_grenadelauncher" weightlist upperbody addlayer Run_Aim_grenadelauncher
+	$sequence Run_Upper_grenadelauncher "grenadelauncher/run_grenadelauncher" startloop 0 weightlist upperbody addlayer Run_Aim_grenadelauncher
+	$sequence Crouch_Idle_Upper_grenadelauncher "grenadelauncher/crouch_idle_grenadelauncher" weightlist upperbody addlayer Crouch_Aim_grenadelauncher
+	$sequence Crouch_Walk_Upper_grenadelauncher "grenadelauncher/crouch_walk_grenadelauncher" weightlist upperbody addlayer Crouch_Aim_grenadelauncher
 
-	$animation Idle_Shoot_grenadelauncher_layer "grenadelauncher/shoot_grenadelauncher" FPS 30 subtract Idle_Shoot_grenadelauncher_layer 0 weightlist upperbody
+	$animation Idle_Shoot_grenadelauncher_layer "grenadelauncher/shoot_grenadelauncher" subtract Idle_Shoot_grenadelauncher_layer 0 weightlist upperbody
 	$sequence Idle_Shoot_grenadelauncher "Idle_Shoot_grenadelauncher_layer" delta
 	$sequence Walk_Shoot_grenadelauncher "Idle_Shoot_grenadelauncher_layer" delta
 	$sequence Run_Shoot_grenadelauncher "Idle_Shoot_grenadelauncher_layer" delta
 	$sequence Crouch_Idle_Shoot_grenadelauncher "Idle_Shoot_grenadelauncher_layer" delta
 	$sequence Crouch_Walk_Shoot_grenadelauncher "Idle_Shoot_grenadelauncher_layer" delta
 
-	$sequence Swim_Idle_Upper_grenadelauncher "grenadelauncher/swim_idle_grenadelauncher" FPS 30 weightlist upperbody addlayer Swim_Aim_grenadelauncher
-	$animation Swim_Shoot_grenadelauncher_layer "grenadelauncher/swim_shoot_grenadelauncher" FPS 30 subtract Swim_Shoot_grenadelauncher_layer 0 weightlist upperbody
-	$sequence Swim_Upper_grenadelauncher "grenadelauncher/swim_grenadelauncher" FPS 30 weightlist upperbody addlayer Swim_Aim_grenadelauncher
+	$sequence Swim_Idle_Upper_grenadelauncher "grenadelauncher/swim_idle_grenadelauncher" weightlist upperbody addlayer Swim_Aim_grenadelauncher
+	$animation Swim_Shoot_grenadelauncher_layer "grenadelauncher/swim_shoot_grenadelauncher" subtract Swim_Shoot_grenadelauncher_layer 0 weightlist upperbody
+	$sequence Swim_Upper_grenadelauncher "grenadelauncher/swim_grenadelauncher" weightlist upperbody addlayer Swim_Aim_grenadelauncher
 
-	$animation Reload_grenadelauncher_layer "grenadelauncher/reload_grenadelauncher" FPS 30 subtract Reload_grenadelauncher_layer 0 weightlist upperbody
+	$animation Reload_grenadelauncher_layer "grenadelauncher/reload_grenadelauncher" subtract Reload_grenadelauncher_layer 0 weightlist upperbody
 	$sequence Reload_grenadelauncher "Reload_grenadelauncher_layer" delta
 
 	//-----------------
  	//	PIPE LAUNCHER
  	//-----------------
-	$sequence Jump_Upper_pipelauncher "grenadelauncher/jump_grenadelauncher" FPS 30 startloop 0 weightlist upperbody 
+	$sequence Jump_Upper_pipelauncher "grenadelauncher/jump_grenadelauncher" startloop 0 weightlist upperbody
 
 	$animation Swim_pipelauncher_aim_neutral grenadelauncher/swim_9aims_grenadelauncher frame 4 4
 	$animation Swim_pipelauncher_aim_up_left grenadelauncher/swim_9aims_grenadelauncher frame 0 0 subtract Swim_pipelauncher_aim_neutral 0
@@ -595,30 +595,30 @@ $poseparameter "body_yaw" -90 90 loop 360
 		delta
 	}
 
-	$sequence Idle_Upper_pipelauncher "grenadelauncher/idle_grenadelauncher" FPS 30 weightlist upperbody addlayer Run_Aim_pipelauncher
-	$sequence Walk_Upper_pipelauncher "grenadelauncher/walk_grenadelauncher" FPS 30 weightlist upperbody addlayer Run_Aim_pipelauncher
-	$sequence Run_Upper_pipelauncher "grenadelauncher/run_grenadelauncher" FPS 30 startloop 0 weightlist upperbody addlayer Run_Aim_pipelauncher
-	$sequence Crouch_Idle_Upper_pipelauncher "grenadelauncher/crouch_idle_grenadelauncher" FPS 30 weightlist upperbody addlayer Crouch_Aim_pipelauncher
-	$sequence Crouch_Walk_Upper_pipelauncher "grenadelauncher/crouch_walk_grenadelauncher" FPS 30 weightlist upperbody addlayer Crouch_Aim_pipelauncher
+	$sequence Idle_Upper_pipelauncher "grenadelauncher/idle_grenadelauncher" weightlist upperbody addlayer Run_Aim_pipelauncher
+	$sequence Walk_Upper_pipelauncher "grenadelauncher/walk_grenadelauncher" weightlist upperbody addlayer Run_Aim_pipelauncher
+	$sequence Run_Upper_pipelauncher "grenadelauncher/run_grenadelauncher" startloop 0 weightlist upperbody addlayer Run_Aim_pipelauncher
+	$sequence Crouch_Idle_Upper_pipelauncher "grenadelauncher/crouch_idle_grenadelauncher" weightlist upperbody addlayer Crouch_Aim_pipelauncher
+	$sequence Crouch_Walk_Upper_pipelauncher "grenadelauncher/crouch_walk_grenadelauncher" weightlist upperbody addlayer Crouch_Aim_pipelauncher
 
-	$animation Idle_Shoot_pipelauncher_layer "grenadelauncher/shoot_grenadelauncher" FPS 30 subtract Idle_Shoot_pipelauncher_layer 0 weightlist upperbody
+	$animation Idle_Shoot_pipelauncher_layer "grenadelauncher/shoot_grenadelauncher" subtract Idle_Shoot_pipelauncher_layer 0 weightlist upperbody
 	$sequence Idle_Shoot_pipelauncher "Idle_Shoot_pipelauncher_layer" delta
 	$sequence Walk_Shoot_pipelauncher "Idle_Shoot_pipelauncher_layer" delta
 	$sequence Run_Shoot_pipelauncher "Idle_Shoot_pipelauncher_layer" delta
 	$sequence Crouch_Idle_Shoot_pipelauncher "Idle_Shoot_pipelauncher_layer" delta
 	$sequence Crouch_Walk_Shoot_pipelauncher "Idle_Shoot_pipelauncher_layer" delta
 
-	$sequence Swim_Idle_Upper_pipelauncher "grenadelauncher/swim_idle_grenadelauncher" FPS 30 weightlist upperbody addlayer Swim_Aim_pipelauncher
-	$animation Swim_Shoot_pipelauncher_layer "grenadelauncher/swim_shoot_grenadelauncher" FPS 30 subtract Swim_Shoot_pipelauncher_layer 0 weightlist upperbody
-	$sequence Swim_Upper_pipelauncher "grenadelauncher/swim_grenadelauncher" FPS 30 weightlist upperbody addlayer Swim_Aim_pipelauncher
+	$sequence Swim_Idle_Upper_pipelauncher "grenadelauncher/swim_idle_grenadelauncher" weightlist upperbody addlayer Swim_Aim_pipelauncher
+	$animation Swim_Shoot_pipelauncher_layer "grenadelauncher/swim_shoot_grenadelauncher" subtract Swim_Shoot_pipelauncher_layer 0 weightlist upperbody
+	$sequence Swim_Upper_pipelauncher "grenadelauncher/swim_grenadelauncher" weightlist upperbody addlayer Swim_Aim_pipelauncher
 
-	$animation Reload_pipelauncher_layer "grenadelauncher/reload_grenadelauncher" FPS 30 subtract Reload_pipelauncher_layer 0 weightlist upperbody
+	$animation Reload_pipelauncher_layer "grenadelauncher/reload_grenadelauncher" subtract Reload_pipelauncher_layer 0 weightlist upperbody
 	$sequence Reload_pipelauncher "Reload_pipelauncher_layer" delta
 
 	//-----------------
 	//	NAILGUN
 	//-----------------
-	$sequence Jump_Upper_nailgun "nailgun/jump_nailgun" FPS 30 startloop 0 weightlist upperbody 
+	$sequence Jump_Upper_nailgun "nailgun/jump_nailgun" startloop 0 weightlist upperbody
 
 	$animation Swim_nailgun_aim_neutral nailgun/swim_9aims_nailgun frame 4 4
 	$animation Swim_nailgun_aim_up_left nailgun/swim_9aims_nailgun frame 0 0 subtract Swim_nailgun_aim_neutral 0
@@ -683,30 +683,30 @@ $poseparameter "body_yaw" -90 90 loop 360
 		delta
 	}
 
-	$sequence Idle_Upper_nailgun "nailgun/idle_nailgun" FPS 30 weightlist upperbody addlayer Run_Aim_nailgun
-	$sequence Walk_Upper_nailgun "nailgun/walk_nailgun" FPS 30 weightlist upperbody addlayer Run_Aim_nailgun
-	$sequence Run_Upper_nailgun "nailgun/run_nailgun" FPS 30 startloop 0 weightlist upperbody addlayer Run_Aim_nailgun
-	$sequence Crouch_Idle_Upper_nailgun "nailgun/crouch_idle_nailgun" FPS 30 weightlist upperbody addlayer Crouch_Aim_nailgun
-	$sequence Crouch_Walk_Upper_nailgun "nailgun/crouch_walk_nailgun" FPS 30 weightlist upperbody addlayer Crouch_Aim_nailgun
+	$sequence Idle_Upper_nailgun "nailgun/idle_nailgun" weightlist upperbody addlayer Run_Aim_nailgun
+	$sequence Walk_Upper_nailgun "nailgun/walk_nailgun" weightlist upperbody addlayer Run_Aim_nailgun
+	$sequence Run_Upper_nailgun "nailgun/run_nailgun" startloop 0 weightlist upperbody addlayer Run_Aim_nailgun
+	$sequence Crouch_Idle_Upper_nailgun "nailgun/crouch_idle_nailgun" weightlist upperbody addlayer Crouch_Aim_nailgun
+	$sequence Crouch_Walk_Upper_nailgun "nailgun/crouch_walk_nailgun" weightlist upperbody addlayer Crouch_Aim_nailgun
 
-	$animation Idle_Shoot_nailgun_layer "nailgun/shoot_nailgun" FPS 30 subtract Idle_Shoot_nailgun_layer 0 weightlist upperbody
+	$animation Idle_Shoot_nailgun_layer "nailgun/shoot_nailgun" subtract Idle_Shoot_nailgun_layer 0 weightlist upperbody
 	$sequence Idle_Shoot_nailgun "Idle_Shoot_nailgun_layer" delta
 	$sequence Walk_Shoot_nailgun "Idle_Shoot_nailgun_layer" delta
 	$sequence Run_Shoot_nailgun "Idle_Shoot_nailgun_layer" delta
 	$sequence Crouch_Idle_Shoot_nailgun "Idle_Shoot_nailgun_layer" delta
 	$sequence Crouch_Walk_Shoot_nailgun "Idle_Shoot_nailgun_layer" delta
 
-	$sequence Swim_Idle_Upper_nailgun "nailgun/swim_idle_nailgun" FPS 30 weightlist upperbody addlayer Swim_Aim_nailgun
-	$animation Swim_Shoot_nailgun_layer "nailgun/swim_shoot_nailgun" FPS 30 subtract Swim_Shoot_nailgun_layer 0 weightlist upperbody
-	$sequence Swim_Upper_nailgun "nailgun/swim_nailgun" FPS 30 weightlist upperbody addlayer Swim_Aim_nailgun
+	$sequence Swim_Idle_Upper_nailgun "nailgun/swim_idle_nailgun" weightlist upperbody addlayer Swim_Aim_nailgun
+	$animation Swim_Shoot_nailgun_layer "nailgun/swim_shoot_nailgun" subtract Swim_Shoot_nailgun_layer 0 weightlist upperbody
+	$sequence Swim_Upper_nailgun "nailgun/swim_nailgun" weightlist upperbody addlayer Swim_Aim_nailgun
 
-	//$animation Reload_nailgun_layer "nailgun/reload_nailgun" FPS 30 subtract Reload_nailgun_layer 0 weightlist upperbody
+	//$animation Reload_nailgun_layer "nailgun/reload_nailgun" subtract Reload_nailgun_layer 0 weightlist upperbody
 	//$sequence Reload_nailgun "Reload_nailgun_layer" delta
 
 	//-----------------
 	//	SUPER NAILGUN
 	//-----------------
-	$sequence Jump_Upper_supernailgun "supernailgun/jump_supernailgun" FPS 30 startloop 0 weightlist upperbody 
+	$sequence Jump_Upper_supernailgun "supernailgun/jump_supernailgun" startloop 0 weightlist upperbody
 
 	$animation Swim_supernailgun_aim_neutral supernailgun/swim_9aims_supernailgun frame 4 4
 	$animation Swim_supernailgun_aim_up_left supernailgun/swim_9aims_supernailgun frame 0 0 subtract Swim_supernailgun_aim_neutral 0
@@ -771,30 +771,30 @@ $poseparameter "body_yaw" -90 90 loop 360
 		delta
 	}
 
-	$sequence Idle_Upper_supernailgun "supernailgun/idle_supernailgun" FPS 30 weightlist upperbody addlayer Run_Aim_supernailgun
-	$sequence Walk_Upper_supernailgun "supernailgun/walk_supernailgun" FPS 30 weightlist upperbody addlayer Run_Aim_supernailgun
-	$sequence Run_Upper_supernailgun "supernailgun/run_supernailgun" FPS 30 startloop 0 weightlist upperbody addlayer Run_Aim_supernailgun
-	$sequence Crouch_Idle_Upper_supernailgun "supernailgun/crouch_idle_supernailgun" FPS 30 weightlist upperbody addlayer Crouch_Aim_supernailgun
-	$sequence Crouch_Walk_Upper_supernailgun "supernailgun/crouch_walk_supernailgun" FPS 30 weightlist upperbody addlayer Crouch_Aim_supernailgun
+	$sequence Idle_Upper_supernailgun "supernailgun/idle_supernailgun" weightlist upperbody addlayer Run_Aim_supernailgun
+	$sequence Walk_Upper_supernailgun "supernailgun/walk_supernailgun" weightlist upperbody addlayer Run_Aim_supernailgun
+	$sequence Run_Upper_supernailgun "supernailgun/run_supernailgun" startloop 0 weightlist upperbody addlayer Run_Aim_supernailgun
+	$sequence Crouch_Idle_Upper_supernailgun "supernailgun/crouch_idle_supernailgun" weightlist upperbody addlayer Crouch_Aim_supernailgun
+	$sequence Crouch_Walk_Upper_supernailgun "supernailgun/crouch_walk_supernailgun" weightlist upperbody addlayer Crouch_Aim_supernailgun
 
-	$animation Idle_Shoot_supernailgun_layer "supernailgun/shoot_supernailgun" FPS 30 subtract Idle_Shoot_supernailgun_layer 0 weightlist upperbody
+	$animation Idle_Shoot_supernailgun_layer "supernailgun/shoot_supernailgun" subtract Idle_Shoot_supernailgun_layer 0 weightlist upperbody
 	$sequence Idle_Shoot_supernailgun "Idle_Shoot_supernailgun_layer" delta
 	$sequence Walk_Shoot_supernailgun "Idle_Shoot_supernailgun_layer" delta
 	$sequence Run_Shoot_supernailgun "Idle_Shoot_supernailgun_layer" delta
 	$sequence Crouch_Idle_Shoot_supernailgun "Idle_Shoot_supernailgun_layer" delta
 	$sequence Crouch_Walk_Shoot_supernailgun "Idle_Shoot_supernailgun_layer" delta
 
-	$sequence Swim_Idle_Upper_supernailgun "supernailgun/swim_idle_supernailgun" FPS 30 weightlist upperbody addlayer Swim_Aim_supernailgun
-	$animation Swim_Shoot_supernailgun_layer "supernailgun/swim_shoot_supernailgun" FPS 30 subtract Swim_Shoot_supernailgun_layer 0 weightlist upperbody
-	$sequence Swim_Upper_supernailgun "supernailgun/swim_supernailgun" FPS 30 weightlist upperbody addlayer Swim_Aim_supernailgun
+	$sequence Swim_Idle_Upper_supernailgun "supernailgun/swim_idle_supernailgun" weightlist upperbody addlayer Swim_Aim_supernailgun
+	$animation Swim_Shoot_supernailgun_layer "supernailgun/swim_shoot_supernailgun" subtract Swim_Shoot_supernailgun_layer 0 weightlist upperbody
+	$sequence Swim_Upper_supernailgun "supernailgun/swim_supernailgun" weightlist upperbody addlayer Swim_Aim_supernailgun
 
-	$animation Reload_supernailgun_layer "supernailgun/reload_supernailgun" FPS 30 subtract Reload_supernailgun_layer 0 weightlist upperbody
+	$animation Reload_supernailgun_layer "supernailgun/reload_supernailgun" subtract Reload_supernailgun_layer 0 weightlist upperbody
 	$sequence Reload_supernailgun "Reload_supernailgun_layer" delta
 
 	//-----------------
 	//	RAILGUN
 	//-----------------
-	$sequence Jump_Upper_railgun "railgun/jump_railgun" FPS 30 startloop 0 weightlist upperbody 
+	$sequence Jump_Upper_railgun "railgun/jump_railgun" startloop 0 weightlist upperbody
 
 	$animation Swim_railgun_aim_neutral railgun/swim_9aims_railgun frame 4 4
 	$animation Swim_railgun_aim_up_left railgun/swim_9aims_railgun frame 0 0 subtract Swim_railgun_aim_neutral 0
@@ -859,30 +859,30 @@ $poseparameter "body_yaw" -90 90 loop 360
 		delta
 	}
 
-	$sequence Idle_Upper_railgun "railgun/idle_railgun" FPS 30 weightlist upperbody addlayer Run_Aim_railgun
-	$sequence Walk_Upper_railgun "railgun/walk_railgun" FPS 30 weightlist upperbody addlayer Run_Aim_railgun
-	$sequence Run_Upper_railgun "railgun/run_railgun" FPS 30 startloop 0 weightlist upperbody addlayer Run_Aim_railgun
-	$sequence Crouch_Idle_Upper_railgun "railgun/crouch_idle_railgun" FPS 30 weightlist upperbody addlayer Crouch_Aim_railgun
-	$sequence Crouch_Walk_Upper_railgun "railgun/crouch_walk_railgun" FPS 30 weightlist upperbody addlayer Crouch_Aim_railgun
+	$sequence Idle_Upper_railgun "railgun/idle_railgun" weightlist upperbody addlayer Run_Aim_railgun
+	$sequence Walk_Upper_railgun "railgun/walk_railgun" weightlist upperbody addlayer Run_Aim_railgun
+	$sequence Run_Upper_railgun "railgun/run_railgun" startloop 0 weightlist upperbody addlayer Run_Aim_railgun
+	$sequence Crouch_Idle_Upper_railgun "railgun/crouch_idle_railgun" weightlist upperbody addlayer Crouch_Aim_railgun
+	$sequence Crouch_Walk_Upper_railgun "railgun/crouch_walk_railgun" weightlist upperbody addlayer Crouch_Aim_railgun
 
-	$animation Idle_Shoot_railgun_layer "railgun/shoot_railgun" FPS 30 subtract Idle_Shoot_railgun_layer 0 weightlist upperbody
+	$animation Idle_Shoot_railgun_layer "railgun/shoot_railgun" subtract Idle_Shoot_railgun_layer 0 weightlist upperbody
 	$sequence Idle_Shoot_railgun "Idle_Shoot_railgun_layer" delta
 	$sequence Walk_Shoot_railgun "Idle_Shoot_railgun_layer" delta
 	$sequence Run_Shoot_railgun "Idle_Shoot_railgun_layer" delta
 	$sequence Crouch_Idle_Shoot_railgun "Idle_Shoot_railgun_layer" delta
 	$sequence Crouch_Walk_Shoot_railgun "Idle_Shoot_railgun_layer" delta
 
-	$sequence Swim_Idle_Upper_railgun "railgun/swim_idle_railgun" FPS 30 weightlist upperbody addlayer Swim_Aim_railgun		
-	$animation Swim_Shoot_railgun_layer "railgun/swim_shoot_railgun" FPS 30 subtract Swim_Shoot_railgun_layer 0 weightlist upperbody
-	$sequence Swim_Upper_railgun "railgun/swim_railgun" FPS 30 weightlist upperbody addlayer Swim_Aim_railgun
+	$sequence Swim_Idle_Upper_railgun "railgun/swim_idle_railgun" weightlist upperbody addlayer Swim_Aim_railgun		
+	$animation Swim_Shoot_railgun_layer "railgun/swim_shoot_railgun" subtract Swim_Shoot_railgun_layer 0 weightlist upperbody
+	$sequence Swim_Upper_railgun "railgun/swim_railgun" weightlist upperbody addlayer Swim_Aim_railgun
 
-	//$animation Reload_railgun_layer "railgun/reload_railgun" FPS 30 subtract Reload_railgun_layer 0 weightlist upperbody
+	//$animation Reload_railgun_layer "railgun/reload_railgun" subtract Reload_railgun_layer 0 weightlist upperbody
 	//$sequence Reload_railgun "Reload_railgun_layer" delta
 
 	//-----------------
 	//	CROWBAR
 	//-----------------
-	$sequence Jump_Upper_crowbar "crowbar/jump_crowbar" FPS 30 startloop 0 weightlist upperbody 
+	$sequence Jump_Upper_crowbar "crowbar/jump_crowbar" startloop 0 weightlist upperbody
 
 	$animation Swim_crowbar_aim_neutral crowbar/swim_9aims_crowbar frame 4 4
 	$animation Swim_crowbar_aim_up_left crowbar/swim_9aims_crowbar frame 0 0 subtract Swim_crowbar_aim_neutral 0
@@ -947,30 +947,30 @@ $poseparameter "body_yaw" -90 90 loop 360
 		delta
 	}
 
-	$sequence Idle_Upper_crowbar "crowbar/idle_crowbar" FPS 30 weightlist upperbody addlayer Run_Aim_crowbar
-	$sequence Walk_Upper_crowbar "crowbar/walk_crowbar" FPS 30 weightlist upperbody addlayer Run_Aim_crowbar
-	$sequence Run_Upper_crowbar "crowbar/run_crowbar" FPS 30 startloop 0 weightlist upperbody addlayer Run_Aim_crowbar
-	$sequence Crouch_Idle_Upper_crowbar "crowbar/crouch_idle_crowbar" FPS 30 weightlist upperbody addlayer Crouch_Aim_crowbar
-	$sequence Crouch_Walk_Upper_crowbar "crowbar/crouch_walk_crowbar" FPS 30 weightlist upperbody addlayer Crouch_Aim_crowbar
+	$sequence Idle_Upper_crowbar "crowbar/idle_crowbar" weightlist upperbody addlayer Run_Aim_crowbar
+	$sequence Walk_Upper_crowbar "crowbar/walk_crowbar" weightlist upperbody addlayer Run_Aim_crowbar
+	$sequence Run_Upper_crowbar "crowbar/run_crowbar" startloop 0 weightlist upperbody addlayer Run_Aim_crowbar
+	$sequence Crouch_Idle_Upper_crowbar "crowbar/crouch_idle_crowbar" weightlist upperbody addlayer Crouch_Aim_crowbar
+	$sequence Crouch_Walk_Upper_crowbar "crowbar/crouch_walk_crowbar" weightlist upperbody addlayer Crouch_Aim_crowbar
 
-	$animation Idle_Shoot_crowbar_layer "crowbar/shoot_crowbar" FPS 30 subtract Idle_Shoot_crowbar_layer 0 weightlist upperbody
+	$animation Idle_Shoot_crowbar_layer "crowbar/shoot_crowbar" subtract Idle_Shoot_crowbar_layer 0 weightlist upperbody
 	$sequence Idle_Shoot_crowbar "Idle_Shoot_crowbar_layer" delta
 	$sequence Walk_Shoot_crowbar "Idle_Shoot_crowbar_layer" delta
 	$sequence Run_Shoot_crowbar "Idle_Shoot_crowbar_layer" delta
 	$sequence Crouch_Idle_Shoot_crowbar "Idle_Shoot_crowbar_layer" delta
 	$sequence Crouch_Walk_Shoot_crowbar "Idle_Shoot_crowbar_layer" delta
 
-	$sequence Swim_Idle_Upper_crowbar "crowbar/swim_idle_crowbar" FPS 30 weightlist upperbody addlayer Swim_Aim_crowbar
-	$animation Swim_Shoot_crowbar_layer "crowbar/swim_shoot_crowbar" FPS 30 subtract Swim_Shoot_crowbar_layer 0 weightlist upperbody
-	$sequence Swim_Upper_crowbar "crowbar/swim_crowbar" FPS 30 weightlist upperbody addlayer Swim_Aim_crowbar
+	$sequence Swim_Idle_Upper_crowbar "crowbar/swim_idle_crowbar" weightlist upperbody addlayer Swim_Aim_crowbar
+	$animation Swim_Shoot_crowbar_layer "crowbar/swim_shoot_crowbar" subtract Swim_Shoot_crowbar_layer 0 weightlist upperbody
+	$sequence Swim_Upper_crowbar "crowbar/swim_crowbar" weightlist upperbody addlayer Swim_Aim_crowbar
 
-	//$animation Reload_crowbar_layer "crowbar/reload_crowbar" FPS 30 subtract Reload_crowbar_layer 0 weightlist upperbody
+	//$animation Reload_crowbar_layer "crowbar/reload_crowbar" subtract Reload_crowbar_layer 0 weightlist upperbody
 	//$sequence Reload_crowbar "Reload_crowbar_layer" delta
 
 	//-----------------
 	//	DEMO SHIELD
 	//-----------------
-	$sequence Jump_Upper_shield "shield/jump_shield" FPS 30 startloop 0 weightlist upperbody 
+	$sequence Jump_Upper_shield "shield/jump_shield" startloop 0 weightlist upperbody
 
 	$animation Swim_shield_aim_neutral shield/swim_9aims_shield frame 4 4
 	$animation Swim_shield_aim_up_left shield/swim_9aims_shield frame 0 0 subtract Swim_shield_aim_neutral 0
@@ -1035,11 +1035,11 @@ $poseparameter "body_yaw" -90 90 loop 360
 		delta
 	}
 
-	$sequence Idle_Upper_shield "shield/idle_shield" FPS 30 weightlist upperbody addlayer Run_Aim_shield
-	$sequence Walk_Upper_shield "shield/idle_shield" FPS 30 weightlist upperbody addlayer Run_Aim_shield
-	$sequence Run_Upper_shield "shield/idle_shield" FPS 30 weightlist upperbody addlayer Run_Aim_shield
-	$sequence Crouch_Idle_Upper_shield "shield/crouch_idle_shield" FPS 30 weightlist upperbody addlayer Crouch_Aim_shield
-	$sequence Crouch_Walk_Upper_shield "shield/crouch_walk_shield" FPS 30 weightlist upperbody addlayer Crouch_Aim_shield
+	$sequence Idle_Upper_shield "shield/idle_shield" weightlist upperbody addlayer Run_Aim_shield
+	$sequence Walk_Upper_shield "shield/idle_shield" weightlist upperbody addlayer Run_Aim_shield
+	$sequence Run_Upper_shield "shield/idle_shield" weightlist upperbody addlayer Run_Aim_shield
+	$sequence Crouch_Idle_Upper_shield "shield/crouch_idle_shield" weightlist upperbody addlayer Crouch_Aim_shield
+	$sequence Crouch_Walk_Upper_shield "shield/crouch_walk_shield" weightlist upperbody addlayer Crouch_Aim_shield
 //shieldDeploy
 
 	$animation Swim_shielddeploy_aim_neutral shield/swim_9aims_shield frame 4 4
@@ -1105,7 +1105,7 @@ $poseparameter "body_yaw" -90 90 loop 360
 		delta
 	}
 
-	$animation Idle_shielddeploy_layer "shield/shoot_shield" FPS 30 frames 12 12 weightlist upperbody
+	$animation Idle_shielddeploy_layer "shield/shoot_shield" frames 12 12 weightlist upperbody
 	$sequence Idle_Upper_shielddeploy Idle_shielddeploy_layer
 	$sequence Walk_Upper_shielddeploy Idle_shielddeploy_layer
 	$sequence Run_Upper_shielddeploy Idle_shielddeploy_layer
@@ -1119,17 +1119,17 @@ $poseparameter "body_yaw" -90 90 loop 360
 	$sequence Crouch_Idle_Shoot_shield_trans "Idle_Shoot_shield_trans_a" rtransition Crouch_Idle_Upper_shield Crouch_Idle_Upper_shielddeploy
 	$sequence Crouch_Walk_Shoot_shield_trans "Idle_Shoot_shield_trans_a" rtransition Crouch_Walk_Upper_shield Crouch_Walk_Upper_shielddeploy
 
-	$sequence Swim_Idle_Upper_shield "shield/swim_idle_shield" FPS 30 weightlist upperbody addlayer Swim_Aim_shield
-	$animation Swim_Shoot_shield_layer "shield/swim_shoot_shield" FPS 30 subtract Swim_Shoot_shield_layer 0 weightlist upperbody
-	$sequence Swim_Upper_shield "shield/swim_shield" FPS 30 weightlist upperbody addlayer Swim_Aim_shield
+	$sequence Swim_Idle_Upper_shield "shield/swim_idle_shield" weightlist upperbody addlayer Swim_Aim_shield
+	$animation Swim_Shoot_shield_layer "shield/swim_shoot_shield" subtract Swim_Shoot_shield_layer 0 weightlist upperbody
+	$sequence Swim_Upper_shield "shield/swim_shield" weightlist upperbody addlayer Swim_Aim_shield
 
-	//$animation Reload_shield_layer "shield/reload_shield" FPS 30 subtract Reload_shield_layer 0 weightlist upperbody
+	//$animation Reload_shield_layer "shield/reload_shield" subtract Reload_shield_layer 0 weightlist upperbody
 	//$sequence Reload_shield "Reload_shield_layer" delta
 
 	//-----------------
 	//	FLAMETHROWER
 	//-----------------
-	$sequence Jump_Upper_flamethrower "flamethrower/jump_flamethrower" FPS 30 startloop 0 weightlist upperbody 
+	$sequence Jump_Upper_flamethrower "flamethrower/jump_flamethrower" startloop 0 weightlist upperbody
 
 	$animation Swim_flamethrower_aim_neutral flamethrower/swim_9aims_flamethrower frame 4 4
 	$animation Swim_flamethrower_aim_up_left flamethrower/swim_9aims_flamethrower frame 0 0 subtract Swim_flamethrower_aim_neutral 0
@@ -1185,39 +1185,39 @@ $poseparameter "body_yaw" -90 90 loop 360
 	$animation Run_flamethrower_aim_down_right flamethrower/run_9aims_flamethrower frame 8 8 subtract Run_flamethrower_aim_neutral 0
 
 	$sequence Run_Aim_flamethrower {
-		Run_flamethrower_aim_up_right Run_flamethrower_aim_up_center Run_flamethrower_aim_up_left 
-		Run_flamethrower_aim_mid_right Run_flamethrower_aim_mid_center Run_flamethrower_aim_mid_left 
-		Run_flamethrower_aim_down_right Run_flamethrower_aim_down_center Run_flamethrower_aim_down_left 
+		Run_flamethrower_aim_up_right Run_flamethrower_aim_up_center Run_flamethrower_aim_up_left
+		Run_flamethrower_aim_mid_right Run_flamethrower_aim_mid_center Run_flamethrower_aim_mid_left
+		Run_flamethrower_aim_down_right Run_flamethrower_aim_down_center Run_flamethrower_aim_down_left
 		weightlist upperbody
 		blendwidth 3 blend body_yaw -90 90 blend body_pitch -65 65
 		iklock lfoot 1 0 iklock rfoot 1 0
 		delta
 	}
 
-	$sequence Idle_Upper_flamethrower "flamethrower/idle_flamethrower" FPS 30 weightlist upperbody addlayer Run_Aim_flamethrower
-	$sequence Walk_Upper_flamethrower "flamethrower/walk_flamethrower" FPS 30 weightlist upperbody addlayer Run_Aim_flamethrower
-	$sequence Run_Upper_flamethrower "flamethrower/run_flamethrower" FPS 30 startloop 0 weightlist upperbody addlayer Run_Aim_flamethrower
-	$sequence Crouch_Idle_Upper_flamethrower "flamethrower/crouch_idle_flamethrower" FPS 30 weightlist upperbody addlayer Crouch_Aim_flamethrower
-	$sequence Crouch_Walk_Upper_flamethrower "flamethrower/crouch_walk_flamethrower" FPS 30 weightlist upperbody addlayer Crouch_Aim_flamethrower
+	$sequence Idle_Upper_flamethrower "flamethrower/idle_flamethrower" weightlist upperbody addlayer Run_Aim_flamethrower
+	$sequence Walk_Upper_flamethrower "flamethrower/walk_flamethrower" weightlist upperbody addlayer Run_Aim_flamethrower
+	$sequence Run_Upper_flamethrower "flamethrower/run_flamethrower" startloop 0 weightlist upperbody addlayer Run_Aim_flamethrower
+	$sequence Crouch_Idle_Upper_flamethrower "flamethrower/crouch_idle_flamethrower" weightlist upperbody addlayer Crouch_Aim_flamethrower
+	$sequence Crouch_Walk_Upper_flamethrower "flamethrower/crouch_walk_flamethrower" weightlist upperbody addlayer Crouch_Aim_flamethrower
 
-	$animation Idle_Shoot_flamethrower_layer "flamethrower/shoot_flamethrower" FPS 30 subtract Idle_Shoot_flamethrower_layer 0 weightlist upperbody
+	$animation Idle_Shoot_flamethrower_layer "flamethrower/shoot_flamethrower" subtract Idle_Shoot_flamethrower_layer 0 weightlist upperbody
 	$sequence Idle_Shoot_flamethrower "Idle_Shoot_flamethrower_layer" delta
 	$sequence Walk_Shoot_flamethrower "Idle_Shoot_flamethrower_layer" delta
 	$sequence Run_Shoot_flamethrower "Idle_Shoot_flamethrower_layer" delta
 	$sequence Crouch_Idle_Shoot_flamethrower "Idle_Shoot_flamethrower_layer" delta
 	$sequence Crouch_Walk_Shoot_flamethrower "Idle_Shoot_flamethrower_layer" delta
 
-	$sequence Swim_Idle_Upper_flamethrower "flamethrower/swim_idle_flamethrower" FPS 30 weightlist upperbody addlayer Swim_Aim_flamethrower
-	$animation Swim_Shoot_flamethrower_layer "flamethrower/swim_shoot_flamethrower" FPS 30 subtract Swim_Shoot_flamethrower_layer 0 weightlist upperbody
-	$sequence Swim_Upper_flamethrower "flamethrower/swim_flamethrower" FPS 30 weightlist upperbody addlayer Swim_Aim_flamethrower
+	$sequence Swim_Idle_Upper_flamethrower "flamethrower/swim_idle_flamethrower" weightlist upperbody addlayer Swim_Aim_flamethrower
+	$animation Swim_Shoot_flamethrower_layer "flamethrower/swim_shoot_flamethrower" subtract Swim_Shoot_flamethrower_layer 0 weightlist upperbody
+	$sequence Swim_Upper_flamethrower "flamethrower/swim_flamethrower" weightlist upperbody addlayer Swim_Aim_flamethrower
 
-	//$animation Reload_flamethrower_layer "flamethrower/reload_flamethrower" FPS 30 subtract Reload_flamethrower_layer 0 weightlist upperbody
+	//$animation Reload_flamethrower_layer "flamethrower/reload_flamethrower" subtract Reload_flamethrower_layer 0 weightlist upperbody
 	//$sequence Reload_flamethrower "Reload_flamethrower_layer" delta
 
 	//-----------------
 	//	SPANNER
 	//-----------------
-	$sequence Jump_Upper_spanner "spanner/jump_spanner" FPS 30 startloop 0 weightlist upperbody 
+	$sequence Jump_Upper_spanner "spanner/jump_spanner" startloop 0 weightlist upperbody
 
 	$animation Swim_spanner_aim_neutral spanner/swim_9aims_spanner frame 4 4
 	$animation Swim_spanner_aim_up_left spanner/swim_9aims_spanner frame 0 0 subtract Swim_spanner_aim_neutral 0
@@ -1282,30 +1282,30 @@ $poseparameter "body_yaw" -90 90 loop 360
 		delta
 	}
 
-	$sequence Idle_Upper_spanner "spanner/idle_spanner" FPS 30 weightlist upperbody addlayer Run_Aim_spanner
-	$sequence Walk_Upper_spanner "spanner/walk_spanner" FPS 30 weightlist upperbody addlayer Run_Aim_spanner
-	$sequence Run_Upper_spanner "spanner/run_spanner" FPS 30 startloop 0 weightlist upperbody addlayer Run_Aim_spanner
-	$sequence Crouch_Idle_Upper_spanner "spanner/crouch_idle_spanner" FPS 30 weightlist upperbody addlayer Crouch_Aim_spanner
-	$sequence Crouch_Walk_Upper_spanner "spanner/crouch_walk_spanner" FPS 30 weightlist upperbody addlayer Crouch_Aim_spanner
+	$sequence Idle_Upper_spanner "spanner/idle_spanner" weightlist upperbody addlayer Run_Aim_spanner
+	$sequence Walk_Upper_spanner "spanner/walk_spanner" weightlist upperbody addlayer Run_Aim_spanner
+	$sequence Run_Upper_spanner "spanner/run_spanner" startloop 0 weightlist upperbody addlayer Run_Aim_spanner
+	$sequence Crouch_Idle_Upper_spanner "spanner/crouch_idle_spanner" weightlist upperbody addlayer Crouch_Aim_spanner
+	$sequence Crouch_Walk_Upper_spanner "spanner/crouch_walk_spanner" weightlist upperbody addlayer Crouch_Aim_spanner
 
-	$animation Idle_Shoot_spanner_layer "spanner/shoot_spanner" FPS 30 subtract Idle_Shoot_spanner_layer 0 weightlist upperbody
+	$animation Idle_Shoot_spanner_layer "spanner/shoot_spanner" subtract Idle_Shoot_spanner_layer 0 weightlist upperbody
 	$sequence Idle_Shoot_spanner "Idle_Shoot_spanner_layer" delta
 	$sequence Walk_Shoot_spanner "Idle_Shoot_spanner_layer" delta
 	$sequence Run_Shoot_spanner "Idle_Shoot_spanner_layer" delta
 	$sequence Crouch_Idle_Shoot_spanner "Idle_Shoot_spanner_layer" delta
 	$sequence Crouch_Walk_Shoot_spanner "Idle_Shoot_spanner_layer" delta
 
-	$sequence Swim_Idle_Upper_spanner "spanner/swim_idle_spanner" FPS 30 weightlist upperbody addlayer Swim_Aim_spanner
-	$animation Swim_Shoot_spanner_layer "spanner/swim_shoot_spanner" FPS 30 subtract Swim_Shoot_spanner_layer 0 weightlist upperbody
-	$sequence Swim_Upper_spanner "spanner/swim_spanner" FPS 30 weightlist upperbody addlayer Swim_Aim_spanner
+	$sequence Swim_Idle_Upper_spanner "spanner/swim_idle_spanner" weightlist upperbody addlayer Swim_Aim_spanner
+	$animation Swim_Shoot_spanner_layer "spanner/swim_shoot_spanner" subtract Swim_Shoot_spanner_layer 0 weightlist upperbody
+	$sequence Swim_Upper_spanner "spanner/swim_spanner" weightlist upperbody addlayer Swim_Aim_spanner
 
-	//$animation Reload_spanner_layer "spanner/reload_spanner" FPS 30 subtract Reload_spanner_layer 0 weightlist upperbody
+	//$animation Reload_spanner_layer "spanner/reload_spanner" subtract Reload_spanner_layer 0 weightlist upperbody
 	//$sequence Reload_spanner "Reload_spanner_layer" delta
 
 	//-----------------
 	//	KNIFE
 	//-----------------
-	$sequence Jump_Upper_knife "knife/jump_knife" FPS 30 startloop 0 weightlist upperbody
+	$sequence Jump_Upper_knife "knife/jump_knife" startloop 0 weightlist upperbody
 
 	$animation Swim_knife_aim_neutral knife/swim_9aims_knife frame 4 4
 	$animation Swim_knife_aim_up_left knife/swim_9aims_knife frame 0 0 subtract Swim_knife_aim_neutral 0
@@ -1370,30 +1370,30 @@ $poseparameter "body_yaw" -90 90 loop 360
 		delta
 	}
 
-	$sequence Idle_Upper_knife "knife/idle_knife" FPS 30 weightlist upperbody addlayer Run_Aim_knife
-	$sequence Walk_Upper_knife "knife/walk_knife" FPS 30 weightlist upperbody addlayer Run_Aim_knife
-	$sequence Run_Upper_knife "knife/run_knife" FPS 30 startloop 0 weightlist upperbody addlayer Run_Aim_knife
-	$sequence Crouch_Idle_Upper_knife "knife/crouch_idle_knife" FPS 30 weightlist upperbody addlayer Crouch_Aim_knife
-	$sequence Crouch_Walk_Upper_knife "knife/crouch_walk_knife" FPS 30 weightlist upperbody addlayer Crouch_Aim_knife
+	$sequence Idle_Upper_knife "knife/idle_knife" weightlist upperbody addlayer Run_Aim_knife
+	$sequence Walk_Upper_knife "knife/walk_knife" weightlist upperbody addlayer Run_Aim_knife
+	$sequence Run_Upper_knife "knife/run_knife" startloop 0 weightlist upperbody addlayer Run_Aim_knife
+	$sequence Crouch_Idle_Upper_knife "knife/crouch_idle_knife" weightlist upperbody addlayer Crouch_Aim_knife
+	$sequence Crouch_Walk_Upper_knife "knife/crouch_walk_knife" weightlist upperbody addlayer Crouch_Aim_knife
 
-	$animation Idle_Shoot_knife_layer "knife/shoot_knife" FPS 30 subtract Idle_Shoot_knife_layer 0 weightlist upperbody
+	$animation Idle_Shoot_knife_layer "knife/shoot_knife" subtract Idle_Shoot_knife_layer 0 weightlist upperbody
 	$sequence Idle_Shoot_knife "Idle_Shoot_knife_layer" delta
 	$sequence Walk_Shoot_knife "Idle_Shoot_knife_layer" delta
 	$sequence Run_Shoot_knife "Idle_Shoot_knife_layer" delta
 	$sequence Crouch_Idle_Shoot_knife "Idle_Shoot_knife_layer" delta
 	$sequence Crouch_Walk_Shoot_knife "Idle_Shoot_knife_layer" delta
 
-	$sequence Swim_Idle_Upper_knife "knife/swim_idle_knife" FPS 30 weightlist upperbody addlayer Swim_Aim_knife
-	$animation Swim_Shoot_knife_layer "knife/swim_shoot_knife" FPS 30 subtract Swim_Shoot_knife_layer 0 weightlist upperbody
-	$sequence Swim_Upper_knife "knife/swim_knife" FPS 30 weightlist upperbody addlayer Swim_Aim_knife
+	$sequence Swim_Idle_Upper_knife "knife/swim_idle_knife" weightlist upperbody addlayer Swim_Aim_knife
+	$animation Swim_Shoot_knife_layer "knife/swim_shoot_knife" subtract Swim_Shoot_knife_layer 0 weightlist upperbody
+	$sequence Swim_Upper_knife "knife/swim_knife" weightlist upperbody addlayer Swim_Aim_knife
 
-	//$animation Reload_knife_layer "knife/reload_knife" FPS 30 subtract Reload_knife_layer 0 weightlist upperbody
+	//$animation Reload_knife_layer "knife/reload_knife" subtract Reload_knife_layer 0 weightlist upperbody
 	//$sequence Reload_knife "Reload_knife_layer" delta
 
 	//-----------------
 	//	UMBRELLA
 	//-----------------
-	$sequence Jump_Upper_umbrella "umbrella/jump_umbrella" FPS 30 startloop 0 weightlist upperbody
+	$sequence Jump_Upper_umbrella "umbrella/jump_umbrella" startloop 0 weightlist upperbody
 
 	$animation Swim_umbrella_aim_neutral umbrella/swim_9aims_umbrella frame 4 4
 	$animation Swim_umbrella_aim_up_left umbrella/swim_9aims_umbrella frame 0 0 subtract Swim_umbrella_aim_neutral 0
@@ -1458,30 +1458,30 @@ $poseparameter "body_yaw" -90 90 loop 360
 		delta
 	}
 
-	$sequence Idle_Upper_umbrella "umbrella/idle_umbrella" FPS 30 weightlist upperbody addlayer Run_Aim_umbrella
-	$sequence Walk_Upper_umbrella "umbrella/walk_umbrella" FPS 30 weightlist upperbody addlayer Run_Aim_umbrella
-	$sequence Run_Upper_umbrella "umbrella/run_umbrella" FPS 30 startloop 0 weightlist upperbody addlayer Run_Aim_umbrella
-	$sequence Crouch_Idle_Upper_umbrella "umbrella/crouch_idle_umbrella" FPS 30 weightlist upperbody addlayer Crouch_Aim_umbrella
-	$sequence Crouch_Walk_Upper_umbrella "umbrella/crouch_walk_umbrella" FPS 30 weightlist upperbody addlayer Crouch_Aim_umbrella
+	$sequence Idle_Upper_umbrella "umbrella/idle_umbrella" weightlist upperbody addlayer Run_Aim_umbrella
+	$sequence Walk_Upper_umbrella "umbrella/walk_umbrella" weightlist upperbody addlayer Run_Aim_umbrella
+	$sequence Run_Upper_umbrella "umbrella/run_umbrella" startloop 0 weightlist upperbody addlayer Run_Aim_umbrella
+	$sequence Crouch_Idle_Upper_umbrella "umbrella/crouch_idle_umbrella" weightlist upperbody addlayer Crouch_Aim_umbrella
+	$sequence Crouch_Walk_Upper_umbrella "umbrella/crouch_walk_umbrella" weightlist upperbody addlayer Crouch_Aim_umbrella
 
-	$animation Idle_Shoot_umbrella_layer "umbrella/shoot_umbrella" FPS 30 subtract Idle_Shoot_umbrella_layer 0 weightlist upperbody
+	$animation Idle_Shoot_umbrella_layer "umbrella/shoot_umbrella" subtract Idle_Shoot_umbrella_layer 0 weightlist upperbody
 	$sequence Idle_Shoot_umbrella "Idle_Shoot_umbrella_layer" delta
 	$sequence Walk_Shoot_umbrella "Idle_Shoot_umbrella_layer" delta
 	$sequence Run_Shoot_umbrella "Idle_Shoot_umbrella_layer" delta
 	$sequence Crouch_Idle_Shoot_umbrella "Idle_Shoot_umbrella_layer" delta
 	$sequence Crouch_Walk_Shoot_umbrella "Idle_Shoot_umbrella_layer" delta
 
-	$sequence Swim_Idle_Upper_umbrella "umbrella/swim_idle_umbrella" FPS 30 weightlist upperbody addlayer Swim_Aim_umbrella
-	$animation Swim_Shoot_umbrella_layer "umbrella/swim_shoot_umbrella" FPS 30 subtract Swim_Shoot_umbrella_layer 0 weightlist upperbody
-	$sequence Swim_Upper_umbrella "umbrella/swim_umbrella" FPS 30 weightlist upperbody addlayer Swim_Aim_umbrella
+	$sequence Swim_Idle_Upper_umbrella "umbrella/swim_idle_umbrella" weightlist upperbody addlayer Swim_Aim_umbrella
+	$animation Swim_Shoot_umbrella_layer "umbrella/swim_shoot_umbrella" subtract Swim_Shoot_umbrella_layer 0 weightlist upperbody
+	$sequence Swim_Upper_umbrella "umbrella/swim_umbrella" weightlist upperbody addlayer Swim_Aim_umbrella
 
-	//$animation Reload_umbrella_layer "umbrella/reload_umbrella" FPS 30 subtract Reload_umbrella_layer 0 weightlist upperbody
+	//$animation Reload_umbrella_layer "umbrella/reload_umbrella" subtract Reload_umbrella_layer 0 weightlist upperbody
 	//$sequence Reload_umbrella "Reload_umbrella_layer" delta
 
 	//-----------------
 	//	TRANQUILISER
 	//-----------------
-	$sequence Jump_Upper_tranq "tranq/jump_tranq" FPS 30 startloop 0 weightlist upperbody
+	$sequence Jump_Upper_tranq "tranq/jump_tranq" startloop 0 weightlist upperbody
 
 	$animation Swim_tranq_aim_neutral tranq/swim_9aims_tranq frame 4 4
 	$animation Swim_tranq_aim_up_left tranq/swim_9aims_tranq frame 0 0 subtract Swim_tranq_aim_neutral 0
@@ -1546,30 +1546,30 @@ $poseparameter "body_yaw" -90 90 loop 360
 		delta
 	}
 
-	$sequence Idle_Upper_tranq "tranq/idle_tranq" FPS 30 weightlist upperbody addlayer Run_Aim_tranq
-	$sequence Walk_Upper_tranq "tranq/walk_tranq" FPS 30 weightlist upperbody addlayer Run_Aim_tranq
-	$sequence Run_Upper_tranq "tranq/run_tranq" FPS 30 startloop 0 weightlist upperbody addlayer Run_Aim_tranq
-	$sequence Crouch_Idle_Upper_tranq "tranq/crouch_idle_tranq" FPS 30 weightlist upperbody addlayer Crouch_Aim_tranq
-	$sequence Crouch_Walk_Upper_tranq "tranq/crouch_walk_tranq" FPS 30 weightlist upperbody addlayer Crouch_Aim_tranq
+	$sequence Idle_Upper_tranq "tranq/idle_tranq" weightlist upperbody addlayer Run_Aim_tranq
+	$sequence Walk_Upper_tranq "tranq/walk_tranq" weightlist upperbody addlayer Run_Aim_tranq
+	$sequence Run_Upper_tranq "tranq/run_tranq" startloop 0 weightlist upperbody addlayer Run_Aim_tranq
+	$sequence Crouch_Idle_Upper_tranq "tranq/crouch_idle_tranq" weightlist upperbody addlayer Crouch_Aim_tranq
+	$sequence Crouch_Walk_Upper_tranq "tranq/crouch_walk_tranq" weightlist upperbody addlayer Crouch_Aim_tranq
 
-	$animation Idle_Shoot_tranq_layer "tranq/shoot_tranq" FPS 30 subtract Idle_Shoot_tranq_layer 0 weightlist upperbody
+	$animation Idle_Shoot_tranq_layer "tranq/shoot_tranq" subtract Idle_Shoot_tranq_layer 0 weightlist upperbody
 	$sequence Idle_Shoot_tranq "Idle_Shoot_tranq_layer" delta
 	$sequence Walk_Shoot_tranq "Idle_Shoot_tranq_layer" delta
 	$sequence Run_Shoot_tranq "Idle_Shoot_tranq_layer" delta
 	$sequence Crouch_Idle_Shoot_tranq "Idle_Shoot_tranq_layer" delta
 	$sequence Crouch_Walk_Shoot_tranq "Idle_Shoot_tranq_layer" delta
 
-	$sequence Swim_Idle_Upper_tranq "tranq/swim_idle_tranq" FPS 30 weightlist upperbody addlayer Swim_Aim_tranq
-	$animation Swim_Shoot_tranq_layer "tranq/swim_shoot_tranq" FPS 30 subtract Swim_Shoot_tranq_layer 0 weightlist upperbody
-	$sequence Swim_Upper_tranq "tranq/swim_tranq" FPS 30 weightlist upperbody addlayer Swim_Aim_tranq
+	$sequence Swim_Idle_Upper_tranq "tranq/swim_idle_tranq" weightlist upperbody addlayer Swim_Aim_tranq
+	$animation Swim_Shoot_tranq_layer "tranq/swim_shoot_tranq" subtract Swim_Shoot_tranq_layer 0 weightlist upperbody
+	$sequence Swim_Upper_tranq "tranq/swim_tranq" weightlist upperbody addlayer Swim_Aim_tranq
 
-	//$animation Reload_tranq_layer "tranq/reload_tranq" FPS 30 subtract Reload_tranq_layer 0 weightlist upperbody
+	//$animation Reload_tranq_layer "tranq/reload_tranq" subtract Reload_tranq_layer 0 weightlist upperbody
 	//$sequence Reload_tranq "Reload_tranq_layer" delta
 
 	//-----------------
 	//	RPG
 	//-----------------
-	$sequence Jump_Upper_rpg "rpg/jump_rpg" FPS 30 startloop 0 weightlist upperbody
+	$sequence Jump_Upper_rpg "rpg/jump_rpg" startloop 0 weightlist upperbody
 
 	$animation Swim_rpg_aim_neutral rpg/swim_9aims_rpg frame 4 4
 	$animation Swim_rpg_aim_up_left rpg/swim_9aims_rpg frame 0 0 subtract Swim_rpg_aim_neutral 0
@@ -1634,30 +1634,30 @@ $poseparameter "body_yaw" -90 90 loop 360
 		delta
 	}
 
-	$sequence Idle_Upper_rpg "rpg/idle_rpg" FPS 30 weightlist upperbody addlayer Run_Aim_rpg
-	$sequence Walk_Upper_rpg "rpg/walk_rpg" FPS 30 weightlist upperbody addlayer Run_Aim_rpg
-	$sequence Run_Upper_rpg "rpg/run_rpg" FPS 30 startloop 0 weightlist upperbody addlayer Run_Aim_rpg
-	$sequence Crouch_Idle_Upper_rpg "rpg/crouch_idle_rpg" FPS 30 weightlist upperbody addlayer Crouch_Aim_rpg
-	$sequence Crouch_Walk_Upper_rpg "rpg/crouch_walk_rpg" FPS 30 weightlist upperbody addlayer Crouch_Aim_rpg
+	$sequence Idle_Upper_rpg "rpg/idle_rpg" weightlist upperbody addlayer Run_Aim_rpg
+	$sequence Walk_Upper_rpg "rpg/walk_rpg" weightlist upperbody addlayer Run_Aim_rpg
+	$sequence Run_Upper_rpg "rpg/run_rpg" startloop 0 weightlist upperbody addlayer Run_Aim_rpg
+	$sequence Crouch_Idle_Upper_rpg "rpg/crouch_idle_rpg" weightlist upperbody addlayer Crouch_Aim_rpg
+	$sequence Crouch_Walk_Upper_rpg "rpg/crouch_walk_rpg" weightlist upperbody addlayer Crouch_Aim_rpg
 
-	$animation Idle_Shoot_rpg_layer "rpg/shoot_rpg" FPS 30 subtract Idle_Shoot_rpg_layer 0 weightlist upperbody
+	$animation Idle_Shoot_rpg_layer "rpg/shoot_rpg" subtract Idle_Shoot_rpg_layer 0 weightlist upperbody
 	$sequence Idle_Shoot_rpg "Idle_Shoot_rpg_layer" delta
 	$sequence Walk_Shoot_rpg "Idle_Shoot_rpg_layer" delta
 	$sequence Run_Shoot_rpg "Idle_Shoot_rpg_layer" delta
 	$sequence Crouch_Idle_Shoot_rpg "Idle_Shoot_rpg_layer" delta
 	$sequence Crouch_Walk_Shoot_rpg "Idle_Shoot_rpg_layer" delta
 
-	$sequence Swim_Idle_Upper_rpg "rpg/swim_idle_rpg" FPS 30 weightlist upperbody addlayer Swim_Aim_rpg
-	$animation Swim_Shoot_rpg_layer "rpg/swim_shoot_rpg" FPS 30 subtract Swim_Shoot_rpg_layer 0 weightlist upperbody
-	$sequence Swim_Upper_rpg "rpg/swim_rpg" FPS 30 weightlist upperbody addlayer Swim_Aim_rpg
+	$sequence Swim_Idle_Upper_rpg "rpg/swim_idle_rpg" weightlist upperbody addlayer Swim_Aim_rpg
+	$animation Swim_Shoot_rpg_layer "rpg/swim_shoot_rpg" subtract Swim_Shoot_rpg_layer 0 weightlist upperbody
+	$sequence Swim_Upper_rpg "rpg/swim_rpg" weightlist upperbody addlayer Swim_Aim_rpg
 
-	$animation Reload_rpg_layer "rpg/reload_rpg" FPS 30 subtract Reload_rpg_layer 0 weightlist upperbody
+	$animation Reload_rpg_layer "rpg/reload_rpg" subtract Reload_rpg_layer 0 weightlist upperbody
 	$sequence Reload_rpg "Reload_rpg_layer" delta
 
 /*	//-----------------
 	//	INCENDIARY CANNON (OBSOLETE as fuck)
 	//-----------------
-	$sequence Jump_Upper_incendiarycannon "incendiarycannon/jump_ic" FPS 30 startloop 0 weightlist upperbody
+	$sequence Jump_Upper_incendiarycannon "incendiarycannon/jump_ic" startloop 0 weightlist upperbody
 
 	$animation Swim_incendiarycannon_aim_neutral incendiarycannon/swim_9aims_ic frame 4 4
 	$animation Swim_incendiarycannon_aim_up_left incendiarycannon/swim_9aims_ic frame 0 0 subtract Swim_incendiarycannon_aim_neutral 0
@@ -1722,32 +1722,32 @@ $poseparameter "body_yaw" -90 90 loop 360
 		delta
 	}
 
-	$sequence Idle_Upper_incendiarycannon "incendiarycannon/idle_ic" FPS 30 weightlist upperbody addlayer Run_Aim_incendiarycannon
-	$sequence Walk_Upper_incendiarycannon "incendiarycannon/walk_ic" FPS 30 weightlist upperbody addlayer Run_Aim_incendiarycannon
-	$sequence Run_Upper_incendiarycannon "incendiarycannon/run_ic" FPS 30 startloop 0 weightlist upperbody addlayer Run_Aim_incendiarycannon
-	$sequence Crouch_Idle_Upper_incendiarycannon "incendiarycannon/crouch_idle_ic" FPS 30 weightlist upperbody addlayer Crouch_Aim_incendiarycannon
-	$sequence Crouch_Walk_Upper_incendiarycannon "incendiarycannon/crouch_walk_ic" FPS 30 weightlist upperbody addlayer Crouch_Aim_incendiarycannon
+	$sequence Idle_Upper_incendiarycannon "incendiarycannon/idle_ic" weightlist upperbody addlayer Run_Aim_incendiarycannon
+	$sequence Walk_Upper_incendiarycannon "incendiarycannon/walk_ic" weightlist upperbody addlayer Run_Aim_incendiarycannon
+	$sequence Run_Upper_incendiarycannon "incendiarycannon/run_ic" startloop 0 weightlist upperbody addlayer Run_Aim_incendiarycannon
+	$sequence Crouch_Idle_Upper_incendiarycannon "incendiarycannon/crouch_idle_ic" weightlist upperbody addlayer Crouch_Aim_incendiarycannon
+	$sequence Crouch_Walk_Upper_incendiarycannon "incendiarycannon/crouch_walk_ic" weightlist upperbody addlayer Crouch_Aim_incendiarycannon
 
-	$animation Idle_Shoot_incendiarycannon_layer "incendiarycannon/shoot_ic" FPS 30 subtract Idle_Shoot_incendiarycannon_layer 0 weightlist upperbody
+	$animation Idle_Shoot_incendiarycannon_layer "incendiarycannon/shoot_ic" subtract Idle_Shoot_incendiarycannon_layer 0 weightlist upperbody
 	$sequence Idle_Shoot_incendiarycannon "Idle_Shoot_incendiarycannon_layer" delta
 	$sequence Walk_Shoot_incendiarycannon "Idle_Shoot_incendiarycannon_layer" delta
 	$sequence Run_Shoot_incendiarycannon "Idle_Shoot_incendiarycannon_layer" delta
 	$sequence Crouch_Idle_Shoot_incendiarycannon "Idle_Shoot_incendiarycannon_layer" delta
 	$sequence Crouch_Walk_Shoot_incendiarycannon "Idle_Shoot_incendiarycannon_layer" delta
 
-	$sequence Swim_Idle_Upper_incendiarycannon "incendiarycannon/swim_idle_ic" FPS 30 weightlist upperbody addlayer Swim_Aim_incendiarycannon
-	$animation Swim_Shoot_incendiarycannon_layer "incendiarycannon/swim_shoot_ic" FPS 30 subtract Swim_Shoot_incendiarycannon_layer 0 weightlist upperbody
-	$sequence Swim_Upper_incendiarycannon "incendiarycannon/swim_ic" FPS 30 weightlist upperbody addlayer Swim_Aim_incendiarycannon
+	$sequence Swim_Idle_Upper_incendiarycannon "incendiarycannon/swim_idle_ic" weightlist upperbody addlayer Swim_Aim_incendiarycannon
+	$animation Swim_Shoot_incendiarycannon_layer "incendiarycannon/swim_shoot_ic" subtract Swim_Shoot_incendiarycannon_layer 0 weightlist upperbody
+	$sequence Swim_Upper_incendiarycannon "incendiarycannon/swim_ic" weightlist upperbody addlayer Swim_Aim_incendiarycannon
 
 
-	$animation Reload_incendiarycannon_layer "incendiarycannon/reload_ic" FPS 30 subtract Reload_incendiarycannon_layer 0 weightlist upperbody
+	$animation Reload_incendiarycannon_layer "incendiarycannon/reload_ic" subtract Reload_incendiarycannon_layer 0 weightlist upperbody
 	$sequence Reload_incendiarycannon "Reload_incendiarycannon_layer" delta
 */
 
 	//-----------------
 	// NEW INCENDIARY CANNON (USES SUPERSHOTGUN ANIMS - COPIED/PASTED)
 	//-----------------
-	$sequence Jump_Upper_incendiarycannon "incendiarycannon/jump_incendiarycannon" FPS 30 startloop 0 weightlist upperbody
+	$sequence Jump_Upper_incendiarycannon "incendiarycannon/jump_incendiarycannon" startloop 0 weightlist upperbody
 
 	$animation Swim_incendiarycannon_aim_neutral incendiarycannon/swim_9aims_incendiarycannon frame 4 4
 	$animation Swim_incendiarycannon_aim_up_left incendiarycannon/swim_9aims_incendiarycannon frame 0 0 subtract Swim_incendiarycannon_aim_neutral 0
@@ -1812,31 +1812,31 @@ $poseparameter "body_yaw" -90 90 loop 360
 		delta
 	}
 
-	$sequence Idle_Upper_incendiarycannon "incendiarycannon/idle_incendiarycannon" FPS 30 weightlist upperbody addlayer Run_Aim_incendiarycannon
-	$sequence Walk_Upper_incendiarycannon "incendiarycannon/walk_incendiarycannon" FPS 30 weightlist upperbody addlayer Run_Aim_incendiarycannon
-	$sequence Run_Upper_incendiarycannon "incendiarycannon/run_incendiarycannon" FPS 30 startloop 0 weightlist upperbody addlayer Run_Aim_incendiarycannon
-	$sequence Crouch_Idle_Upper_incendiarycannon "incendiarycannon/crouch_idle_incendiarycannon" FPS 30 weightlist upperbody addlayer Crouch_Aim_incendiarycannon
-	$sequence Crouch_Walk_Upper_incendiarycannon "incendiarycannon/crouch_walk_incendiarycannon" FPS 30 weightlist upperbody addlayer Crouch_Aim_incendiarycannon
+	$sequence Idle_Upper_incendiarycannon "incendiarycannon/idle_incendiarycannon" weightlist upperbody addlayer Run_Aim_incendiarycannon
+	$sequence Walk_Upper_incendiarycannon "incendiarycannon/walk_incendiarycannon" weightlist upperbody addlayer Run_Aim_incendiarycannon
+	$sequence Run_Upper_incendiarycannon "incendiarycannon/run_incendiarycannon" startloop 0 weightlist upperbody addlayer Run_Aim_incendiarycannon
+	$sequence Crouch_Idle_Upper_incendiarycannon "incendiarycannon/crouch_idle_incendiarycannon" weightlist upperbody addlayer Crouch_Aim_incendiarycannon
+	$sequence Crouch_Walk_Upper_incendiarycannon "incendiarycannon/crouch_walk_incendiarycannon" weightlist upperbody addlayer Crouch_Aim_incendiarycannon
 
-	$animation Idle_Shoot_incendiarycannon_layer "incendiarycannon/shoot_incendiarycannon" FPS 30 subtract Idle_Shoot_incendiarycannon_layer 0 weightlist upperbody
+	$animation Idle_Shoot_incendiarycannon_layer "incendiarycannon/shoot_incendiarycannon" subtract Idle_Shoot_incendiarycannon_layer 0 weightlist upperbody
 	$sequence Idle_Shoot_incendiarycannon "Idle_Shoot_incendiarycannon_layer" delta
 	$sequence Walk_Shoot_incendiarycannon "Idle_Shoot_incendiarycannon_layer" delta
 	$sequence Run_Shoot_incendiarycannon "Idle_Shoot_incendiarycannon_layer" delta
 	$sequence Crouch_Idle_Shoot_incendiarycannon "Idle_Shoot_incendiarycannon_layer" delta
 	$sequence Crouch_Walk_Shoot_incendiarycannon "Idle_Shoot_incendiarycannon_layer" delta
 
-	$sequence Swim_Idle_Upper_incendiarycannon "incendiarycannon/swim_idle_incendiarycannon" FPS 30 weightlist upperbody addlayer Swim_Aim_incendiarycannon
-	$animation Swim_Shoot_incendiarycannon_layer "incendiarycannon/swim_shoot_incendiarycannon" FPS 30 subtract Swim_Shoot_incendiarycannon_layer 0 weightlist upperbody
-	$sequence Swim_Upper_incendiarycannon "incendiarycannon/swim_incendiarycannon" FPS 30 weightlist upperbody addlayer Swim_Aim_incendiarycannon
+	$sequence Swim_Idle_Upper_incendiarycannon "incendiarycannon/swim_idle_incendiarycannon" weightlist upperbody addlayer Swim_Aim_incendiarycannon
+	$animation Swim_Shoot_incendiarycannon_layer "incendiarycannon/swim_shoot_incendiarycannon" subtract Swim_Shoot_incendiarycannon_layer 0 weightlist upperbody
+	$sequence Swim_Upper_incendiarycannon "incendiarycannon/swim_incendiarycannon" weightlist upperbody addlayer Swim_Aim_incendiarycannon
 
-	$animation Reload_incendiarycannon_layer "incendiarycannon/reload_incendiarycannon" FPS 30 subtract Reload_incendiarycannon_layer 0 weightlist upperbody
+	$animation Reload_incendiarycannon_layer "incendiarycannon/reload_incendiarycannon" subtract Reload_incendiarycannon_layer 0 weightlist upperbody
 	$sequence Reload_incendiarycannon "Reload_incendiarycannon_layer" delta
 
 
 	//-----------------
 	//	MEDKIT
 	//-----------------
-	$sequence Jump_Upper_medkit "medkit/jump_medkit" FPS 30 startloop 0 weightlist upperbody
+	$sequence Jump_Upper_medkit "medkit/jump_medkit" startloop 0 weightlist upperbody
 
 	$animation Swim_medkit_aim_neutral medkit/swim_9aims_medkit frame 4 4
 	$animation Swim_medkit_aim_up_left medkit/swim_9aims_medkit frame 0 0 subtract Swim_medkit_aim_neutral 0
@@ -1871,9 +1871,9 @@ $poseparameter "body_yaw" -90 90 loop 360
 	$animation Crouch_medkit_aim_down_right medkit/crouch_9aims_medkit frame 8 8 subtract Crouch_medkit_aim_neutral 0
 
 	$sequence Crouch_Aim_medkit {
-		Crouch_medkit_aim_up_right Crouch_medkit_aim_up_center Crouch_medkit_aim_up_left 
-		Crouch_medkit_aim_mid_right Crouch_medkit_aim_mid_center Crouch_medkit_aim_mid_left 
-		Crouch_medkit_aim_down_right Crouch_medkit_aim_down_center Crouch_medkit_aim_down_left 
+		Crouch_medkit_aim_up_right Crouch_medkit_aim_up_center Crouch_medkit_aim_up_left
+		Crouch_medkit_aim_mid_right Crouch_medkit_aim_mid_center Crouch_medkit_aim_mid_left
+		Crouch_medkit_aim_down_right Crouch_medkit_aim_down_center Crouch_medkit_aim_down_left
 		weightlist upperbody
 		blendwidth 3 blend body_yaw -90 90 blend body_pitch -65 65
 		iklock lfoot 1 0 iklock rfoot 1 0
@@ -1902,30 +1902,30 @@ $poseparameter "body_yaw" -90 90 loop 360
 	}
 
 
-	$sequence Idle_Upper_medkit "medkit/idle_medkit" FPS 30 weightlist upperbody addlayer Run_Aim_medkit
-	$sequence Walk_Upper_medkit "medkit/walk_medkit" FPS 30 weightlist upperbody addlayer Run_Aim_medkit
-	$sequence Run_Upper_medkit "medkit/run_medkit" FPS 30 startloop 0 weightlist upperbody addlayer Run_Aim_medkit
-	$sequence Crouch_Idle_Upper_medkit "medkit/crouch_idle_medkit" FPS 30 weightlist upperbody addlayer Crouch_Aim_medkit
-	$sequence Crouch_Walk_Upper_medkit "medkit/crouch_walk_medkit" FPS 30 weightlist upperbody addlayer Crouch_Aim_medkit
+	$sequence Idle_Upper_medkit "medkit/idle_medkit" weightlist upperbody addlayer Run_Aim_medkit
+	$sequence Walk_Upper_medkit "medkit/walk_medkit" weightlist upperbody addlayer Run_Aim_medkit
+	$sequence Run_Upper_medkit "medkit/run_medkit" startloop 0 weightlist upperbody addlayer Run_Aim_medkit
+	$sequence Crouch_Idle_Upper_medkit "medkit/crouch_idle_medkit" weightlist upperbody addlayer Crouch_Aim_medkit
+	$sequence Crouch_Walk_Upper_medkit "medkit/crouch_walk_medkit" weightlist upperbody addlayer Crouch_Aim_medkit
 
-	$animation Idle_Shoot_medkit_layer "medkit/shoot_medkit" FPS 30 subtract Idle_Shoot_medkit_layer 0 weightlist upperbody
+	$animation Idle_Shoot_medkit_layer "medkit/shoot_medkit" subtract Idle_Shoot_medkit_layer 0 weightlist upperbody
 	$sequence Idle_Shoot_medkit "Idle_Shoot_medkit_layer" delta
 	$sequence Walk_Shoot_medkit "Idle_Shoot_medkit_layer" delta
 	$sequence Run_Shoot_medkit "Idle_Shoot_medkit_layer" delta
 	$sequence Crouch_Idle_Shoot_medkit "Idle_Shoot_medkit_layer" delta
 	$sequence Crouch_Walk_Shoot_medkit "Idle_Shoot_medkit_layer" delta
 
-	$sequence Swim_Idle_Upper_medkit "medkit/swim_idle_medkit" FPS 30 weightlist upperbody addlayer Swim_Aim_medkit
-	$animation Swim_Shoot_medkit_layer "medkit/swim_shoot_medkit" FPS 30 subtract Swim_Shoot_medkit_layer 0 weightlist upperbody
-	$sequence Swim_Upper_medkit "medkit/swim_medkit" FPS 30 weightlist upperbody addlayer Swim_Aim_medkit
+	$sequence Swim_Idle_Upper_medkit "medkit/swim_idle_medkit" weightlist upperbody addlayer Swim_Aim_medkit
+	$animation Swim_Shoot_medkit_layer "medkit/swim_shoot_medkit" subtract Swim_Shoot_medkit_layer 0 weightlist upperbody
+	$sequence Swim_Upper_medkit "medkit/swim_medkit" weightlist upperbody addlayer Swim_Aim_medkit
 
-	//$animation Reload_medkit_layer "medkit/reload_medkit" FPS 30 subtract Reload_medkit_layer 0 weightlist upperbody
+	//$animation Reload_medkit_layer "medkit/reload_medkit" subtract Reload_medkit_layer 0 weightlist upperbody
 	//$sequence Reload_medkit "Reload_medkit_layer" delta
 
 	//-----------------
 	//	SNIPER RIFLE
 	//-----------------
-	$sequence Jump_Upper_sniperrifle "sniperrifle/jump_sniperrifle" FPS 30 startloop 0 weightlist upperbody 
+	$sequence Jump_Upper_sniperrifle "sniperrifle/jump_sniperrifle" startloop 0 weightlist upperbody
 
 	$animation Swim_sniperrifle_aim_neutral sniperrifle/swim_9aims_sniperrifle frame 4 4
 	$animation Swim_sniperrifle_aim_up_left sniperrifle/swim_9aims_sniperrifle frame 0 0 subtract Swim_sniperrifle_aim_neutral 0
@@ -1990,31 +1990,31 @@ $poseparameter "body_yaw" -90 90 loop 360
 		delta
 	}
 
-	$sequence Idle_Upper_sniperrifle "sniperrifle/idle_sniperrifle" FPS 30 weightlist upperbody addlayer Run_Aim_sniperrifle
-	$sequence Walk_Upper_sniperrifle "sniperrifle/walk_sniperrifle" FPS 30 weightlist upperbody addlayer Run_Aim_sniperrifle
-	$sequence Run_Upper_sniperrifle "sniperrifle/run_sniperrifle" FPS 30 startloop 0 weightlist upperbody addlayer Run_Aim_sniperrifle
-	$sequence Crouch_Idle_Upper_sniperrifle "sniperrifle/crouch_idle_sniperrifle" FPS 30 weightlist upperbody addlayer Crouch_Aim_sniperrifle
-	$sequence Crouch_Walk_Upper_sniperrifle "sniperrifle/crouch_walk_sniperrifle" FPS 30 weightlist upperbody addlayer Crouch_Aim_sniperrifle
+	$sequence Idle_Upper_sniperrifle "sniperrifle/idle_sniperrifle" weightlist upperbody addlayer Run_Aim_sniperrifle
+	$sequence Walk_Upper_sniperrifle "sniperrifle/walk_sniperrifle" weightlist upperbody addlayer Run_Aim_sniperrifle
+	$sequence Run_Upper_sniperrifle "sniperrifle/run_sniperrifle" startloop 0 weightlist upperbody addlayer Run_Aim_sniperrifle
+	$sequence Crouch_Idle_Upper_sniperrifle "sniperrifle/crouch_idle_sniperrifle" weightlist upperbody addlayer Crouch_Aim_sniperrifle
+	$sequence Crouch_Walk_Upper_sniperrifle "sniperrifle/crouch_walk_sniperrifle" weightlist upperbody addlayer Crouch_Aim_sniperrifle
 
-	$animation Idle_Shoot_sniperrifle_layer "sniperrifle/shoot_sniperrifle" FPS 30 subtract Idle_Shoot_sniperrifle_layer 0 weightlist upperbody
+	$animation Idle_Shoot_sniperrifle_layer "sniperrifle/shoot_sniperrifle" subtract Idle_Shoot_sniperrifle_layer 0 weightlist upperbody
 	$sequence Idle_Shoot_sniperrifle "Idle_Shoot_sniperrifle_layer" delta
 	$sequence Walk_Shoot_sniperrifle "Idle_Shoot_sniperrifle_layer" delta
 	$sequence Run_Shoot_sniperrifle "Idle_Shoot_sniperrifle_layer" delta
 	$sequence Crouch_Idle_Shoot_sniperrifle "Idle_Shoot_sniperrifle_layer" delta
 	$sequence Crouch_Walk_Shoot_sniperrifle "Idle_Shoot_sniperrifle_layer" delta
 
-	$sequence Swim_Idle_Upper_sniperrifle "sniperrifle/swim_idle_sniperrifle" FPS 30 weightlist upperbody addlayer Swim_Aim_sniperrifle
-	$animation Swim_Shoot_sniperrifle_layer "sniperrifle/swim_shoot_sniperrifle" FPS 30 subtract Swim_Shoot_sniperrifle_layer 0 weightlist upperbody
-	$sequence Swim_Upper_sniperrifle "sniperrifle/swim_sniperrifle" FPS 30 weightlist upperbody addlayer Swim_Aim_sniperrifle
+	$sequence Swim_Idle_Upper_sniperrifle "sniperrifle/swim_idle_sniperrifle" weightlist upperbody addlayer Swim_Aim_sniperrifle
+	$animation Swim_Shoot_sniperrifle_layer "sniperrifle/swim_shoot_sniperrifle" subtract Swim_Shoot_sniperrifle_layer 0 weightlist upperbody
+	$sequence Swim_Upper_sniperrifle "sniperrifle/swim_sniperrifle" weightlist upperbody addlayer Swim_Aim_sniperrifle
 
-	//$animation Reload_sniperrifle_layer "sniperrifle/reload_sniperrifle" FPS 30 subtract Reload_sniperrifle_layer 0 weightlist upperbody
+	//$animation Reload_sniperrifle_layer "sniperrifle/reload_sniperrifle" subtract Reload_sniperrifle_layer 0 weightlist upperbody
 	//$sequence Reload_sniperrifle "Reload_sniperrifle_layer" delta
 
 
 	//-----------------
 	//	AUTO RIFLE
 	//-----------------
-	$sequence Jump_Upper_autorifle "autorifle/jump_autorifle" FPS 30 startloop 0 weightlist upperbody
+	$sequence Jump_Upper_autorifle "autorifle/jump_autorifle" startloop 0 weightlist upperbody
 	$animation Swim_autorifle_aim_neutral autorifle/swim_9aims_autorifle frame 4 4
 	$animation Swim_autorifle_aim_up_left autorifle/swim_9aims_autorifle frame 0 0 subtract Swim_autorifle_aim_neutral 0
 	$animation Swim_autorifle_aim_up_center autorifle/swim_9aims_autorifle frame 1 1 subtract Swim_autorifle_aim_neutral 0
@@ -2079,31 +2079,31 @@ $poseparameter "body_yaw" -90 90 loop 360
 		delta
 	}
 
-	$sequence Idle_Upper_autorifle "autorifle/idle_autorifle" FPS 30 weightlist upperbody addlayer Run_Aim_autorifle
-	$sequence Walk_Upper_autorifle "autorifle/walk_autorifle" FPS 30 weightlist upperbody addlayer Run_Aim_autorifle
-	$sequence Run_Upper_autorifle "autorifle/run_autorifle" FPS 30 startloop 0 weightlist upperbody addlayer Run_Aim_autorifle
-	$sequence Crouch_Idle_Upper_autorifle "autorifle/crouch_idle_autorifle" FPS 30 weightlist upperbody addlayer Crouch_Aim_autorifle
-	$sequence Crouch_Walk_Upper_autorifle "autorifle/crouch_walk_autorifle" FPS 30 weightlist upperbody addlayer Crouch_Aim_autorifle
+	$sequence Idle_Upper_autorifle "autorifle/idle_autorifle" weightlist upperbody addlayer Run_Aim_autorifle
+	$sequence Walk_Upper_autorifle "autorifle/walk_autorifle" weightlist upperbody addlayer Run_Aim_autorifle
+	$sequence Run_Upper_autorifle "autorifle/run_autorifle" startloop 0 weightlist upperbody addlayer Run_Aim_autorifle
+	$sequence Crouch_Idle_Upper_autorifle "autorifle/crouch_idle_autorifle" weightlist upperbody addlayer Crouch_Aim_autorifle
+	$sequence Crouch_Walk_Upper_autorifle "autorifle/crouch_walk_autorifle" weightlist upperbody addlayer Crouch_Aim_autorifle
 
-	$animation Idle_Shoot_autorifle_layer "autorifle/shoot_autorifle" FPS 30 subtract Idle_Shoot_autorifle_layer 0 weightlist upperbody
+	$animation Idle_Shoot_autorifle_layer "autorifle/shoot_autorifle" subtract Idle_Shoot_autorifle_layer 0 weightlist upperbody
 	$sequence Idle_Shoot_autorifle "Idle_Shoot_autorifle_layer" delta
 	$sequence Walk_Shoot_autorifle "Idle_Shoot_autorifle_layer" delta
 	$sequence Run_Shoot_autorifle "Idle_Shoot_autorifle_layer" delta
 	$sequence Crouch_Idle_Shoot_autorifle "Idle_Shoot_autorifle_layer" delta
 	$sequence Crouch_Walk_Shoot_autorifle "Idle_Shoot_autorifle_layer" delta
 
-	$sequence Swim_Idle_Upper_autorifle "autorifle/swim_idle_autorifle" FPS 30 weightlist upperbody addlayer Swim_Aim_autorifle
-	$animation Swim_Shoot_autorifle_layer "autorifle/swim_shoot_autorifle" FPS 30 subtract Swim_Shoot_autorifle_layer 0 weightlist upperbody
-	$sequence Swim_Upper_autorifle "autorifle/swim_autorifle" FPS 30 weightlist upperbody addlayer Swim_Aim_autorifle
+	$sequence Swim_Idle_Upper_autorifle "autorifle/swim_idle_autorifle" weightlist upperbody addlayer Swim_Aim_autorifle
+	$animation Swim_Shoot_autorifle_layer "autorifle/swim_shoot_autorifle" subtract Swim_Shoot_autorifle_layer 0 weightlist upperbody
+	$sequence Swim_Upper_autorifle "autorifle/swim_autorifle" weightlist upperbody addlayer Swim_Aim_autorifle
 
-	//$animation Reload_autorifle_layer "autorifle/reload_autorifle" FPS 30 subtract Reload_autorifle_layer 0 weightlist upperbody
+	//$animation Reload_autorifle_layer "autorifle/reload_autorifle" subtract Reload_autorifle_layer 0 weightlist upperbody
 	//$sequence Reload_autorifle "Reload_autorifle_layer" delta
 
 
 	//-----------------
 	//	DET PACK
 	//-----------------
-	$sequence Jump_Upper_detpack "detpack/jump_detpack" FPS 30 startloop 0 weightlist upperbody
+	$sequence Jump_Upper_detpack "detpack/jump_detpack" startloop 0 weightlist upperbody
 
 	$animation Swim_detpack_aim_neutral detpack/swim_9aims_detpack frame 4 4
 	$animation Swim_detpack_aim_up_left detpack/swim_9aims_detpack frame 0 0 subtract Swim_detpack_aim_neutral 0
@@ -2168,31 +2168,31 @@ $poseparameter "body_yaw" -90 90 loop 360
 		delta
 	}
 
-	$sequence Idle_Upper_detpack "detpack/idle_detpack" FPS 30 weightlist upperbody addlayer Run_Aim_detpack
-	$sequence Walk_Upper_detpack "detpack/walk_detpack" FPS 30 weightlist upperbody addlayer Run_Aim_detpack
-	$sequence Run_Upper_detpack "detpack/run_detpack" FPS 30 startloop 0 weightlist upperbody addlayer Run_Aim_detpack
-	$sequence Crouch_Idle_Upper_detpack "detpack/crouch_idle_detpack" FPS 30 weightlist upperbody addlayer Crouch_Aim_detpack
-	$sequence Crouch_Walk_Upper_detpack "detpack/crouch_walk_detpack" FPS 30 weightlist upperbody addlayer Crouch_Aim_detpack
+	$sequence Idle_Upper_detpack "detpack/idle_detpack" weightlist upperbody addlayer Run_Aim_detpack
+	$sequence Walk_Upper_detpack "detpack/walk_detpack" weightlist upperbody addlayer Run_Aim_detpack
+	$sequence Run_Upper_detpack "detpack/run_detpack" startloop 0 weightlist upperbody addlayer Run_Aim_detpack
+	$sequence Crouch_Idle_Upper_detpack "detpack/crouch_idle_detpack" weightlist upperbody addlayer Crouch_Aim_detpack
+	$sequence Crouch_Walk_Upper_detpack "detpack/crouch_walk_detpack" weightlist upperbody addlayer Crouch_Aim_detpack
 
-	$animation Idle_Shoot_detpack_layer "detpack/shoot_detpack" FPS 30 subtract Idle_Shoot_detpack_layer 0 weightlist upperbody
+	$animation Idle_Shoot_detpack_layer "detpack/shoot_detpack" subtract Idle_Shoot_detpack_layer 0 weightlist upperbody
 	$sequence Idle_Shoot_detpack "Idle_Shoot_detpack_layer" delta
 	$sequence Walk_Shoot_detpack "Idle_Shoot_detpack_layer" delta
 	$sequence Run_Shoot_detpack "Idle_Shoot_detpack_layer" delta
 	$sequence Crouch_Idle_Shoot_detpack "Idle_Shoot_detpack_layer" delta
 	$sequence Crouch_Walk_Shoot_detpack "Idle_Shoot_detpack_layer" delta
 
-	$sequence Swim_Idle_Upper_detpack "detpack/swim_idle_detpack" FPS 30 weightlist upperbody addlayer Swim_Aim_detpack
-	$animation Swim_Shoot_detpack_layer "detpack/swim_shoot_detpack" FPS 30 subtract Swim_Shoot_detpack_layer 0 weightlist upperbody
-	$sequence Swim_Upper_detpack "detpack/swim_detpack" FPS 30 weightlist upperbody addlayer Swim_Aim_detpack
+	$sequence Swim_Idle_Upper_detpack "detpack/swim_idle_detpack" weightlist upperbody addlayer Swim_Aim_detpack
+	$animation Swim_Shoot_detpack_layer "detpack/swim_shoot_detpack" subtract Swim_Shoot_detpack_layer 0 weightlist upperbody
+	$sequence Swim_Upper_detpack "detpack/swim_detpack" weightlist upperbody addlayer Swim_Aim_detpack
 
-	//$animation Reload_detpack_layer "detpack/reload_detpack" FPS 30 subtract Reload_detpack_layer 0 weightlist upperbody
+	//$animation Reload_detpack_layer "detpack/reload_detpack" subtract Reload_detpack_layer 0 weightlist upperbody
 	//$sequence Reload_detpack "Reload_detpack_layer" delta
 
 
 	//-----------------
 	//	ASSAULT CANNON
 	//-----------------
-	$sequence Jump_Upper_assaultcannon "assaultcannon/jump_assaultcannon" FPS 30 startloop 0 weightlist upperbody
+	$sequence Jump_Upper_assaultcannon "assaultcannon/jump_assaultcannon" startloop 0 weightlist upperbody
 
 	$animation Swim_assaultcannon_aim_neutral assaultcannon/swim_9aims_assaultcannon frame 4 4
 	$animation Swim_assaultcannon_aim_up_left assaultcannon/swim_9aims_assaultcannon frame 0 0 subtract Swim_assaultcannon_aim_neutral 0
@@ -2257,31 +2257,31 @@ $poseparameter "body_yaw" -90 90 loop 360
 		delta
 	}
 
-	$sequence Idle_Upper_assaultcannon "assaultcannon/idle_assaultcannon" FPS 30 weightlist upperbody addlayer Run_Aim_assaultcannon
-	$sequence Walk_Upper_assaultcannon "assaultcannon/walk_assaultcannon" FPS 30 weightlist upperbody addlayer Run_Aim_assaultcannon
-	$sequence Run_Upper_assaultcannon "assaultcannon/run_assaultcannon" FPS 30 startloop 0 weightlist upperbody addlayer Run_Aim_assaultcannon
-	$sequence Crouch_Idle_Upper_assaultcannon "assaultcannon/crouch_idle_assaultcannon" FPS 30 weightlist upperbody addlayer Crouch_Aim_assaultcannon
-	$sequence Crouch_Walk_Upper_assaultcannon "assaultcannon/crouch_walk_assaultcannon" FPS 30 weightlist upperbody addlayer Crouch_Aim_assaultcannon
+	$sequence Idle_Upper_assaultcannon "assaultcannon/idle_assaultcannon" weightlist upperbody addlayer Run_Aim_assaultcannon
+	$sequence Walk_Upper_assaultcannon "assaultcannon/walk_assaultcannon" weightlist upperbody addlayer Run_Aim_assaultcannon
+	$sequence Run_Upper_assaultcannon "assaultcannon/run_assaultcannon" startloop 0 weightlist upperbody addlayer Run_Aim_assaultcannon
+	$sequence Crouch_Idle_Upper_assaultcannon "assaultcannon/crouch_idle_assaultcannon" weightlist upperbody addlayer Crouch_Aim_assaultcannon
+	$sequence Crouch_Walk_Upper_assaultcannon "assaultcannon/crouch_walk_assaultcannon" weightlist upperbody addlayer Crouch_Aim_assaultcannon
 
-	$animation Idle_Shoot_assaultcannon_layer "assaultcannon/shoot_assaultcannon" FPS 30 subtract Idle_Shoot_assaultcannon_layer 0 weightlist upperbody
+	$animation Idle_Shoot_assaultcannon_layer "assaultcannon/shoot_assaultcannon" subtract Idle_Shoot_assaultcannon_layer 0 weightlist upperbody
 	$sequence Idle_Shoot_assaultcannon "Idle_Shoot_assaultcannon_layer" delta
 	$sequence Walk_Shoot_assaultcannon "Idle_Shoot_assaultcannon_layer" delta
 	$sequence Run_Shoot_assaultcannon "Idle_Shoot_assaultcannon_layer" delta
 	$sequence Crouch_Idle_Shoot_assaultcannon "Idle_Shoot_assaultcannon_layer" delta
 	$sequence Crouch_Walk_Shoot_assaultcannon "Idle_Shoot_assaultcannon_layer" delta
 
-	$sequence Swim_Idle_Upper_assaultcannon "assaultcannon/swim_idle_assaultcannon" FPS 30 weightlist upperbody addlayer Swim_Aim_assaultcannon
-	$animation Swim_Shoot_assaultcannon_layer "assaultcannon/swim_shoot_assaultcannon" FPS 30 subtract Swim_Shoot_assaultcannon_layer 0 weightlist upperbody
-	$sequence Swim_Upper_assaultcannon "assaultcannon/swim_assaultcannon" FPS 30 weightlist upperbody addlayer Swim_Aim_assaultcannon
+	$sequence Swim_Idle_Upper_assaultcannon "assaultcannon/swim_idle_assaultcannon" weightlist upperbody addlayer Swim_Aim_assaultcannon
+	$animation Swim_Shoot_assaultcannon_layer "assaultcannon/swim_shoot_assaultcannon" subtract Swim_Shoot_assaultcannon_layer 0 weightlist upperbody
+	$sequence Swim_Upper_assaultcannon "assaultcannon/swim_assaultcannon" weightlist upperbody addlayer Swim_Aim_assaultcannon
 
-	//$animation Reload_assaultcannon_layer "assaultcannon/reload_assaultcannon" FPS 30 subtract Reload_assaultcannon_layer 0 weightlist upperbody
+	//$animation Reload_assaultcannon_layer "assaultcannon/reload_assaultcannon" subtract Reload_assaultcannon_layer 0 weightlist upperbody
 	//$sequence Reload_assaultcannon "Reload_assaultcannon_layer" delta
 
 
 	//-----------------
 	//	DISPENSER
 	//-----------------
-	$sequence Jump_Upper_dispenser "dispenser/jump_dispenser" FPS 30 startloop 0 weightlist upperbody
+	$sequence Jump_Upper_dispenser "dispenser/jump_dispenser" startloop 0 weightlist upperbody
 
 	$animation Swim_dispenser_aim_neutral dispenser/swim_9aims_dispenser frame 4 4
 	$animation Swim_dispenser_aim_up_left dispenser/swim_9aims_dispenser frame 0 0 subtract Swim_dispenser_aim_neutral 0
@@ -2346,31 +2346,31 @@ $poseparameter "body_yaw" -90 90 loop 360
 		delta
 	}
 
-	$sequence Idle_Upper_dispenser "dispenser/idle_dispenser" FPS 30 weightlist upperbody addlayer Run_Aim_dispenser
-	$sequence Walk_Upper_dispenser "dispenser/walk_dispenser" FPS 30 weightlist upperbody addlayer Run_Aim_dispenser
-	$sequence Run_Upper_dispenser "dispenser/run_dispenser" FPS 30 startloop 0 weightlist upperbody addlayer Run_Aim_dispenser
-	$sequence Crouch_Idle_Upper_dispenser "dispenser/crouch_idle_dispenser" FPS 30 weightlist upperbody addlayer Crouch_Aim_dispenser
-	$sequence Crouch_Walk_Upper_dispenser "dispenser/crouch_walk_dispenser" FPS 30 weightlist upperbody addlayer Crouch_Aim_dispenser
+	$sequence Idle_Upper_dispenser "dispenser/idle_dispenser" weightlist upperbody addlayer Run_Aim_dispenser
+	$sequence Walk_Upper_dispenser "dispenser/walk_dispenser" weightlist upperbody addlayer Run_Aim_dispenser
+	$sequence Run_Upper_dispenser "dispenser/run_dispenser" startloop 0 weightlist upperbody addlayer Run_Aim_dispenser
+	$sequence Crouch_Idle_Upper_dispenser "dispenser/crouch_idle_dispenser" weightlist upperbody addlayer Crouch_Aim_dispenser
+	$sequence Crouch_Walk_Upper_dispenser "dispenser/crouch_walk_dispenser" weightlist upperbody addlayer Crouch_Aim_dispenser
 
-	$animation Idle_Shoot_dispenser_layer "dispenser/shoot_dispenser" FPS 30 subtract Idle_Shoot_dispenser_layer 0 weightlist upperbody
+	$animation Idle_Shoot_dispenser_layer "dispenser/shoot_dispenser" subtract Idle_Shoot_dispenser_layer 0 weightlist upperbody
 	$sequence Idle_Shoot_dispenser "Idle_Shoot_dispenser_layer" delta
 	$sequence Walk_Shoot_dispenser "Idle_Shoot_dispenser_layer" delta
 	$sequence Run_Shoot_dispenser "Idle_Shoot_dispenser_layer" delta
 	$sequence Crouch_Idle_Shoot_dispenser "Idle_Shoot_dispenser_layer" delta
 	$sequence Crouch_Walk_Shoot_dispenser "Idle_Shoot_dispenser_layer" delta
 
-	$sequence Swim_Idle_Upper_dispenser "dispenser/swim_idle_dispenser" FPS 30 weightlist upperbody addlayer Swim_Aim_dispenser
-	$animation Swim_Shoot_dispenser_layer "dispenser/swim_shoot_dispenser" FPS 30 subtract Swim_Shoot_dispenser_layer 0 weightlist upperbody
-	$sequence Swim_Upper_dispenser "dispenser/swim_dispenser" FPS 30 weightlist upperbody addlayer Swim_Aim_dispenser
+	$sequence Swim_Idle_Upper_dispenser "dispenser/swim_idle_dispenser" weightlist upperbody addlayer Swim_Aim_dispenser
+	$animation Swim_Shoot_dispenser_layer "dispenser/swim_shoot_dispenser" subtract Swim_Shoot_dispenser_layer 0 weightlist upperbody
+	$sequence Swim_Upper_dispenser "dispenser/swim_dispenser" weightlist upperbody addlayer Swim_Aim_dispenser
 
-	//$animation Reload_dispenser_layer "dispenser/reload_dispenser" FPS 30 subtract Reload_dispenser_layer 0 weightlist upperbody
+	//$animation Reload_dispenser_layer "dispenser/reload_dispenser" subtract Reload_dispenser_layer 0 weightlist upperbody
 	//$sequence Reload_dispenser "Reload_dispenser_layer" delta
 
 
 	//-----------------
 	//	TOMMYGUN
 	//-----------------
-	$sequence Jump_Upper_tommygun "tommygun/jump_tommygun" FPS 30 startloop 0 weightlist upperbody
+	$sequence Jump_Upper_tommygun "tommygun/jump_tommygun" startloop 0 weightlist upperbody
 
 	$animation Swim_tommygun_aim_neutral tommygun/swim_9aims_tommygun frame 4 4
 	$animation Swim_tommygun_aim_up_left tommygun/swim_9aims_tommygun frame 0 0 subtract Swim_tommygun_aim_neutral 0
@@ -2435,31 +2435,31 @@ $poseparameter "body_yaw" -90 90 loop 360
 		delta
 	}
 
-	$sequence Idle_Upper_tommygun "tommygun/idle_tommygun" FPS 30 weightlist upperbody addlayer Run_Aim_tommygun
-	$sequence Walk_Upper_tommygun "tommygun/walk_tommygun" FPS 30 weightlist upperbody addlayer Run_Aim_tommygun
-	$sequence Run_Upper_tommygun "tommygun/run_tommygun" FPS 30 startloop 0 weightlist upperbody addlayer Run_Aim_tommygun
-	$sequence Crouch_Idle_Upper_tommygun "tommygun/crouch_idle_tommygun" FPS 30 weightlist upperbody addlayer Crouch_Aim_tommygun
-	$sequence Crouch_Walk_Upper_tommygun "tommygun/crouch_walk_tommygun" FPS 30 weightlist upperbody addlayer Crouch_Aim_tommygun
+	$sequence Idle_Upper_tommygun "tommygun/idle_tommygun" weightlist upperbody addlayer Run_Aim_tommygun
+	$sequence Walk_Upper_tommygun "tommygun/walk_tommygun" weightlist upperbody addlayer Run_Aim_tommygun
+	$sequence Run_Upper_tommygun "tommygun/run_tommygun" startloop 0 weightlist upperbody addlayer Run_Aim_tommygun
+	$sequence Crouch_Idle_Upper_tommygun "tommygun/crouch_idle_tommygun" weightlist upperbody addlayer Crouch_Aim_tommygun
+	$sequence Crouch_Walk_Upper_tommygun "tommygun/crouch_walk_tommygun" weightlist upperbody addlayer Crouch_Aim_tommygun
 
-	$animation Idle_Shoot_tommygun_layer "tommygun/shoot_tommygun" FPS 30 subtract Idle_Shoot_tommygun_layer 0 weightlist upperbody
+	$animation Idle_Shoot_tommygun_layer "tommygun/shoot_tommygun" subtract Idle_Shoot_tommygun_layer 0 weightlist upperbody
 	$sequence Idle_Shoot_tommygun "Idle_Shoot_tommygun_layer" delta
 	$sequence Walk_Shoot_tommygun "Idle_Shoot_tommygun_layer" delta
 	$sequence Run_Shoot_tommygun "Idle_Shoot_tommygun_layer" delta
 	$sequence Crouch_Idle_Shoot_tommygun "Idle_Shoot_tommygun_layer" delta
 	$sequence Crouch_Walk_Shoot_tommygun "Idle_Shoot_tommygun_layer" delta
 
-	$sequence Swim_Idle_Upper_tommygun "tommygun/swim_idle_tommygun" FPS 30 weightlist upperbody addlayer Swim_Aim_tommygun
-	$animation Swim_Shoot_tommygun_layer "tommygun/swim_shoot_tommygun" FPS 30 subtract Swim_Shoot_tommygun_layer 0 weightlist upperbody
-	$sequence Swim_Upper_tommygun "tommygun/swim_tommygun" FPS 30 weightlist upperbody addlayer Swim_Aim_tommygun
+	$sequence Swim_Idle_Upper_tommygun "tommygun/swim_idle_tommygun" weightlist upperbody addlayer Swim_Aim_tommygun
+	$animation Swim_Shoot_tommygun_layer "tommygun/swim_shoot_tommygun" subtract Swim_Shoot_tommygun_layer 0 weightlist upperbody
+	$sequence Swim_Upper_tommygun "tommygun/swim_tommygun" weightlist upperbody addlayer Swim_Aim_tommygun
 
-	$animation Reload_tommygun_layer "tommygun/reload_tommygun" FPS 30 subtract Reload_tommygun_layer 0 weightlist upperbody
+	$animation Reload_tommygun_layer "tommygun/reload_tommygun" subtract Reload_tommygun_layer 0 weightlist upperbody
 	$sequence Reload_tommygun "Reload_tommygun_layer" delta
 
 
 	//-----------------
 	//	SENTRY GUN
 	//-----------------
-	$sequence Jump_Upper_sentrygun "sentrygun/jump_sentrygun" FPS 30 startloop 0 weightlist upperbody
+	$sequence Jump_Upper_sentrygun "sentrygun/jump_sentrygun" startloop 0 weightlist upperbody
 
 	$animation Swim_sentrygun_aim_neutral sentrygun/swim_9aims_sentrygun frame 4 4
 	$animation Swim_sentrygun_aim_up_left sentrygun/swim_9aims_sentrygun frame 0 0 subtract Swim_sentrygun_aim_neutral 0
@@ -2524,22 +2524,22 @@ $poseparameter "body_yaw" -90 90 loop 360
 		delta
 	}
 
-	$sequence Idle_Upper_sentrygun "sentrygun/idle_sentrygun" FPS 30 weightlist upperbody addlayer Run_Aim_sentrygun
-	$sequence Walk_Upper_sentrygun "sentrygun/walk_sentrygun" FPS 30 weightlist upperbody addlayer Run_Aim_sentrygun
-	$sequence Run_Upper_sentrygun "sentrygun/run_sentrygun" FPS 30 startloop 0 weightlist upperbody addlayer Run_Aim_sentrygun
-	$sequence Crouch_Idle_Upper_sentrygun "sentrygun/crouch_idle_sentrygun" FPS 30 weightlist upperbody addlayer Crouch_Aim_sentrygun
-	$sequence Crouch_Walk_Upper_sentrygun "sentrygun/crouch_walk_sentrygun" FPS 30 weightlist upperbody addlayer Crouch_Aim_sentrygun
+	$sequence Idle_Upper_sentrygun "sentrygun/idle_sentrygun" weightlist upperbody addlayer Run_Aim_sentrygun
+	$sequence Walk_Upper_sentrygun "sentrygun/walk_sentrygun" weightlist upperbody addlayer Run_Aim_sentrygun
+	$sequence Run_Upper_sentrygun "sentrygun/run_sentrygun" startloop 0 weightlist upperbody addlayer Run_Aim_sentrygun
+	$sequence Crouch_Idle_Upper_sentrygun "sentrygun/crouch_idle_sentrygun" weightlist upperbody addlayer Crouch_Aim_sentrygun
+	$sequence Crouch_Walk_Upper_sentrygun "sentrygun/crouch_walk_sentrygun" weightlist upperbody addlayer Crouch_Aim_sentrygun
 
-	$animation Idle_Shoot_sentrygun_layer "sentrygun/shoot_sentrygun" FPS 30 subtract Idle_Shoot_sentrygun_layer 0 weightlist upperbody
+	$animation Idle_Shoot_sentrygun_layer "sentrygun/shoot_sentrygun" subtract Idle_Shoot_sentrygun_layer 0 weightlist upperbody
 	$sequence Idle_Shoot_sentrygun "Idle_Shoot_sentrygun_layer" delta
 	$sequence Walk_Shoot_sentrygun "Idle_Shoot_sentrygun_layer" delta
 	$sequence Run_Shoot_sentrygun "Idle_Shoot_sentrygun_layer" delta
 	$sequence Crouch_Idle_Shoot_sentrygun "Idle_Shoot_sentrygun_layer" delta
 	$sequence Crouch_Walk_Shoot_sentrygun "Idle_Shoot_sentrygun_layer" delta
 
-	$sequence Swim_Idle_Upper_sentrygun "sentrygun/swim_idle_sentrygun" FPS 30 weightlist upperbody addlayer Swim_Aim_sentrygun		
-	$animation Swim_Shoot_sentrygun_layer "sentrygun/swim_shoot_sentrygun" FPS 30 subtract Swim_Shoot_sentrygun_layer 0 weightlist upperbody
-	$sequence Swim_Upper_sentrygun "sentrygun/swim_sentrygun" FPS 30 weightlist upperbody addlayer Swim_Aim_sentrygun
+	$sequence Swim_Idle_Upper_sentrygun "sentrygun/swim_idle_sentrygun" weightlist upperbody addlayer Swim_Aim_sentrygun		
+	$animation Swim_Shoot_sentrygun_layer "sentrygun/swim_shoot_sentrygun" subtract Swim_Shoot_sentrygun_layer 0 weightlist upperbody
+	$sequence Swim_Upper_sentrygun "sentrygun/swim_sentrygun" weightlist upperbody addlayer Swim_Aim_sentrygun
 
-	//$animation Reload_sentrygun_layer "sentrygun/reload_sentrygun" FPS 30 subtract Reload_sentrygun_layer 0 weightlist upperbody
+	//$animation Reload_sentrygun_layer "sentrygun/reload_sentrygun" subtract Reload_sentrygun_layer 0 weightlist upperbody
 	//$sequence Reload_sentrygun "Reload_sentrygun_layer" delta
