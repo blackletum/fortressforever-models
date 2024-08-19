@@ -4,8 +4,7 @@ $attachment 1 "ffSkel_gunEnd" 0 0 0
 $scale 1
 $surfaceprop weapon
 $keyvalues { "prop_data" { "base" "metal.medium" }}
-
-$model studio "w_grenadelauncher_ref.smd"
+$body studio "w_grenadelauncher_ref.smd"
 $sequence idle "w_grenadelauncher_ref.smd"
 
 $sequence attack1 "attack1" ACT_VM_PRIMARYATTACK 1 {{ event AE_NPC_MUZZLEFLASH 0 "SMG1 1" }}

@@ -25,7 +25,7 @@ $attachment "ffAtt_bm"	"bone_sgTripod_BK" 0 0 0
 $poseparameter aim_yaw -180 180 wrap
 $poseparameter aim_pitch -60 30
 
-$body studio "reference_SG_Level3"
+$body studio "reference_SG_Level3.smd"
 $bodygroup specialFX {
 	blank
 	studio "specialFX_SG_Level3"
@@ -46,8 +46,8 @@ $lod 60 {
 $lod 90 {
 	replacemodel "reference_SG_Level3.smd" "LOD3_SG_Level3.smd"
 }
-$sequence aim_yaw "anim_SG_Level3" fps 30
-$sequence aim_pitch "anim_SG_Level3" fps 30
+$sequence aim_yaw "anim_SG_Level3"
+$sequence aim_pitch "anim_SG_Level3"
 
 $weightlist sg_yaw	{ "bone_sgYaw" 1.0 }
 $weightlist sg_pitch	{ "bone_sgPitch" 1.0 }

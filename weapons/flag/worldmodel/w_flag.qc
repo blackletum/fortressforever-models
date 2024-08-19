@@ -1,5 +1,5 @@
 $modelname "flag\w_flag.mdl"
-$model Body "w_flag_ref.smd"
+$body Body "w_flag_ref.smd"
 $cdmaterials "models\flag"
 $texturegroup skinfamilies
 {

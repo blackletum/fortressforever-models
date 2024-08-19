@@ -1,5 +1,5 @@
 $modelname "editor/ff_script_helper.mdl"
-$model studio "ff_script_helper.smd"
+$body studio "ff_script_helper.smd"
 $cdmaterials "models\editor\"
 $hboxset "default"
 $hbox 0 "Box01" -8.000  -8.000  -8.000  8.000  8.000  8.000

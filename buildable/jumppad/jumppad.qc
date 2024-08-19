@@ -9,7 +9,7 @@ $texturegroup skinfamilies {
 	{ "jumppad_yellow" }
 	{ "jumppad_green" }
 }
-$sequence Idle "jumppad_ref.smd" ACT_IDLE 1
+$sequence Idle "jumppad_ref.smd"
 $collisionmodel "phymodel.smd" {
 	$concave
 	$mass 100.0
@@ -21,6 +21,6 @@ $keyvalues
 {
 	prop_data
 	{
-		base	Metal.Small 
+		base Metal.Small 
 	}
 }

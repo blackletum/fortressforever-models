@@ -1,11 +1,11 @@
 $modelname "weapons\assaultcannon\w_assaultcannon.mdl"
 $alwayscollapse "SMDImport"
 $cdmaterials "models\weapons\assaultcannon"
-$attachment "1" "ffSkel_att_righthand" -3.00 39.00 2.00 rotate 0 90 0
+$attachment 1 "ffSkel_att_righthand" -3.00 39.00 2.00 rotate 0 90 0
 $scale 1
 $surfaceprop metal
 $keyvalues { "prop_data" { "base" "metal.medium" }}
-$model studio "ac_ref.SMD"
+$body studio "ac_ref.SMD"
 $sequence idle "ac_ref.SMD" loop ACT_VM_IDLE 1 fps 15
 
 $poseparameter ac_rotate -180 180 wrap

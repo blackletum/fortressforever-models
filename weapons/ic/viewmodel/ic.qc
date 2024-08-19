@@ -17,7 +17,7 @@ $surfaceprop "default"
 // v_models: left/right front/back up/down
 $origin 0 0 0
 
-$attachment "1" "bone_muzzle" 0 0 0 rotate 0 0 0
+$attachment 1 "bone_muzzle" 0 0 0 rotate 0 0 0
 
 $hboxset "default" 
 

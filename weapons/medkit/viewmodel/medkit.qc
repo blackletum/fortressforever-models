@@ -1,5 +1,5 @@
 $modelname "weapons\medkit\v_medkit"
-$model studio "medkit_ref.smd"
+$body studio "medkit_ref.smd"
 $cdmaterials "models\weapons\medkit"
 $cdmaterials "models\v_arms"
 $illumposition 0 0 0
@@ -18,9 +18,9 @@ $sequence hit2 "medkit_hitcenter2.smd" fps 35 activity ACT_VM_HITCENTER 1 fadein
 $sequence miss1 "medkit_misscenter1.smd" fps 35 activity ACT_VM_MISSCENTER 1 fadein 0.5 fadeout 0.5 node "miss"
 $sequence miss2 "medkit_misscenter2.smd" fps 35 activity ACT_VM_MISSCENTER 1 fadein 0.5 fadeout 0.5 node "miss"
 $sequence miss3 "medkit_misscenter3.smd" fps 35 activity ACT_VM_MISSCENTER 1 fadein 0.5 fadeout 0.5 node "miss"
-$sequence idle1 "medkit_idle1.smd" loop fps 30 activity ACT_VM_IDLE 5 fadein 2 fadeout 3
-$sequence idle2 "medkit_idle5.smd" loop fps 30 activity ACT_VM_IDLE 5 fadein 2 fadeout 3
-$sequence idle3 "medkit_idle3.smd" loop fps 30 activity ACT_VM_IDLE 5 fadein 3 fadeout 2
+$sequence idle1 "medkit_idle1.smd" loop activity ACT_VM_IDLE 5 fadein 2 fadeout 3
+$sequence idle2 "medkit_idle5.smd" loop activity ACT_VM_IDLE 5 fadein 2 fadeout 3
+$sequence idle3 "medkit_idle3.smd" loop activity ACT_VM_IDLE 5 fadein 3 fadeout 2
 $sequence deepidle "medkit_idle4.smd" fps 40 activity ACT_VM_IDLE 3 fadein 1 fadeout 2
 $sequence deepestidle "medkit_idle2.smd" fps 40 activity ACT_VM_IDLE 2 fadein 0.5 fadeout 1.5 {
 	{ event AE_CL_PLAYSOUND 63 "medkit.button1" }

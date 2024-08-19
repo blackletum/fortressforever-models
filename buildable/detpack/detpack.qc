@@ -1,5 +1,5 @@
 $modelname "buildable/detpack/detpack.mdl"
-$model studio "detpack_ref.smd"
+$body studio "detpack_ref.smd"
 $cdmaterials "models\buildable\detpack"
 $surfaceprop metal
 $illumposition 4.876 -2.116 8.708

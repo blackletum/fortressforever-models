@@ -1,5 +1,5 @@
 $modelname "buildable\dispenser\gib5.mdl"
-$model studio "dispgib5.smd"
+$body studio "dispgib5.smd"
 $cdmaterials "models\buildable\dispenser\"
 $surfaceprop metal
 $sequence idle "dispenser.smd"

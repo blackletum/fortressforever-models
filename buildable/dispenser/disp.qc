@@ -1,5 +1,5 @@
 $modelname "buildable\dispenser\dispenser.mdl"
-$model studio "dispenser.smd"
+$body studio "dispenser.smd"
 $cdmaterials "models\buildable\dispenser\"
 $surfaceprop metal
 

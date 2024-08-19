@@ -9,7 +9,7 @@ $lod 30 {
       replacemodel "ic_w_ref" "ic_w_ref_LOD1"
 }
 
-$sequence idle "ic_w_ref.smd" ACT_IDLE 1
+$sequence idle "ic_w_ref.smd" ACT_VM_IDLE 1
 
 $collisionmodel "ic_w_phy.smd" {
 	$concave

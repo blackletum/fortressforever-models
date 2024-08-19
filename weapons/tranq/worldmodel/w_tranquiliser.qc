@@ -4,7 +4,7 @@ $attachment 1 "ffSkel_gunEnd" 0 0 0
 $scale 1
 $surfaceprop weapon
 $keyvalues { "prop_data" { "base" "metal.medium" }}
-$model w_tranquiliser "w_tranq_ref.smd"
+$body w_tranquiliser "w_tranq_ref.smd"
 $sequence idle "w_tranq_ref.smd" ACT_VM_IDLE 1
 
 $sequence attack1 "attack1" ACT_VM_PRIMARYATTACK 1 {

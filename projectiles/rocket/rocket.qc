@@ -30,4 +30,4 @@ $collisionmodel "reference_collision_rocket.smd" {
 	$rotdamping 0.00
 }
 
-$sequence Idle "anim_Idle" fps 30.00
+$sequence Idle "reference_LOD0_rocket.smd"

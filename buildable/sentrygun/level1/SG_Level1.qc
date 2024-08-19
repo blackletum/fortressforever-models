@@ -20,7 +20,7 @@ $attachment "ffAtt_bm"	"bone_sgTripod_BK" 0 0 0
 $poseparameter aim_yaw -180 180 wrap
 $poseparameter aim_pitch -60 30
 
-$body studio "reference_SG_Level1"
+$body studio "reference_SG_Level1.smd"
 $bodygroup specialFX {
 	blank
 	studio "specialFX_SG_Level1"

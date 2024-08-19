@@ -1,5 +1,5 @@
 $modelname "weapons\crowbar\w_crowbar.mdl"
-$model studio "crow_ref.smd"
+$body studio "crow_ref.smd"
 $cdmaterials "models\weapons\crowbar"
 $surfaceprop crowbar
 $sequence idle "crow_ref.smd" ACT_VM_IDLE 1
