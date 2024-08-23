@@ -1,6 +1,6 @@
 version 1
 nodes
-  0 "ffSkel_RightHand"  -1
+  0 "ffSkel_att_righthand"  -1
   1 "lod002"  -1
 end
 skeleton
