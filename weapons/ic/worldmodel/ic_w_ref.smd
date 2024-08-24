@@ -1,7 +1,7 @@
 version 1
 nodes
 0 "ic_lowpoly" -1
-1 "ffSkel_RightHand" -1
+1 "ffSkel_att_righthand" -1
 end
 skeleton
 time 0
