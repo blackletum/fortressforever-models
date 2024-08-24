@@ -1,6 +1,6 @@
 # TO-DO...
 * Classes should not have weight-painting on their attachment bones; this is to let us animate those particular bones without dragging along vertices from the classes' meshes.
-* Physics meshes improved; currently not easily done, as BreakinBenny noted when doing the above task.
+* Physics meshes improved; currently not easily done on character models, as BreakinBenny noted when doing the above task.
 * Mismatched parent bones need being dealt with.
 * Classes' feet should absolutely touch the ground, rather than hover centimeters above it.
 * Menu poses for class selection menu?
