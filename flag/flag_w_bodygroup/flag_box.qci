@@ -1,0 +1,15 @@
+
+// Clipping box or view bounding box.
+$CBox 0 0 0 0 0 0
+
+// Bounding box or hull. Used for collision with a world object.
+$BBox -6.23 -14.848 0.001 2.858 14.844 69.54
+
+// Hitbox info. Used for damage-based collision.
+// The hitbox info below was automatically generated when compiled because no hitbox info was provided.
+// $HBoxSet "default"
+// $HBox 0 "Dummy_root01" -13.654 -1.72115 -0.011455 13.651 0.65075 68.51384
+// $HBox 0 "Dummy12" -1.4104 -2.68185 -8.081001 1.4229 2.49375 0.064846
+// $HBox 0 "Dummy13" -1.4395 -2.75895 -6.909897 1.4517 2.49845 0.00375
+// $HBox 0 "Dummy14" -1.3936 -2.64055 -5.380402 1.4052 2.52015 0.009346
+// $HBox 0 "Dummy15" -1.1884 -1.45125 -3.576252 1.202 0 0

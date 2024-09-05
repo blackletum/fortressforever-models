@@ -1,0 +1,21 @@
+$Sequence "Idle" {
+	"flag_anims\Idle.smd"
+	activity "ACT_INFO_RETURNED" 1
+	{ event AE_CL_DISABLE_BODYGROUP 0 "fx" }
+	loop
+}
+
+$Sequence "Drop" {
+	"flag_anims\Drop.smd"
+	activity "ACT_INFO_DROPPED" 1
+	fadein 0.2
+	fadeout 0.2
+	loop
+}
+
+$Sequence "Carry" {
+	"flag_anims\Carry.smd"
+	activity "ACT_INFO_CARRIED" 1
+	{ event AE_CL_ENABLE_BODYGROUP 0 "fx" }
+	loop
+}

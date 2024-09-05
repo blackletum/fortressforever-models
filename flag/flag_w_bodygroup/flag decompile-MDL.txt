@@ -1,0 +1,137 @@
+// Created by Crowbar 0.74
+====== File Size ======
+	15 548
+====== File Seek Log ======
+	0 - 79 MDL File Header 00 (MDL version: 48); MDL File Header 00 (MDL version: 48)
+	80 - 407 MDL File Header 01; MDL File Header 01
+	408 - 663 MDL File Header 02; MDL File Header 02
+	664 - 6 279 theMdlFileData.theBones 26
+	6 280 - 6 291 theMdlFileData.theHitboxSets 1
+	6 292 - 6 631 aHitboxSet.theHitboxes 5
+	6 632 - 6 657 theMdlFileData.theBoneTableByName
+	6 658 - 6 659 [ERROR] Unread bytes (all zeroes) [ 00 00 ]
+	6 660 - 6 959 theMdlFileData.theAnimationDescs 3
+	6 960 - 6 977 anAnimationDesc.anAnimation  [@Idle] (frameCount = 61; sectionFrameCount = 61)
+	6 978 - 6 987 anAnimationDesc.anAnimation  [@Idle] (frameCount = 61; sectionFrameCount = 61)
+	6 988 - 7 111 anAnimation.theRotV.theAnimXValues (accumulatedTotal = 61)
+	7 112 - 7 121 anAnimationDesc.anAnimation  [@Idle] (frameCount = 61; sectionFrameCount = 61)
+	7 122 - 7 245 anAnimation.theRotV.theAnimXValues (accumulatedTotal = 61)
+	7 246 - 7 255 anAnimationDesc.anAnimation  [@Idle] (frameCount = 61; sectionFrameCount = 61)
+	7 256 - 7 379 anAnimation.theRotV.theAnimXValues (accumulatedTotal = 61)
+	7 380 - 7 389 anAnimationDesc.anAnimation  [@Idle] (frameCount = 61; sectionFrameCount = 61)
+	7 390 - 7 513 anAnimation.theRotV.theAnimXValues (accumulatedTotal = 61)
+	7 514 - 7 523 anAnimationDesc.anAnimation  [@Idle] (frameCount = 61; sectionFrameCount = 61)
+	7 524 - 7 647 anAnimation.theRotV.theAnimXValues (accumulatedTotal = 61)
+	7 648 - 7 651 anAnimationDesc.anAnimation [@Idle] (unused empty data structure at the end of the list)
+	7 652 - 7 663 [ERROR] Unread bytes (all zeroes) [ 00 00 00 00 00 00 00 00 00 00 00 00 ]
+	7 664 - 7 681 anAnimationDesc.anAnimation  [@Drop] (frameCount = 61; sectionFrameCount = 61)
+	7 682 - 7 691 anAnimationDesc.anAnimation  [@Drop] (frameCount = 61; sectionFrameCount = 61)
+	7 692 - 7 815 anAnimation.theRotV.theAnimXValues (accumulatedTotal = 61)
+	7 816 - 7 825 anAnimationDesc.anAnimation  [@Drop] (frameCount = 61; sectionFrameCount = 61)
+	7 826 - 7 949 anAnimation.theRotV.theAnimXValues (accumulatedTotal = 61)
+	7 950 - 7 959 anAnimationDesc.anAnimation  [@Drop] (frameCount = 61; sectionFrameCount = 61)
+	7 960 - 8 083 anAnimation.theRotV.theAnimXValues (accumulatedTotal = 61)
+	8 084 - 8 093 anAnimationDesc.anAnimation  [@Drop] (frameCount = 61; sectionFrameCount = 61)
+	8 094 - 8 217 anAnimation.theRotV.theAnimXValues (accumulatedTotal = 61)
+	8 218 - 8 227 anAnimationDesc.anAnimation  [@Drop] (frameCount = 61; sectionFrameCount = 61)
+	8 228 - 8 351 anAnimation.theRotV.theAnimXValues (accumulatedTotal = 61)
+	8 352 - 8 355 anAnimationDesc.anAnimation [@Drop] (unused empty data structure at the end of the list)
+	8 356 - 8 367 [ERROR] Unread bytes (all zeroes) [ 00 00 00 00 00 00 00 00 00 00 00 00 ]
+	8 368 - 8 385 anAnimationDesc.anAnimation  [@Carry] (frameCount = 61; sectionFrameCount = 61)
+	8 386 - 8 395 anAnimationDesc.anAnimation  [@Carry] (frameCount = 61; sectionFrameCount = 61)
+	8 396 - 8 519 anAnimation.theRotV.theAnimXValues (accumulatedTotal = 61)
+	8 520 - 8 529 anAnimationDesc.anAnimation  [@Carry] (frameCount = 61; sectionFrameCount = 61)
+	8 530 - 8 653 anAnimation.theRotV.theAnimXValues (accumulatedTotal = 61)
+	8 654 - 8 663 anAnimationDesc.anAnimation  [@Carry] (frameCount = 61; sectionFrameCount = 61)
+	8 664 - 8 787 anAnimation.theRotV.theAnimXValues (accumulatedTotal = 61)
+	8 788 - 8 797 anAnimationDesc.anAnimation  [@Carry] (frameCount = 61; sectionFrameCount = 61)
+	8 798 - 8 921 anAnimation.theRotV.theAnimXValues (accumulatedTotal = 61)
+	8 922 - 8 931 anAnimationDesc.anAnimation  [@Carry] (frameCount = 61; sectionFrameCount = 61)
+	8 932 - 9 055 anAnimation.theRotV.theAnimXValues (accumulatedTotal = 61)
+	9 056 - 9 059 anAnimationDesc.anAnimation [@Carry] (unused empty data structure at the end of the list)
+	9 060 - 9 695 theMdlFileData.theSequenceDescs 3
+	9 696 - 9 775 aSeqDesc.theEvents [Idle] 1
+	9 776 - 9 879 aSeqDesc.theBoneWeights [Idle] 26; aSeqDesc.theBoneWeights [Drop] 26; aSeqDesc.theBoneWeights [Carry] 26
+	9 880 - 9 881 aSeqDesc.theAnimDescIndexes [Idle] 1
+	9 882 - 9 883 [ERROR] Unread bytes (all zeroes) [ 00 00 ]
+	9 884 - 9 885 aSeqDesc.theAnimDescIndexes [Drop] 1
+	9 886 - 9 887 [ERROR] Unread bytes (all zeroes) [ 00 00 ]
+	9 888 - 9 967 aSeqDesc.theEvents [Carry] 1
+	9 968 - 9 969 aSeqDesc.theAnimDescIndexes [Carry] 1
+	9 970 - 9 971 [ERROR] Unread bytes (all zeroes) [ 00 00 ]
+	9 972 - 10 003 theMdlFileData.theBodyParts 2
+	10 004 - 10 151 aModel Name = flag_nofx_ref.smd
+	10 152 - 10 299 aModel Name = 
+	10 300 - 10 447 aModel Name = flag_fx_ref.smd
+	10 448 - 10 563 aModel.theMeshes 1
+	10 564 - 10 679 aModel.theMeshes 1
+	10 680 - 11 319 theMdlFileData.theTextures 10
+	11 320 - 11 323 theMdlFileData.theTexturePaths 1
+	11 324 - 11 423 theMdlFileData.theSkinFamilies 5
+	11 424 - 11 487 theMdlFileData.theLinearBoneTable header
+	11 488 - 11 591 theMdlFileData.theLinearBoneTable.theFlags
+	11 592 - 11 695 theMdlFileData.theLinearBoneTable.theParents
+	11 696 - 12 007 theMdlFileData.theLinearBoneTable.thePositions
+	12 008 - 12 423 theMdlFileData.theLinearBoneTable.theQuaternions
+	12 424 - 12 735 theMdlFileData.theLinearBoneTable.theRotations
+	12 736 - 13 983 theMdlFileData.theLinearBoneTable.thePoseToBoneDataColumns
+	13 984 - 14 295 theMdlFileData.theLinearBoneTable.thePositionScales
+	14 296 - 14 607 theMdlFileData.theLinearBoneTable.theRotationScales
+	14 608 - 15 023 theMdlFileData.theLinearBoneTable.theQAlignments
+	15 024 - 15 024 [ERROR] Unread bytes (all zeroes) [ 00 ]
+	15 025 - 15 038 theMdlFileData.theNameCopy = flag/flag.mdl; theMdlFileData.theNameCopy = flag/flag.mdl
+	15 039 - 15 045 theSurfacePropName = carpet; theSurfacePropName = carpet; aBone.theSurfacePropName = carpet; aBone.theSurfacePropName = carpet; aBone.theSurfacePropName = carpet; aBone.theSurfacePropName = carpet; aBone.theSurfacePropName = carpet; aBone.theSurfacePropName = carpet; aBone.theSurfacePropName = carpet; aBone.theSurfacePropName = carpet; aBone.theSurfacePropName = carpet; aBone.theSurfacePropName = carpet; aBone.theSurfacePropName = carpet; aBone.theSurfacePropName = carpet; aBone.theSurfacePropName = carpet; aBone.theSurfacePropName = carpet; aBone.theSurfacePropName = carpet; aBone.theSurfacePropName = carpet; aBone.theSurfacePropName = carpet; aBone.theSurfacePropName = carpet; aBone.theSurfacePropName = carpet; aBone.theSurfacePropName = carpet; aBone.theSurfacePropName = carpet; aBone.theSurfacePropName = carpet; aBone.theSurfacePropName = carpet; aBone.theSurfacePropName = carpet; aBone.theSurfacePropName = carpet; aBone.theSurfacePropName = carpet
+	15 046 - 15 058 aBone.theName = Dummy_root01
+	15 059 - 15 066 aBone.theName = Dummy01
+	15 067 - 15 074 aBone.theName = Dummy02
+	15 075 - 15 082 aBone.theName = Dummy03
+	15 083 - 15 090 aBone.theName = Dummy04
+	15 091 - 15 098 aBone.theName = Dummy05
+	15 099 - 15 106 aBone.theName = Dummy06
+	15 107 - 15 114 aBone.theName = Dummy07
+	15 115 - 15 122 aBone.theName = Dummy08
+	15 123 - 15 130 aBone.theName = Dummy09
+	15 131 - 15 138 aBone.theName = Dummy10
+	15 139 - 15 146 aBone.theName = Dummy11
+	15 147 - 15 154 aBone.theName = Dummy12
+	15 155 - 15 162 aBone.theName = Dummy13
+	15 163 - 15 170 aBone.theName = Dummy14
+	15 171 - 15 178 aBone.theName = Dummy15
+	15 179 - 15 186 aBone.theName = Dummy16
+	15 187 - 15 194 aBone.theName = Dummy17
+	15 195 - 15 202 aBone.theName = Dummy18
+	15 203 - 15 210 aBone.theName = Dummy19
+	15 211 - 15 218 aBone.theName = Dummy20
+	15 219 - 15 226 aBone.theName = Dummy21
+	15 227 - 15 234 aBone.theName = Dummy22
+	15 235 - 15 242 aBone.theName = Dummy23
+	15 243 - 15 250 aBone.theName = Dummy24
+	15 251 - 15 258 aBone.theName = Dummy25
+	15 259 - 15 266 aHitboxSet.theName = default
+	15 267 - 15 272 anAnimationDesc.theName = @Idle
+	15 273 - 15 278 anAnimationDesc.theName = @Drop
+	15 279 - 15 285 anAnimationDesc.theName = @Carry
+	15 286 - 15 290 aSeqDesc.theName = Idle
+	15 291 - 15 308 aSeqDesc.theActivityName = ACT_INFO_RETURNED
+	15 309 - 15 332 anEvent.theName = AE_CL_DISABLE_BODYGROUP
+	15 333 - 15 337 aSeqDesc.theName = Drop
+	15 338 - 15 354 aSeqDesc.theActivityName = ACT_INFO_DROPPED
+	15 355 - 15 360 aSeqDesc.theName = Carry
+	15 361 - 15 377 aSeqDesc.theActivityName = ACT_INFO_CARRIED
+	15 378 - 15 400 anEvent.theName = AE_CL_ENABLE_BODYGROUP
+	15 401 - 15 405 aBodyPart.theName = Body
+	15 406 - 15 408 aBodyPart.theName = fx
+	15 409 - 15 418 aTexture.thePathFileName = flag_blue
+	15 419 - 15 431 aTexture.thePathFileName = flag_fx_blue
+	15 432 - 15 440 aTexture.thePathFileName = flag_red
+	15 441 - 15 452 aTexture.thePathFileName = flag_fx_red
+	15 453 - 15 464 aTexture.thePathFileName = flag_yellow
+	15 465 - 15 479 aTexture.thePathFileName = flag_fx_yellow
+	15 480 - 15 490 aTexture.thePathFileName = flag_green
+	15 491 - 15 504 aTexture.thePathFileName = flag_fx_green
+	15 505 - 15 517 aTexture.thePathFileName = flag_neutral
+	15 518 - 15 533 aTexture.thePathFileName = flag_fx_neutral
+	15 534 - 15 546 aTexturePath = models\flag\
+	15 547 - 15 547 [ERROR] Unread bytes (all zeroes) [ 00 ]
+	15 548 - 15 548 END OF FILE + 1 (File size)
+========================
