@@ -1,15 +1,6 @@
-// Created by Crowbar 0.74
-
 $modelname "weapons\new\incendiarycannon\v_incendiarycannon.mdl"
 
-$bodygroup "studio"
-{
-	studio "v_ic_cannon.smd"
-}
-
-$surfaceprop "default"
-
-$contents "solid"
+$body studio "v_ic_cannon.smd"
 
 $illumposition -13.301 -18.926 -9.947
 
@@ -60,58 +51,26 @@ $cbox 0 0 0 0 0 0
 
 $bbox -2.655 -27.225 -19.894 40.507 0.623 0
 
-$sequence "Idle" {
-	"anims\idle.smd"
-	activity "ACT_VM_IDLE" 5
-	fadein 0.2
-	fadeout 0.2
-	node "1"
-	fps 30
-	loop
-}
+$sequence Idle "anims\idle.smd" ACT_VM_IDLE 5 loop
 
-$sequence "Draw" {
-	"anims\draw.smd"
-	activity "ACT_VM_DRAW" -1
-	fadein 0
-	fadeout 0.2
-	fps 30
-}
+$sequence Draw "anims\draw.smd" ACT_VM_DRAW -1 fadein 0
 
-$sequence "Fire" {
-	"anims\Fire_New.smd"
-	activity "ACT_VM_PRIMARYATTACK" 1
+$sequence Fire "anims\Fire_New.smd" ACT_VM_PRIMARYATTACK 1 {
 	{ event AE_MUZZLEFLASH 1 "RPG 1" }
 	{ event AE_CL_PLAYSOUND 18 "ic.cock_back" }
 	{ event AE_CL_PLAYSOUND 27 "ic.cock_forward" }
-	fadein 0.2
-	fadeout 0.2
-	snap
-	fps 30
 }
 
-$sequence "Fire2" {
-	"anims\Fire_New.smd"
-	activity "ACT_VM_PRIMARYATTACK" 1
+$sequence Fire2 "anims\Fire_New.smd" ACT_VM_PRIMARYATTACK 1 {
 	{ event AE_MUZZLEFLASH 1 "RPG 1" }
 	{ event AE_CL_PLAYSOUND 18 "ic.cock_back" }
 	{ event AE_CL_PLAYSOUND 27 "ic.cock_forward" }
-	fadein 0.2
-	fadeout 0.2
-	snap
-	fps 30
 }
 
-$sequence "Fire3" {
-	"anims\Fire_New.smd"
-	activity "ACT_VM_PRIMARYATTACK" 1
+$sequence Fire3 "anims\Fire_New.smd" ACT_VM_PRIMARYATTACK 1 {
 	{ event AE_MUZZLEFLASH 1 "RPG 1" }
 	{ event AE_CL_PLAYSOUND 18 "ic.cock_back" }
 	{ event AE_CL_PLAYSOUND 27 "ic.cock_forward" }
-	fadein 0.2
-	fadeout 0.2
-	snap
-	fps 30
 }
 
 $include "DefineBones.qci"

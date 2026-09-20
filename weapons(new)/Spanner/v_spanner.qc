@@ -1,6 +1,6 @@
 /*
 *****************************
-Knife (v_model)
+Spanner (v_model)
 
 Model 	- FooleyCooley
 Skin	- Decs
@@ -8,11 +8,12 @@ Anims	- FooleyCooley
 *****************************
 */
 
-$modelname "weapons/new/knife/v_knife.mdl"
-$cdmaterials "models/weapons/knife"
-$origin 0 -5 0
+$modelname "weapons/new/spanner/v_spanner.mdl"
+$cdmaterials "models/weapons/spanner"
+$origin 0 0 1
 $scale 1.0
-$body studio "reference_Knife.smd"
+$illumposition 20 -6 7
+$body studio "reference_Spanner.smd"
 
 $bonemerge "root"
 $bonemerge "upperarm_l"
@@ -52,17 +53,16 @@ $bonemerge "pinky_0_r"
 $bonemerge "pinky_1_r"
 $bonemerge "pinky_2_r"
 
-$sequence Draw "draw" ACT_VM_DRAW 1 fps 30.00 fadein 0
+$sequence Draw "anims\draw.smd" ACT_VM_DRAW 1 fadein 0
 
-$sequence Idle "idle" ACT_VM_IDLE 1 fps 30.00 loop
+$sequence Idle1 "anims\idle.smd" ACT_VM_IDLE 1 loop
 
-$sequence MissCenter1 "swing1" ACT_VM_MISSCENTER 1 fps 30.00 fadein 0 fadeout 0
-$sequence MissCenter2 "swing2" ACT_VM_MISSCENTER 1 fps 30.00 fadein 0 fadeout 0
-$sequence MissCenter3 "swing3" ACT_VM_MISSCENTER 1 fps 30.00 fadein 0 fadeout 0
+$sequence MissCenter1 "anims\swing1.smd" ACT_VM_MISSCENTER 1 fps 30.00 fadein 0 fadeout 0
+$sequence MissCenter2 "anims\swing2.smd" ACT_VM_MISSCENTER 1 fps 30.00 fadein 0 fadeout 0
+$sequence MissCenter3 "anims\swing32.smd" ACT_VM_MISSCENTER 1 fps 30.00 fadein 0 fadeout 0
 
-$sequence HitCenter1 "stab1" ACT_VM_HITCENTER 1 fps 30.00 fadein 0 fadeout 0
-$sequence HitCenter2 "stab2" ACT_VM_HITCENTER 1 fps 30.00 fadein 0 fadeout 0
-$sequence HitCenter3 "stab3" ACT_VM_HITCENTER 1 fps 30.00 fadein 0 fadeout 0
+$sequence HitCenter1 "anims\hit1.smd" ACT_VM_HITCENTER 1 fadein 0 fadeout 0
+$sequence HitCenter2 "anims\hit2.smd" ACT_VM_HITCENTER 1 fadein 0 fadeout 0
+$sequence HitCenter3 "anims\hit3.smd" ACT_VM_HITCENTER 1 fadein 0 fadeout 0
 
-$sequence backstab "backstab" ACT_VM_SWINGHARD 1 fps 30.00 fadein 0 fadeout 0
 $include "DefineBones.qci"

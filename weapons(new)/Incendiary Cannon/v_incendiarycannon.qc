@@ -1,15 +1,6 @@
-// Created by Crowbar 0.74
-
 $modelname "weapons\new\incendiarycannon\v_incendiarycannon.mdl"
 
-$bodygroup "studio"
-{
-	studio "v_ic_cannon.smd"
-}
-
-$surfaceprop "default"
-
-$contents "solid"
+$body studio "v_ic_cannon.smd"
 
 $illumposition -13.301 -18.926 -9.947
 
@@ -60,78 +51,31 @@ $cbox 0 0 0 0 0 0
 
 $bbox -2.655 -27.225 -19.894 40.507 0.623 0
 
-$sequence "Idle" {
-	"anims\idle.smd"
-	activity "ACT_VM_IDLE" 5
-	fadein 0.2
-	fadeout 0.2
-	node "1"
-	fps 30
-	loop
-}
+$sequence Idle "anims\idle.smd" ACT_VM_IDLE 5 loop
 
-$sequence "Draw" {
-	"anims\draw.smd"
-	activity "ACT_VM_DRAW" -1
-	fadein 0
-	fadeout 0.2
-	fps 30
-}
+$sequence Draw "anims\draw.smd" ACT_VM_DRAW -1 fadein 0
 
-$sequence "Fire" {
-	"anims\Fire1.smd"
-	activity "ACT_VM_PRIMARYATTACK" 1
+$sequence Fire "anims\Fire1.smd" ACT_VM_PRIMARYATTACK 1 {
 	{ event AE_MUZZLEFLASH 1 "RPG 1" }
-	fadein 0.2
-	fadeout 0.2
-	snap
-	fps 30
 }
 
-$sequence "Fire2" {
-	"anims\Fire2.smd"
-	activity "ACT_VM_PRIMARYATTACK" 1
+$sequence Fire2 "anims\Fire2.smd" ACT_VM_PRIMARYATTACK 1 {
 	{ event AE_MUZZLEFLASH 1 "RPG 1" }
-	fadein 0.2
-	fadeout 0.2
-	snap
-	fps 30
 }
 
-$sequence "Fire3" {
-	"anims\Fire3.smd"
-	activity "ACT_VM_PRIMARYATTACK" 1
+$sequence Fire3 "anims\Fire3.smd" ACT_VM_PRIMARYATTACK 1 {
 	{ event AE_MUZZLEFLASH 1 "RPG 1" }
-	fadein 0.2
-	fadeout 0.2
-	snap
-	fps 30
 }
 
-$sequence "StartReload" {
-	"anims\reload_start.smd"
-	activity "ACT_SHOTGUN_RELOAD_START" 1
-	fadein 0.2
-	fadeout 0
-	fps 30
-}
+$sequence StartReload "anims\reload_start.smd" ACT_SHOTGUN_RELOAD_START 1 fadeout 0
 
-$sequence "Reload" {
-	"anims\reload_loop.smd"
-	activity "ACT_VM_RELOAD" 1
+$sequence Reload "anims\reload_loop.smd" ACT_VM_RELOAD 1 {
 	{ event AE_CL_PLAYSOUND 2 "ic.cock_back" }
 	{ event AE_CL_PLAYSOUND 11 "ic.cock_forward" }
 	fadein 0
 	fadeout 0
-	fps 30
 }
 
-$sequence "FinishReload" {
-	"anims\reload_end.smd"
-	activity "ACT_SHOTGUN_RELOAD_FINISH" 1
-	fadein 0
-	fadeout 0.2
-	fps 30
-}
+$sequence FinishReload "anims\reload_end.smd" ACT_SHOTGUN_RELOAD_FINISH 1 fadein 0
 
 $include "DefineBones.qci"

@@ -1,19 +1,21 @@
 /*
 *****************************
-Spanner (v_model)
+Tranq Pistol
 
-Model 	- FooleyCooley
+Model	- FooleyCooley
 Skin	- Decs
 Anims	- FooleyCooley
 *****************************
 */
 
-$modelname "weapons/new/spanner/v_spanner.mdl"
-$cdmaterials "models/weapons/spanner"
-$origin 0 0 1
+$modelname "weapons/new/tranq/v_tranq.mdl"
+$cdmaterials "models/weapons/tranq"
+$origin 0 0 0
 $scale 1.0
-$illumposition 20 -6 7
-$body studio "reference_Spanner.smd"
+
+$attachment "1" "bone_muzzle" 0 0 0 rotate 0 0 0
+
+$body studio "v_tranq.smd"
 
 $bonemerge "root"
 $bonemerge "upperarm_l"
@@ -53,15 +55,14 @@ $bonemerge "pinky_0_r"
 $bonemerge "pinky_1_r"
 $bonemerge "pinky_2_r"
 
-$sequence Draw "draw" ACT_VM_DRAW 1 fps 30.00 fadein 0
+$sequence Draw "anims\draw.smd" ACT_VM_DRAW 1 fadein 0
 
-$sequence Idle1 "idle" ACT_VM_IDLE 1 fps 30.00 loop
+$sequence Idle1 "anims\idle.smd" loop ACT_VM_IDLE 1
 
-$sequence MissCenter1 "swing1" ACT_VM_MISSCENTER 1 fps 30.00 fadein 0 fadeout 0
-$sequence MissCenter2 "swing2" ACT_VM_MISSCENTER 1 fps 30.00 fadein 0 fadeout 0
-$sequence MissCenter3 "swing32" ACT_VM_MISSCENTER 1 fps 30.00 fadein 0 fadeout 0
+$sequence Fire "anims\fire2.smd" ACT_VM_PRIMARYATTACK 1 fadein 0 {
+	{ event AE_MUZZLEFLASH 0 "PISTOL 1" }
+	{ event AE_CL_PLAYSOUND 16 "Tranq.cock_back" }
+	{ event AE_CL_PLAYSOUND 23 "Tranq.cock_forward" }
+}
 
-$sequence HitCenter1 "hit1" ACT_VM_HITCENTER 1 fps 30.00 fadein 0 fadeout 0
-$sequence HitCenter2 "hit2" ACT_VM_HITCENTER 1 fps 30.00 fadein 0 fadeout 0
-$sequence HitCenter3 "hit3" ACT_VM_HITCENTER 1 fps 30.00 fadein 0 fadeout 0
 $include "DefineBones.qci"

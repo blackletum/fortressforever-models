@@ -1,6 +1,6 @@
 /*
 *****************************
-Tranq Pistol
+Railgun
 
 Model	- FooleyCooley
 Skin	- Decs
@@ -8,14 +8,16 @@ Anims	- FooleyCooley
 *****************************
 */
 
-$modelname "weapons/new/tranq/v_tranq.mdl"
-$cdmaterials "models/weapons/tranq"
-$origin 0 0 0
+$modelname "weapons/new/railgun/v_railgun.mdl"
+$cdmaterials "models/weapons/railgun"
+$origin 0 0 -2
 $scale 1.0
 
-$attachment "1" "bone_muzzle" 0 0 0 rotate 0 0 0
+$attachment "1" "bone_muzzle" 1.00 0.00 0.00 rotate 0 0 0
+$attachment "railgunFX1" "bone_pistolGrip" 0.00 2.30 3.00 rotate -0 0 3
+$attachment "railgunFX2" "bone_pistolGrip" 0.00 2.00 9.00 rotate -0 0 3
 
-$body studio "v_tranq.smd"
+$body studio "reference_Railgun.smd"
 
 $bonemerge "root"
 $bonemerge "upperarm_l"
@@ -55,13 +57,20 @@ $bonemerge "pinky_0_r"
 $bonemerge "pinky_1_r"
 $bonemerge "pinky_2_r"
 
-$sequence Draw "draw" ACT_VM_DRAW 1 fps 30.00 fadein 0
+$sequence Draw "anims\draw2.smd" ACT_VM_DRAW 1 fadein 0
 
-$sequence Idle1 "idle" loop ACT_VM_IDLE 1 fps 30.00
+$sequence Idle "anims\idle.smd" loop ACT_VM_IDLE 1
 
-$sequence Fire "fire2" ACT_VM_PRIMARYATTACK 1 fps 30.00 fadein 0 {
-	{ event AE_MUZZLEFLASH 0 "PISTOL 1" }
-	{ event AE_CL_PLAYSOUND 16 "Tranq.cock_back" }
-	{ event AE_CL_PLAYSOUND 23 "Tranq.cock_forward" }
+$sequence Charge "anims\charge_bake2.smd" ACT_VM_PULLBACK  1
+
+$sequence Discharge "anims\discharge.smd" ACT_VM_RELEASE 1
+
+$sequence Fire "anims\fire.smd" ACT_VM_PRIMARYATTACK 1 snap fadein 0 {
+	{ event AE_MUZZLEFLASH 0 "COMBINE 1" }
 }
+	
+$sequence FireCharge "anims\fire_charge.smd" ACT_VM_SECONDARYATTACK 1 snap fadein 0 {
+	{ event AE_MUZZLEFLASH 0 "COMBINE 1" }
+}
+
 $include "DefineBones.qci"

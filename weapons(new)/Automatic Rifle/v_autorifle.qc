@@ -4,14 +4,7 @@ $modelname "weapons/new/autorifle/v_autorifle.mdl"
 
 $origin -1.5 -5 -2
 
-$bodygroup "studio"
-{
-	studio "v_autorifle.smd"
-}
-
-$surfaceprop "default"
-
-$contents "solid"
+$body studio "v_autorifle.smd"
 
 $illumposition 22.959 -6.767 -9.755
 
@@ -62,27 +55,11 @@ $bonemerge "pinky_0_r"
 $bonemerge "pinky_1_r"
 $bonemerge "pinky_2_r"
 
-$sequence "Idle01" {
-	"anims\idle.smd"
-	activity "ACT_VM_IDLE" 1
-	fadein 0.2
-	fadeout 0.2
-	snap
-	fps 30
-}
+$sequence Idle "anims\idle.smd" ACT_VM_IDLE 1
 
-$sequence "Draw01" {
-	"anims\draw.smd"
-	activity "ACT_VM_DRAW" 1
-	fadein 0.2
-	fadeout 0.2
-	snap
-	fps 30
-}
+$sequence Draw "anims\draw.smd" ACT_VM_DRAW 1
 
-$sequence "fire01" {
-	"anims\fire1.smd"
-	activity "ACT_VM_PRIMARYATTACK" 1
+$sequence Fire01 "anims\fire1.smd" ACT_VM_PRIMARYATTACK 1 {
 	{ event AE_MUZZLEFLASH 0 "SMG1 1" }
 	{ event AE_CLIENT_EFFECT_ATTACH 0 "EjectBrass_9mm 2 65" }
 	fadein 0
@@ -91,9 +68,7 @@ $sequence "fire01" {
 	fps 30
 }
 
-$sequence "fire02" {
-	"anims\fire2.smd"
-	activity "ACT_VM_PRIMARYATTACK" 1
+$sequence Fire02 "anims\fire2.smd" ACT_VM_PRIMARYATTACK 1 {
 	{ event AE_MUZZLEFLASH 0 "SMG1 1" }
 	{ event AE_CLIENT_EFFECT_ATTACH 0 "EjectBrass_9mm 2 65" }
 	fadein 0
@@ -102,9 +77,7 @@ $sequence "fire02" {
 	fps 30
 }
 
-$sequence "fire03" {
-	"anims\fire3.smd"
-	activity "ACT_VM_PRIMARYATTACK" 1
+$sequence Fire03 "anims\fire3.smd" ACT_VM_PRIMARYATTACK 1 {
 	{ event AE_MUZZLEFLASH 0 "SMG1 1" }
 	{ event AE_CLIENT_EFFECT_ATTACH 0 "EjectBrass_9mm 2 65" }
 	fadein 0
@@ -113,9 +86,7 @@ $sequence "fire03" {
 	fps 30
 }
 
-$sequence "reload" {
-	"anims\reload.smd"
-	activity "ACT_VM_RELOAD" 1
+$sequence Reload "anims\reload.smd" ACT_VM_RELOAD 1 {
 	{ event AE_CL_PLAYSOUND 1 "Weapon.Reload2_Mag_In" }
 	{ event AE_CL_PLAYSOUND 18 "Weapon.Reload2_Bolt_Back" }
 	{ event AE_CL_PLAYSOUND 24 "Weapon.Reload2_Bolt_Forward" }

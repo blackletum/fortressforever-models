@@ -45,9 +45,9 @@ $bonemerge "pinky_0_r"
 $bonemerge "pinky_1_r"
 $bonemerge "pinky_2_r"
 
-$sequence hit "anims/hit.smd" fps 30 activity ACT_VM_HITCENTER 1 fadein 0 fadeout 0.2 node "hit"
-$sequence miss "anims/miss.smd" fps 30 activity ACT_VM_MISSCENTER 1 fadein 0.2 fadeout 0.2 node "miss"
-$sequence idle "anims/idle.smd" loop fps 30 activity ACT_VM_IDLE 1 fadein 0.2 fadeout 0.2
-$sequence draw "anims/draw.smd" fps 30 activity ACT_VM_DRAW -1 fadein 0.2 fadeout 2 node "draw"
+$sequence hit "anims\hit.smd" ACT_VM_HITCENTER 1 fadein 0 node "hit"
+$sequence miss "anims\miss.smd" ACT_VM_MISSCENTER 1 node "miss"
+$sequence idle "anims\idle.smd" loop ACT_VM_IDLE 1
+$sequence draw "anims\draw.smd" ACT_VM_DRAW -1 fadeout 2 node "draw"
 
 $include "DefineBones.qci"

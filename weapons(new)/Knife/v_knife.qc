@@ -1,23 +1,18 @@
 /*
 *****************************
-Railgun
+Knife (v_model)
 
-Model	- FooleyCooley
+Model 	- FooleyCooley
 Skin	- Decs
 Anims	- FooleyCooley
 *****************************
 */
 
-$modelname "weapons/new/railgun/v_railgun.mdl"
-$cdmaterials "models/weapons/railgun"
-$origin 0 0 -2
+$modelname "weapons/new/knife/v_knife.mdl"
+$cdmaterials "models/weapons/knife"
+$origin 0 -5 0
 $scale 1.0
-
-$attachment "1" "bone_muzzle" 1.00 0.00 0.00 rotate 0 0 0
-$attachment "railgunFX1" "bone_pistolGrip" 0.00 2.30 3.00 rotate -0 0 3
-$attachment "railgunFX2" "bone_pistolGrip" 0.00 2.00 9.00 rotate -0 0 3
-
-$body studio "reference_Railgun.smd"
+$body studio "reference_Knife.smd"
 
 $bonemerge "root"
 $bonemerge "upperarm_l"
@@ -57,19 +52,17 @@ $bonemerge "pinky_0_r"
 $bonemerge "pinky_1_r"
 $bonemerge "pinky_2_r"
 
-$sequence Draw "draw2" ACT_VM_DRAW 1 fps 30.00 fadein 0
+$sequence Draw "anims\draw.smd" ACT_VM_DRAW 1 fadein 0
 
-$sequence Idle "idle" loop ACT_VM_IDLE 1 fps 30.00
+$sequence Idle "anims\idle.smd" ACT_VM_IDLE 1 loop
 
-$sequence Charge "charge_bake2" ACT_VM_PULLBACK  1 fps 30.00
+$sequence MissCenter1 "anims\swing1.smd" ACT_VM_MISSCENTER 1 fadein 0 fadeout 0
+$sequence MissCenter2 "anims\swing2.smd" ACT_VM_MISSCENTER 1 fadein 0 fadeout 0
+$sequence MissCenter3 "anims\swing3.smd" ACT_VM_MISSCENTER 1 fadein 0 fadeout 0
 
-$sequence Discharge "discharge" ACT_VM_RELEASE 1 fps 30.00
+$sequence HitCenter1 "anims\stab1.smd" ACT_VM_HITCENTER 1 fadein 0 fadeout 0
+$sequence HitCenter2 "anims\stab2.smd" ACT_VM_HITCENTER 1 fadein 0 fadeout 0
+$sequence HitCenter3 "anims\stab3.smd" ACT_VM_HITCENTER 1 fadein 0 fadeout 0
 
-$sequence Fire "fire" ACT_VM_PRIMARYATTACK 1 fps 30.00 snap fadein 0 {
-	{ event AE_MUZZLEFLASH 0 "COMBINE 1" }
-}
-	
-$sequence FireCharge "fire_charge" ACT_VM_SECONDARYATTACK 1 fps 30.00 snap fadein 0 {
-	{ event AE_MUZZLEFLASH 0 "COMBINE 1" }
-}
+$sequence backstab "anims\backstab.smd" ACT_VM_SWINGHARD 1 fadein 0 fadeout 0
 $include "DefineBones.qci"

@@ -53,15 +53,16 @@ $bonemerge "pinky_1_r"
 $bonemerge "pinky_2_r"
 
 
-$sequence Draw "anims\draw" ACT_VM_DRAW 1 fps 30.00 fadein 0
+$sequence Draw "anims\draw.smd" ACT_VM_DRAW 1 fps 30.00 fadein 0
 
-$sequence Idle "anims\idle" ACT_VM_IDLE 1 loop fps 30.00 
+$sequence Idle "anims\idle.smd" ACT_VM_IDLE 1 loop fps 30.00 
 
-$sequence MissCenter1 "anims\swing1" ACT_VM_MISSCENTER 1 fps 36.00 fadein 0 fadeout 0
-$sequence MissCenter2 "anims\swing2" ACT_VM_MISSCENTER 1 fps 36.00 fadein 0 fadeout 0
-$sequence MissCenter3 "anims\swing3" ACT_VM_MISSCENTER 1 fps 36.00 fadein 0 fadeout 0
+$sequence MissCenter1 "anims\swing1.smd" ACT_VM_MISSCENTER 1 fps 36.00 fadein 0 fadeout 0
+$sequence MissCenter2 "anims\swing2.smd" ACT_VM_MISSCENTER 1 fps 36.00 fadein 0 fadeout 0
+$sequence MissCenter3 "anims\swing3.smd" ACT_VM_MISSCENTER 1 fps 36.00 fadein 0 fadeout 0
 
-$sequence HitCenter1 "anims\swing_hit1" ACT_VM_HITCENTER 1 fps 30.00 fadein 0 fadeout 0
-$sequence HitCenter2 "anims\swing_hit2" ACT_VM_HITCENTER 1 fps 30.00 fadein 0 fadeout 0
-$sequence HitCenter3 "anims\swing_hit3" ACT_VM_HITCENTER 1 fps 30.00 fadein 0 fadeout 0
+$sequence HitCenter1 "anims\swing_hit1.smd" ACT_VM_HITCENTER 1 fadein 0 fadeout 0
+$sequence HitCenter2 "anims\swing_hit2.smd" ACT_VM_HITCENTER 1 fadein 0 fadeout 0
+$sequence HitCenter3 "anims\swing_hit3.smd" ACT_VM_HITCENTER 1 fadein 0 fadeout 0
+
 $include "DefineBones.qci"

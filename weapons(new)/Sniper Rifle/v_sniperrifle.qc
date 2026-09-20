@@ -2,14 +2,7 @@
 
 $modelname "weapons/new/sniperrifle/v_sniperrifle.mdl"
 
-$bodygroup "studio"
-{
-	studio "v_sniper.smd"
-}
-
-$surfaceprop "default"
-
-$contents "solid"
+$body studio "v_sniper.smd"
 
 $illumposition 5.537 -31.712 -21.568
 
@@ -60,31 +53,14 @@ $bonemerge "pinky_0_r"
 $bonemerge "pinky_1_r"
 $bonemerge "pinky_2_r"
 
-$sequence "Draw" {
-	"anims\Draw.smd"
-	activity "ACT_VM_DRAW" 1
-	fadein 0
-	fadeout 0.2
-	fps 30
-}
+$sequence Draw "anims\Draw.smd" ACT_VM_DRAW 1 fadein 0
 
-$sequence "Idle" {
-	"anims\Idle.smd"
-	activity "ACT_VM_IDLE" 1
-	fadein 0.2
-	fadeout 0.2
-	fps 30
-	loop
-}
+$sequence Idle "anims\Idle.smd" ACT_VM_IDLE 1 loop
 
-$sequence "Fire" {
-	"anims\Fire.smd"
-	activity "ACT_VM_PRIMARYATTACK" 1
+$sequence Fire "anims\Fire.smd" ACT_VM_PRIMARYATTACK 1 {
 	{ event AE_MUZZLEFLASH 0 "SMG1 1" }
 	{ event AE_CLIENT_EFFECT_ATTACH 2 "EjectBrass_9mm 2 65" }
 	fadein 0
-	fadeout 0.2
-	fps 30
 }
 
 $include "DefineBones.qci"

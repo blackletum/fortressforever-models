@@ -47,14 +47,14 @@ $bonemerge "pinky_0_r"
 $bonemerge "pinky_1_r"
 $bonemerge "pinky_2_r"
 
-$sequence Draw "draw" ACT_VM_DRAW 1 fps 30.00 fadein 0 {
+$sequence Draw "anims\draw.smd" ACT_VM_DRAW 1 fadein 0 {
 	{ event AE_CL_PLAYSOUND 8 "SuperShotgun.cock_back" }
 	{ event AE_CL_PLAYSOUND 16 "SuperShotgun.cock_forward" }
 }
 
-$sequence Idle1 "idle" loop ACT_VM_IDLE 1 fps 30.00
+$sequence Idle1 "anims\idle.smd" loop ACT_VM_IDLE 1
 
-$sequence Fire "fire4" ACT_VM_PRIMARYATTACK 1 fps 30.00 snap {
+$sequence Fire "anims\fire4.smd" ACT_VM_PRIMARYATTACK 1 snap {
 	{ event AE_MUZZLEFLASH 0 "SHOTGUN 1" }
 	{ event AE_CLIENT_EFFECT_ATTACH 12 "EjectBrass_12gauge 2 70" }
 //	{ event AE_CLIENT_EFFECT_ATTACH 13 "EjectBrass_12gauge 2 70" }
@@ -62,10 +62,11 @@ $sequence Fire "fire4" ACT_VM_PRIMARYATTACK 1 fps 30.00 snap {
 	{ event AE_CL_PLAYSOUND 16 "SuperShotgun.cock_forward" }
 }
 
-$sequence StartReload "reload_start2" ACT_SHOTGUN_RELOAD_START 1 fps 30.00 
-$sequence Reload "reload_loop2" ACT_VM_RELOAD 1 fps 30.00 snap 
-$sequence FinishReload "reload_end2" ACT_SHOTGUN_RELOAD_FINISH 1 fps 30.00 snap {
+$sequence StartReload "anims\reload_start2.smd" ACT_SHOTGUN_RELOAD_START 1 
+$sequence Reload "anims\reload_loop2.smd" ACT_VM_RELOAD 1 snap 
+$sequence FinishReload "anims\reload_end2.smd" ACT_SHOTGUN_RELOAD_FINISH 1 snap {
 	{ event AE_CL_PLAYSOUND 8 "SuperShotgun.cock_back" }
 	{ event AE_CL_PLAYSOUND 16 "SuperShotgun.cock_forward" }
 }
+
 $include "DefineBones.qci"

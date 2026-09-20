@@ -58,7 +58,7 @@ $bonemerge "pinky_2_r"
 
 $poseparameter ac_rotate -180 180 wrap
 
-$sequence ac_rotate "anim_AC_Rotate" fps 30
+$sequence ac_rotate "anims\anim_AC_Rotate.smd"
 
 $weightlist ac_rot { "bone_barrels" 1.0 }
 
@@ -69,23 +69,24 @@ $animation ac_rot240 "anim_AC_Rotate" frame 6 6 subtract neutral 0 weightlist ac
 
 $sequence auto_rotate { ac_rot0 ac_rot120 ac_rot240 ac_rot0 blendwidth 4 blend "ac_rotate" -180 180 } weightlist ac_rot delta autoplay
 
-$sequence Draw "anim_Draw" ACT_VM_DRAW 1 fps 30.00 fadein 0
+$sequence Draw "anim_Draw" ACT_VM_DRAW 1 fadein 0
 
-$sequence Idle1 "anim_Idle1" loop ACT_VM_IDLE 1 fps 30.00
+$sequence Idle1 "anim_Idle1" loop ACT_VM_IDLE 1
 
-$sequence Fire1 "anim_Fire1" ACT_VM_PRIMARYATTACK 1 fps 30.00 snap {
+$sequence Fire1 "anim_Fire1" ACT_VM_PRIMARYATTACK 1 snap {
 	{ event AE_MUZZLEFLASH 0 "SMG1 1" }
 	{ event AE_CLIENT_EFFECT_ATTACH 0 "EjectBrass_9mm 2 75" }
 	{ event AE_CLIENT_EFFECT_ATTACH 2 "EjectBrass_9mm 2 75" }
 }
-$sequence Fire2 "anim_Fire2" ACT_VM_PRIMARYATTACK 1 fps 30.00 snap {
+$sequence Fire2 "anim_Fire2" ACT_VM_PRIMARYATTACK 1 snap {
 	{ event AE_MUZZLEFLASH 0 "SMG1 1" }
 	{ event AE_CLIENT_EFFECT_ATTACH 0 "EjectBrass_9mm 2 75" }
 	{ event AE_CLIENT_EFFECT_ATTACH 2 "EjectBrass_9mm 2 75" }
 }
-$sequence Fire3 "anim_Fire3" ACT_VM_PRIMARYATTACK 1 fps 30.00 snap {
+$sequence Fire3 "anim_Fire3" ACT_VM_PRIMARYATTACK 1 snap {
 	{ event AE_MUZZLEFLASH 0 "SMG1 1" }
 	{ event AE_CLIENT_EFFECT_ATTACH 0 "EjectBrass_9mm 2 75" }
 	{ event AE_CLIENT_EFFECT_ATTACH 2 "EjectBrass_9mm 2 75" }
 }
+
 $include "DefineBones.qci"
